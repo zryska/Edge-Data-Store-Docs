@@ -1,0 +1,58 @@
+---
+uid: system_Port_schema
+---
+
+# System Port Schema
+
+| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                         |
+| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------- |
+| Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [System_Port_schema.json](System_Port_schema.json) |
+
+# PortConfiguration Properties
+
+| Property      | Type      | Required | Nullable | Defined by                      |
+| ------------- | --------- | -------- | -------- | ------------------------------- |
+| [Port](#port) | `integer` | Optional | No       | PortConfiguration (this schema) |
+
+## Port
+
+`Port`
+
+- is optional
+- type: `integer`
+- defined in this schema
+
+### Port Type
+
+`integer`
+
+- minimum value: `1024`
+- maximum value: `65535`
+
+**All** of the following _requirements_ need to be fulfilled.
+
+#### Requirement 1
+
+- []() – `#/definitions/EdgeConfigurationBase`
+
+#### Requirement 2
+
+`object` with following properties:
+
+| Property | Type    | Required |
+| -------- | ------- | -------- |
+| `Port`   | integer | Optional |
+
+#### Port
+
+`Port`
+
+- is optional
+- type: `integer`
+
+##### Port Type
+
+`integer`
+
+- minimum value: `1024`
+- maximum value: `65535`
