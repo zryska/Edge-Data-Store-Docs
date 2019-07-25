@@ -10,8 +10,8 @@
       ],
       "dest": "api",
       "disableGitFeatures": false,
-      "_appLogoPath": "./Documentation/images/atlas_icon.png",
-      "_appName": "OSIsoft Cloud Services Documentation"
+      "_appLogoPath": "./Beta2/images/atlas_icon.png",
+      "_appName": "OSIsoft Edge System"
     }
   ],
   "build": {
@@ -21,9 +21,9 @@
     "content": [
       {
         "files": [
-          "Documentation/**/toc.yml",
-          "Documentation/**/**.md",
-          "Documentation/toc.yml",
+          "Beta2/**/toc.yml",
+          "Beta2/**/**.md",
+          "Beta2/toc.yml",
           "toc.yml",
           "**.md"
         ]
@@ -32,7 +32,7 @@
     "resource": [
       {
         "files": [
-          "Documentation/images/**"
+          "Beta2/images/**"
         ]
       }
     ],
