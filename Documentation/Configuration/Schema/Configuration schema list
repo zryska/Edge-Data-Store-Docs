@@ -1,0 +1,22 @@
+---
+uid: configurationSchemaList
+---
+
+# Configuration Schema List
+
+## Configuration Schemas
+
+- [DataCollectionItem](.\OpcUa_DataSelection_schema.md) – `` (Unknown)
+- [DataSelectionConfiguration](.\Modbus_DataSelection_schema.md) – `` (Unknown)
+- [DataSourceConfiguration](.\Modbus_DataSource_schema.md) – `` (Unknown)
+- [DataSourceConfiguration](.\OpcUa_DataSource_schema.md) – `` (Unknown)
+- [EdgeLoggerConfiguration](.\Modbus_Logging_schema.md) – `` (Unknown)
+- [EdgeLoggerConfiguration](.\OpcUa_Logging_schema.md) – `` (Unknown)
+- [EdgeLoggerConfiguration](.\Storage_Logging_schema.md) – `` (Unknown)
+- [EdgeLoggerConfiguration](.\System_Logging_schema.md) – `` (Unknown)
+- [EdgeSystemConfig](.\System_Components_schema.md) – `` (Unknown)
+- [OEMConfiguration](.\Storage_OEM_schema.md) – `` (Unknown)
+- [OmfHealthEndpointConfiguration](.\System_HealthEndpoints_schema.md) – `` (Unknown)
+- [PeriodicEgressConfiguration](.\Storage_PeriodicEgressEndpoints_schema.md) – `` (Unknown)
+- [PortConfiguration](.\System_Port_schema.md) – `` (Unknown)
+- [StorageRuntimeConfiguration](.\Storage_Runtime_schema.md) – `` (Unknown)
