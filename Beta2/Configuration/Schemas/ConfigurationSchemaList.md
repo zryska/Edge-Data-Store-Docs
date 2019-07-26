@@ -5,8 +5,7 @@ uid: configurationSchemaList
 # Configuration Schemas
 
 ## Edge System Configuration Schemas
-
-The following schemas are used by the Edge System for configuration:
+The following schemas are used by Edge System for configuration:
 
   - [EdgeLoggerConfiguration](.\System_Logging_schema.md)
   - [PortConfiguration](.\System_Port_schema.md)
@@ -14,7 +13,6 @@ The following schemas are used by the Edge System for configuration:
   - [EdgeSystemConfig](.\System_Components_schema.md)
   
 ## Connectivity Adapters Configuration Schemas
-
 The following schemas are used by Connectivity Adapters for configuration:
 
 **OpcUa**
@@ -30,7 +28,6 @@ The following schemas are used by Connectivity Adapters for configuration:
 - [EdgeLoggerConfiguration](.\Modbus_Logging_schema.md)
 
 ## Storage Configuration Schemas
-
 The following schemas are used by the Storage component for configuration:
   - [EdgeLoggerConfiguration](.\Storage_Logging_schema.md)
   - [StorageRuntimeConfiguration](.\Storage_Runtime_schema.md)
