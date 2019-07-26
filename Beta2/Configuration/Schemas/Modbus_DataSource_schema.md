@@ -2,7 +2,7 @@
 uid: modbus_DataSource_schema
 ---
 
-# Modbus Data Source Configuration Schema
+# Modbus data source configuration schema
 
 ```
 
@@ -12,7 +12,7 @@ uid: modbus_DataSource_schema
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Modbus_DataSource_schema.json](Modbus_DataSource_schema.json) |
 
-# DataSourceConfiguration Properties
+# DataSourceConfiguration properties
 
 | Property                                        | Type      | Required | Nullable | Defined by                            |
 | ----------------------------------------------- | --------- | -------- | -------- | ------------------------------------- |
@@ -33,7 +33,7 @@ uid: modbus_DataSource_schema
 - type: `integer`
 - defined in this schema
 
-### ConnectTimeout Type
+### ConnectTimeout type
 
 `integer`
 
@@ -45,7 +45,7 @@ uid: modbus_DataSource_schema
 - type: `integer`
 - defined in this schema
 
-### DelayBetweenRequests Type
+### DelayBetweenRequests type
 
 `integer`
 
@@ -57,7 +57,7 @@ uid: modbus_DataSource_schema
 - type: `string`
 - defined in this schema
 
-### IpAddress Type
+### IpAddress type
 
 `string`, nullable
 
@@ -69,7 +69,7 @@ uid: modbus_DataSource_schema
 - type: `integer`
 - defined in this schema
 
-### MaxResponseDataLength Type
+### MaxResponseDataLength type
 
 `integer`
 
@@ -81,7 +81,7 @@ uid: modbus_DataSource_schema
 - type: `integer`
 - defined in this schema
 
-### Port Type
+### Port type
 
 `integer`
 
@@ -93,7 +93,7 @@ uid: modbus_DataSource_schema
 - type: `integer`
 - defined in this schema
 
-### ReconnectInterval Type
+### ReconnectInterval type
 
 `integer`
 
@@ -105,7 +105,7 @@ uid: modbus_DataSource_schema
 - type: `integer`
 - defined in this schema
 
-### RequestTimeout Type
+### RequestTimeout type
 
 `integer`
 
@@ -117,7 +117,7 @@ uid: modbus_DataSource_schema
 - type: `string`
 - defined in this schema
 
-### StreamIdPrefix Type
+### StreamIdPrefix type
 
 `string`, nullable
 
@@ -149,7 +149,7 @@ uid: modbus_DataSource_schema
 - is optional
 - type: `integer`
 
-##### ConnectTimeout Type
+##### ConnectTimeout type
 
 `integer`
 
@@ -160,7 +160,7 @@ uid: modbus_DataSource_schema
 - is optional
 - type: `integer`
 
-##### DelayBetweenRequests Type
+##### DelayBetweenRequests type
 
 `integer`
 
@@ -171,7 +171,7 @@ uid: modbus_DataSource_schema
 - is optional
 - type: `string`
 
-##### IpAddress Type
+##### IpAddress type
 
 `string`, nullable
 
@@ -182,7 +182,7 @@ uid: modbus_DataSource_schema
 - is optional
 - type: `integer`
 
-##### MaxResponseDataLength Type
+##### MaxResponseDataLength type
 
 `integer`
 
@@ -193,7 +193,7 @@ uid: modbus_DataSource_schema
 - is optional
 - type: `integer`
 
-##### Port Type
+##### Port type
 
 `integer`
 
@@ -204,7 +204,7 @@ uid: modbus_DataSource_schema
 - is optional
 - type: `integer`
 
-##### ReconnectInterval Type
+##### ReconnectInterval type
 
 `integer`
 
@@ -215,7 +215,7 @@ uid: modbus_DataSource_schema
 - is optional
 - type: `integer`
 
-##### RequestTimeout Type
+##### RequestTimeout type
 
 `integer`
 
@@ -226,6 +226,6 @@ uid: modbus_DataSource_schema
 - is optional
 - type: `string`
 
-##### StreamIdPrefix Type
+##### StreamIdPrefix type
 
 `string`, nullable
