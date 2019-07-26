@@ -2,7 +2,7 @@
 uid: modbus_Logging_schema
 ---
 
-# EdgeLoggerConfiguration Schema
+# EdgeLoggerConfiguration schema
 
 ```
 
@@ -12,7 +12,7 @@ uid: modbus_Logging_schema
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Modbus_Logging_schema.json](Modbus_Logging_schema.json) |
 
-# EdgeLoggerConfiguration Properties
+# EdgeLoggerConfiguration properties
 
 | Property                                        | Type      | Required | Nullable | Defined by                            |
 | ----------------------------------------------- | --------- | -------- | -------- | ------------------------------------- |
@@ -28,7 +28,7 @@ uid: modbus_Logging_schema
 - type: `integer`
 - defined in this schema
 
-### LogFileCountLimit Type
+### LogFileCountLimit type
 
 `integer`, nullable
 
@@ -40,7 +40,7 @@ uid: modbus_Logging_schema
 - type: `integer`
 - defined in this schema
 
-### LogFileSizeLimitBytes Type
+### LogFileSizeLimitBytes type
 
 `integer`, nullable
 
@@ -52,7 +52,7 @@ uid: modbus_Logging_schema
 - type: reference
 - defined in this schema
 
-### LogLevel Type
+### LogLevel type
 
 - []() – `#/definitions/EdgeLogLevel`
 
@@ -79,7 +79,7 @@ uid: modbus_Logging_schema
 - is optional
 - type: `integer`
 
-##### LogFileCountLimit Type
+##### LogFileCountLimit type
 
 `integer`, nullable
 
@@ -90,7 +90,7 @@ uid: modbus_Logging_schema
 - is optional
 - type: `integer`
 
-##### LogFileSizeLimitBytes Type
+##### LogFileSizeLimitBytes type
 
 `integer`, nullable
 
@@ -101,6 +101,6 @@ uid: modbus_Logging_schema
 - is optional
 - type: reference
 
-##### LogLevel Type
+##### LogLevel type
 
 - []() – `#/definitions/EdgeLogLevel`
