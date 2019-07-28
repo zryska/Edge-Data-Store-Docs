@@ -2,9 +2,10 @@
 uid: storage_PeriodicEgressEndpoints_schema
 ---
 
-# Storage Periodic Egress Configuration Schema
-
-## Sample Periodic Egress Configuration file
+# Periodic egress configuration schema
+EDS egress enables the copy/transfer of data from EDS to another device or destination. Supported destinations are OSIsoft Cloud Services or PI Server. Periodic egress configuration specifies zero or more egress endpoints, which represent destinations to which EDS data will be sent. 
+		
+## Sample periodic egress configuration file
 
 ```json
 [{
@@ -82,11 +83,11 @@ uid: storage_PeriodicEgressEndpoints_schema
 ]
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                                                 |
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined Ii                                                                                 |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------------------------------------ |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Storage_PeriodicEgressEndpoints_schema.json](Storage_PeriodicEgressEndpoints_schema.json) |
 
-# PeriodicEgressConfiguration Properties
+# PeriodicEgressConfiguration properties
 
 | Property                            | Type      | Required     | Nullable | Defined by                                |
 | ----------------------------------- | --------- | ------------ | -------- | ----------------------------------------- |
@@ -115,7 +116,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `boolean`
 - defined in this schema
 
-### Backfill Type
+### Backfill type
 
 `boolean`
 
@@ -127,7 +128,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### ClientId Type
+### ClientId type
 
 `string`, nullable
 
@@ -139,7 +140,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### ClientSecret Type
+### ClientSecret type
 
 `string`, nullable
 
@@ -151,7 +152,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### DebugExpiration Type
+### DebugExpiration type
 
 `string`, nullable
 
@@ -165,7 +166,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### Description Type
+### Description type
 
 `string`, nullable
 
@@ -177,7 +178,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### EgressFilter Type
+### EgressFilter type
 
 `string`, nullable
 
@@ -189,7 +190,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `boolean`
 - defined in this schema
 
-### Enabled Type
+### Enabled type
 
 `boolean`
 
@@ -201,7 +202,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### Endpoint Type
+### Endpoint type
 
 `string`
 
@@ -215,7 +216,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### ExecutionPeriod Type
+### ExecutionPeriod type
 
 `string`
 
@@ -229,7 +230,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### Id Type
+### Id type
 
 `string`
 
@@ -243,7 +244,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### Name Type
+### Name type
 
 `string`, nullable
 
@@ -255,7 +256,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### NamespaceId Type
+### NamespaceId type
 
 `string`, nullable
 
@@ -267,7 +268,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### Password Type
+### Password type
 
 `string`, nullable
 
@@ -279,7 +280,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### StreamPrefix Type
+### StreamPrefix type
 
 `string`, nullable
 
@@ -291,7 +292,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### TypePrefix Type
+### TypePrefix type
 
 `string`, nullable
 
@@ -303,7 +304,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - type: `string`
 - defined in this schema
 
-### UserName Type
+### UserName type
 
 `string`, nullable
 
@@ -343,7 +344,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `boolean`
 
-##### Backfill Type
+##### Backfill type
 
 `boolean`
 
@@ -354,7 +355,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### ClientId Type
+##### ClientId type
 
 `string`, nullable
 
@@ -365,7 +366,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### ClientSecret Type
+##### ClientSecret type
 
 `string`, nullable
 
@@ -376,7 +377,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### DebugExpiration Type
+##### DebugExpiration type
 
 `string`, nullable
 
@@ -389,7 +390,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### Description Type
+##### Description type
 
 `string`, nullable
 
@@ -400,7 +401,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### EgressFilter Type
+##### EgressFilter type
 
 `string`, nullable
 
@@ -411,7 +412,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `boolean`
 
-##### Enabled Type
+##### Enabled type
 
 `boolean`
 
@@ -422,7 +423,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is **required**
 - type: `string`
 
-##### Endpoint Type
+##### Endpoint type
 
 `string`
 
@@ -435,7 +436,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is **required**
 - type: `string`
 
-##### ExecutionPeriod Type
+##### ExecutionPeriod type
 
 `string`
 
@@ -448,7 +449,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is **required**
 - type: `string`
 
-##### Id Type
+##### Id type
 
 `string`
 
@@ -461,7 +462,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### Name Type
+##### Name type
 
 `string`, nullable
 
@@ -472,7 +473,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### NamespaceId Type
+##### NamespaceId type
 
 `string`, nullable
 
@@ -483,7 +484,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### Password Type
+##### Password type
 
 `string`, nullable
 
@@ -494,7 +495,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### StreamPrefix Type
+##### StreamPrefix type
 
 `string`, nullable
 
@@ -505,7 +506,7 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### TypePrefix Type
+##### TypePrefix type
 
 `string`, nullable
 
@@ -516,6 +517,6 @@ uid: storage_PeriodicEgressEndpoints_schema
 - is optional
 - type: `string`
 
-##### UserName Type
+##### UserName type
 
 `string`, nullable
