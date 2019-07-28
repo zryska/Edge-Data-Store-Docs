@@ -4,11 +4,7 @@ uid: modbus_Logging_schema
 
 # EdgeLoggerConfiguration schema
 
-```
-
-```
-
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                               |
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined In                                               |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Modbus_Logging_schema.json](Modbus_Logging_schema.json) |
 
