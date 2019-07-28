@@ -4,7 +4,7 @@ uid: opcUa_Logging_schema
 
 # OPC UA logger configuration schema
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                             |
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                             |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------ |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [OpcUa_Logging_schema.json](OpcUa_Logging_schema.json) |
 
