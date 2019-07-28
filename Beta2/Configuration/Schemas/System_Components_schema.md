@@ -2,13 +2,13 @@
 uid: system_Components_schema
 ---
 
-# Edge System Components Schema
+# Edge System components schema
 
 | Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                     |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [System_Components_schema.json](System_Components_schema.json) |
 
-# EdgeSystemConfig Definitions
+# EdgeSystemConfig definitions
 
 | Property                        | Type     | Group                               |
 | ------------------------------- | -------- | ----------------------------------- |
@@ -23,7 +23,7 @@ uid: system_Components_schema
 - type: `string`
 - defined in this schema
 
-### ComponentId Type
+### ComponentId type
 
 `string`, nullable
 
@@ -35,11 +35,11 @@ uid: system_Components_schema
 - type: `string`
 - defined in this schema
 
-### ComponentType Type
+### ComponentType type
 
 `string`, nullable
 
-# EdgeSystemConfig Properties
+# EdgeSystemConfig properties
 
 | Property                                            | Type      | Required | Nullable | Defined by                     |
 | --------------------------------------------------- | --------- | -------- | -------- | ------------------------------ |
@@ -53,7 +53,7 @@ uid: system_Components_schema
 - type: reference
 - defined in this schema
 
-### ComponentConfigurations Type
+### ComponentConfigurations type
 
 Array type: reference
 
@@ -82,7 +82,7 @@ All items must be of the type:
 - is optional
 - type: reference
 
-##### ComponentConfigurations Type
+##### ComponentConfigurations type
 
 Array type: reference
 

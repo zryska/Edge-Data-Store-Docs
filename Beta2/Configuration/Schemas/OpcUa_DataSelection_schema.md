@@ -2,17 +2,14 @@
 uid: opcUa_DataSelection_schema
 ---
 
-# Opc Ua Data Collection Item Schema
+# OPC UA data collection item schema
 
-```
 
-```
-
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                         |
+| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined in                                                         |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------------ |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [OpcUa_DataSelection_schema.json](OpcUa_DataSelection_schema.json) |
 
-# DataCollectionItem Properties
+# DataCollectionItem properties
 
 | Property              | Type      | Required | Nullable | Defined by                       |
 | --------------------- | --------- | -------- | -------- | -------------------------------- |
@@ -29,7 +26,7 @@ uid: opcUa_DataSelection_schema
 - type: `string`
 - defined in this schema
 
-### Name Type
+### Name type
 
 `string`, nullable
 
