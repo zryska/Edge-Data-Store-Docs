@@ -4,11 +4,7 @@ uid: modbus_DataSource_schema
 
 # Modbus data source configuration schema
 
-```
-
-```
-
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                     |
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined In                                                     |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Modbus_DataSource_schema.json](Modbus_DataSource_schema.json) |
 
