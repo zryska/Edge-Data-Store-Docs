@@ -5,6 +5,7 @@ uid: opcUaOverview
 # OPC UA Connectivity
 
 ## Overview
+
 The OPC UA connectivity transfers time-series data from OPC UA devices into the Edge System.
 
 On startup, the OPC UA connectivity browses the entire OPC UA server address space and exports the available OPC UA variables into a .json file for data selection. Data is collected automatically based upon user demands.  OPC UA data from OPC UA variables is read through subscriptions (unsolicited reads).
@@ -25,7 +26,7 @@ The following procedure is for configuring OPC UA data source.
     - See OPC UA Data Source Example section below for content structure
     - See Parameters for OPC UA Data Source section below for a table of all available parameters
 1. Save the file as "DataSource.config.json".
-1. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`
+1. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`
     - Example using cURL:
 
 ```bash
@@ -68,7 +69,7 @@ In addition to the data source configuration, you need to provide a data selecti
 
 ### Procedure for Configuring OPC UA Data Selection
 
-> **Note:** You cannot modify OPC UA data selection configurations manually. You must use the REST endpoints to add/edit the configuration. See [REST Urls](#rest-urls).
+> **Note:** You cannot modify OPC UA data selection configurations manually. You must use the REST endpoints to add/edit the configuration.
 
 The following procedure is for configuring OPC UA data selection.
 
@@ -76,7 +77,7 @@ The following procedure is for configuring OPC UA data selection.
     - See OPC UA Data Selection Example section below for content structure
     - See Parameters for OPC UA Data Selection section below for a table of all available parameters
 1. Save the file as "DataSelection.config.json"
-1. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection/`
+1. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection/`
     - Example using cURL:
 
 ```bash
