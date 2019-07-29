@@ -18,7 +18,7 @@ To utilize the Modbus TCP connectivity component of the Edge System, it must be 
 
 ### Procedure for Configuring Modbus Data Source
 
-> **Note:** You cannot modify Modbus data source configurations manually. You must use the REST endpoints to add/edit the configuration. See [REST Urls](#rest-urls).
+> **Note:** You cannot modify Modbus data source configurations manually. You must use the REST endpoints to add/edit the configuration. 
 
 The following procedure is for configuring Modbus data source.
 
@@ -27,11 +27,12 @@ The following procedure is for configuring Modbus data source.
     - See Parameters for Modbus Data Source section below for a table of all available parameters
 1. Save the file as DataSource.config.json.
 1. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`
-    - Example using cURL:
 
-        ```bash
-        curl -v -d "@DataSource.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource"
-        ```
+- Example using cURL:
+
+  ```bash
+  curl -v -d "@DataSource.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource"
+  ```
 
 ### Parameters for Modbus Data Source
 
@@ -66,20 +67,20 @@ Once a data source is configured for a Modbus instance, which data is to be coll
 
 ### Procedure for Configuring Modbus Data Selection
 
-> **Note:** You cannot modify Modbus data selection configurations manually. You must use the REST endpoints to add/edit the configuration. See [REST Urls](#rest-urls).
+> **Note:** You cannot modify Modbus data selection configurations manually. You must use the REST endpoints to add/edit the configuration.
 
 The following procedure is for configuring Modbus data selection.
 
 1. Using any text editor, create a file that contains a Modbus data selection in JSON form
     - See Modbus Data Selection Example section below for content structure
     - See Parameters for Modbus Data Selection section below for a table of all available parameters
-1. Save the file as DataSelection.config.json.
-1. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection/`
+2. Save the file as DataSelection.config.json.
+3. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection/`
     - Example using cURL:
 
-        ```bash
-        curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection"
-        ```
+```bash
+curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection"
+```
 
 ### Parameters for Modbus Data Selection
 

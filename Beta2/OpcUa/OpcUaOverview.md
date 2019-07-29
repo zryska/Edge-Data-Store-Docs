@@ -17,7 +17,7 @@ To utilize the OPC UA connectivity component of the Edge System, it must be conf
 
 ### Procedure for Configuring OPC UA Data Source
 
-> **Note:** You cannot modify OPC UA data source configurations manually. You must use the REST endpoints to add/edit the configuration. See [REST Urls](#rest-urls).
+> **Note:** You cannot modify OPC UA data source configurations manually. You must use the REST endpoints to add/edit the configuration.
 
 The following procedure is for configuring OPC UA data source.
 
@@ -28,9 +28,9 @@ The following procedure is for configuring OPC UA data source.
 1. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`
     - Example using cURL:
 
-        ```bash
-        curl -v -d "@DataSource.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource"
-        ```
+```bash
+curl -v -d "@DataSource.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource"
+```
 
 ### Parameters for OPC UA Data Source
 
@@ -79,9 +79,9 @@ The following procedure is for configuring OPC UA data selection.
 1. Use any tool capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection/`
     - Example using cURL:
 
-        ```bash
-        curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection"
-        ```
+```bash
+curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection"
+```
 
 ### Parameters for OPC UA Data Selection
 
