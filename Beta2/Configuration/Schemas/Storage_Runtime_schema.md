@@ -14,7 +14,7 @@ uid: storage_Runtime_schema
 
 # Storage runtime configuration schema
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                 |
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                                 |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ---------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Storage_Runtime_schema.json](Storage_Runtime_schema.json) |
 
