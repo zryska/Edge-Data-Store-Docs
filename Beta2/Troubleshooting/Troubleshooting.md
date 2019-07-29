@@ -10,6 +10,24 @@ Edge System supports a diagnostics namespace that is used to store streams conta
 
 In addition, all components in Edge System support OMF Health messages that can be configured using the Health Endpoint configuration so that OMF Health messages are sent to remote PI Web API or OSIsoft Cloud Service endpoints to support remote monitoring of devices.
 
+## Ingress
+
+### Ingress logging
+
+You can find log messages related to egress in the Storage logs. If you set the the log level temporarily to **Verbose**, most information for troubleshooting will be output.
+
+### Ingress debugging
+
+In order to troubleshoot problems between an OMF application and Edge Storage, enable debugging. If you set an appropriate value for the *IngressDebugExpiration* property in an storage runtime configuration, debugging will be enabled for all incoming OMF messages, and HTTP request and response content will be stored to disk for review. The property represents the date and time when debugging should no longer be enabled. You can also disable debugging if you set the value to *null*. 
+
+Examples of valid strings representing date and time:
+
+    Utc: “yyyy-mm-ddThh:mm:ssZ”
+
+    Local: “mm-dd-yyyy hh:mm:ss”
+
+The content of the OMF message, including the headers will be written to the Logs Directory. For an active application this can become quite large. As a result, debug information is stored to disk in a separate format that usual log messages. A single file will be written to the usual Logs directory for every incoming OMF Type, Container, and Data message.
+
 ## Egress
 
 ### Egress logging

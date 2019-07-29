@@ -38,7 +38,7 @@ OSIsoft Edge System
       - [Stream Tags and Metadata](xref:sdsStreamExtra)
     - [Egress](xref:egress)
   - [Administration](xref:edgeSystemAdministration)
-    - [Management Tools](xref:mangementTools)
+    - [Management Tools](xref:managementTools)
   - [Configuration Schemas](xref:configurationSchemaList)
   - [Health](xref:edgeSystemHealth)
   - [Diagnostics](xref:edgeSystemDiagnostics)

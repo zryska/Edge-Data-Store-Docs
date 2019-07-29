@@ -126,7 +126,7 @@ Find various examples below of valid egress configurations.
     "StreamPrefix" : "1ValidPrefix.",
     "TypePrefix" : "AlsoValid_",
     "DebugExpiration" : null,
-    "NamespaceId" : "default",
+    "NamespaceId" : "default"
 }]
 ```
 
