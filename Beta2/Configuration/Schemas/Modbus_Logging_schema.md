@@ -2,13 +2,13 @@
 uid: modbus_Logging_schema
 ---
 
-# EdgeLoggerConfiguration schema
+# ModbusLoggerConfiguration Schema
 
 | Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                               |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Modbus_Logging_schema.json](Modbus_Logging_schema.json) |
 
-# EdgeLoggerConfiguration properties
+# ModbusLoggerConfiguration Properties
 
 | Property                                        | Type      | Required | Nullable | Defined by                            |
 | ----------------------------------------------- | --------- | -------- | -------- | ------------------------------------- |
