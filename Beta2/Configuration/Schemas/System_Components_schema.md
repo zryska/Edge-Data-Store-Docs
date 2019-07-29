@@ -2,6 +2,25 @@
 uid: system_Components_schema
 ---
 
+# Sample Edge System components configuration
+
+ ```json
+[
+  {
+    "ComponentId": "OpcUa1",
+    "ComponentType": "OpcUa"
+  },
+  {
+    "ComponentId": "Modbus1",
+    "ComponentType": "Modbus"
+  },
+  {
+    "ComponentId": "Storage",
+    "ComponentType": "EDS.Component"
+  }
+]
+ ```
+
 # Edge System components schema
 
 | Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                     |

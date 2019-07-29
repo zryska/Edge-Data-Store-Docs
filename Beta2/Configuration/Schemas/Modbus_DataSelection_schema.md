@@ -2,6 +2,67 @@
 uid: modbus_DataSelection_schema
 ---
 
+# Sample Modbus Data Selection Configuration
+
+```json
+[{
+        "Selected": "true",
+        "UnitId": 1,
+        "RegisterType": 3,
+        "RegisterOffset": 1,
+        "DataTypeCode": 20,
+        "BitMap": "16151413",
+        "ConversionFactor": 2,
+        "ConversionOffset": 3.4,
+        "ScanRate": 500
+    },
+    {
+        "Selected": "true",
+        "UnitId": 1,
+        "RegisterType": 3,
+        "RegisterOffset": 2,
+        "DataTypeCode": 20,
+        "BitMap": "16151413",
+        "ConversionFactor": 2,
+        "ConversionOffset": 3.4,
+        "ScanRate": 500
+    },
+    {
+        "Selected": "true",
+        "UnitId": 1,
+        "RegisterType": 3,
+        "RegisterOffset": 3,
+        "DataTypeCode": 20,
+        "BitMap": "16151413",
+        "ConversionFactor": 2,
+        "ConversionOffset": 3.4,
+        "ScanRate": 500
+    },
+    {
+        "Selected": "true",
+        "UnitId": 1,
+        "RegisterType": 3,
+        "RegisterOffset": 4,
+        "DataTypeCode": 20,
+        "BitMap": "16151413",
+        "ConversionFactor": 2,
+        "ConversionOffset": 3.4,
+        "ScanRate": 500
+    },
+    {
+        "Selected": "true",
+        "UnitId": 1,
+        "RegisterType": 3,
+        "RegisterOffset": 5,
+        "DataTypeCode": 20,
+        "BitMap": "16151413",
+        "ConversionFactor": 2,
+        "ConversionOffset": 3.4,
+        "ScanRate": 500
+    }
+]
+```
+
 # Modbus DataSelectionConfiguration schema
 
 | Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                                           |

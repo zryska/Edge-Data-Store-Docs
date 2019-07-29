@@ -2,8 +2,45 @@
 uid: opcUa_DataSelection_schema
 ---
 
-# OPC UA data collection item schema
+# Sample Opc Ua Data Selection Configuration
 
+```json
+[{
+        "Selected": true,
+        "Name": "Cold Side Inlet Temperature",
+        "NodeId": "ns=2;s=Line1.HeatExchanger1001.ColdSideInletTemperature",
+        "StreamId": null
+    },
+    {
+        "Selected": true,
+        "Name": "Hot Side Inlet Temperature",
+        "NodeId": "ns=2;s=Line1.HeatExchanger1001.HotSideInletTemperature",
+        "StreamId": null
+    },
+    {
+        "Selected": true,
+        "Name": "Hot Side Outlet Temperature",
+        "NodeId": "ns=2;s=Line1.HeatExchanger1001.HotSideOutletTemperature",
+        "StreamId": null
+    },
+    {
+        "Selected": true,
+        "Name": "Cold Side Inlet Temperature",
+        "NodeId": "ns=2;s=Line1.HeatExchanger1002.ColdSideInletTemperature",
+        "StreamId": null
+    },
+    {
+        "Selected": true,
+        "Name": "Hot Side Outlet Temperature",
+        "NodeId": "ns=2;s=Line1.HeatExchanger1002.HotSideOutletTemperature",
+        "StreamId": null
+    }
+]
+```
+
+```
+
+# OPC UA data collection item schema
 
 | Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined in                                                         |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------------ |

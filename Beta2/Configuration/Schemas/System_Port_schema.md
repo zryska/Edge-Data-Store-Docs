@@ -2,6 +2,14 @@
 uid: system_Port_schema
 ---
 
+# Sample system port configuration file
+
+```json
+{
+  "Port": 5590
+}
+```
+
 # System port schema
 
 | Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                         |
