@@ -4,11 +4,11 @@ uid: opcUaQuickStart
 
 # Edge Opc Ua Quick Start
 
-This document is a quick tour of setting up the Edge Opc Ua component.
+This topic is a quick tour of setting up the Edge OPC UA component.
 
-## Configuring an Opc Ua Data Source
+## 1. Configure an OPC UA data source
 
-The first step in configuring Edge Opc Ua is to create a file in JSON format describing the location of the data source. Please modify the values below to match your environment.
+1. Create a file in JSON format describing the location of the data source. Please modify the the following values to match your environment.
 
 ```json
 {
@@ -22,17 +22,20 @@ The first step in configuring Edge Opc Ua is to create a file in JSON format des
 }
 ```
 
-Enter the correct IP address and port for your Opc Ua data source and save the file with the name OpcUa1Datasource.json. Then run the following curl script from the same directory where the file is located. The script should be run on the same computer where the Edge System is installed:
+2. Enter the correct IP address and port for your OPC UA data source.
+3. Save the file with the name OpcUa1Datasource.json. 
+4. Run the following curl script from the same directory where the file is located. You should run the script on the same computer where the Edge System is installed:
 
 ```bash
 curl -i -d "@OpcUa1Datasource.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/OpcUa1/Datasource
 ```
 
-When this command completes successfully (a 204 is returned by curl), your Opc Ua data source has been created. If you get a 400 error check your JSON file for errors, if you get a 404 or 500 error check to make sure the Edge System is running on your computer.
+When this command completes successfully (a 204 is returned by curl), your OPC UA data source has been created. If you get a 400 error, check your JSON file for errors. If you get a 404 or 500 error, check to make sure Edge System is running on your computer.
 
-## Configuring Opc Ua Data Selection
+## 2. Configure OPC UA data selection
 
-The next step in setting up Opc Ua is to select the Opc Ua data you wish to store in the Edge System. This is done by configuring Opc Ua data selection. Sample JSON for 5 Opc Ua values is below - please modify the values as appropriate for your environment.
+Select the OPC UA data you want to store in Edge System by configuring OPC UA data selection. The following is a sample JSON for 5 Opc Ua values.
+1. Modify the values as appropriate for your environment.
 
 ```json
 [{
@@ -68,18 +71,19 @@ The next step in setting up Opc Ua is to select the Opc Ua data you wish to stor
 ]
 ```
 
-Save the JSON content above in a text file and name it OpcUa1Dataselection.json. When you run the following curl script the system will be configured to collect Opc Ua data values.
+2. Save the JSON content above in a text file and name it OpcUa1Dataselection.json. 
+When you run the following curl script the system will be configured to collect Opc Ua data values.
 
 ```bash
 curl -i -d "@OpcUa1Dataselection.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/OpcUa1/Dataselection
 ```
 
-To see the streams that have been created in Edge Storage to store the data you are writing you can run the following curl script:
+To see the streams that have been created in Edge Storage to store the data you are writing, you can run the following curl script:
 
 ```bash
 curl http://localhost:5590/api/v1/tenants/default/namespaces/default/streams/
 ```
 
-To view the data in the streams being written  you can refer to the SDS part of this documentation.
+To view the data in the streams being written, you can refer to the SDS part of this documentation.
 
 To egress the data to OSIsoft Cloud Services or the PI System, see the egress documentation or quick starts.
