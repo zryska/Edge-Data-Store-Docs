@@ -9,9 +9,9 @@ Indexes speed up and order the results of searches. A key uniquely identifies a 
 
 In Sds, the key of an SdsType is also an index. The key is often referred to as the *primary index,* while all other indexes are referred to as *secondary indexes* or *secondaries*.
 
-An SdsType that is used to define an SdsStream must specify a key. When inserting data into an SdsStream, every key value must be unique. Sds will not store more than a single event for a given key; an event with a particular key may be deleted or updated, but two events with the same key cannot exist.
+An SdsType that is used to define an SdsStream must specify a key. When inserting data into an SdsStream, every key value must be unique. Sds will not store more than a single event for a given key. An event with a particular key may be deleted or updated, but two events with the same key cannot exist.
 
-Secondary indexes are defined on SdsStreams and are applied to a single property. You can define many secondary indexes. Secondary index values need not be unique.
+Secondary indexes are defined on SdsStreams and are applied to a single property. You can define many secondary indexes. Secondary index values do not need to be unique.
 
 The following table contains supported index types:
 
@@ -41,7 +41,7 @@ Working with Indexes
 
 The following discusses the types defined in the [Python](<https://github.com/osisoft/OCS-Samples/tree/master/basic_samples/SDS/Python/SDSPy>) and [Java Script](<https://github.com/osisoft/OCS-Samples/tree/master/basic_samples/SDS/JavaScript>) samples. Samples in other languages can be found [here](<https://github.com/osisoft/OCS-Samples/tree/master/basic_samples/SDS>).
 
-To build a SdsType representation of the following sample class, see [Sample](#sample):
+To build an SdsType representation of the following sample class, see [Sample](#sample):
 
 *Python*
 
@@ -201,7 +201,7 @@ var simpleType = new SdsObjects.SdsType({
 });
 ```
 
-The Time property is identified as the Key by define its SdsTypeProperty as follows:
+The Time property is identified as the Key by defining its SdsTypeProperty as follows:
 
 *Python*
 
@@ -231,8 +231,8 @@ var timeProperty = new SdsObjects.SdsTypeProperty({
 });
 ```
 
-Note that the time.IsKey field is set to true.
+**Note:** The time.IsKey field is set to true.
 
 To read data using the key, you define a start index and an end index. For DateTime, use ISO 8601 representation of dates and times. To query for a window of values between January 1, 2010 and February 1, 2010, you would define indexes as “2010-01-01T08:00:00.000Z” and “2010-02-01T08:00:00.000Z”, respectively.
 
-Additional information can be found in [Reading data](xref:sdsReadingData).
+For additional information, see [Reading data](xref:sdsReadingData).
