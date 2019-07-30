@@ -2,7 +2,7 @@
 uid: edgeSystemAdministration
 ---
 
-# Edge System Administration
+# Edge System administration
 
 The Edge System provides a number of administration level functions.
 
