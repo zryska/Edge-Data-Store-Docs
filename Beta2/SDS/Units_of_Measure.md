@@ -4,9 +4,9 @@ uid: unitsOfMeasure
 
 # Units of Measure
 
-The Sequential Data Store (SDS) provides a collection of built-in units of measure (Uom). These units of measure can be [associated](#associating-a-unit-of-measure-with-a-sdstype) with SdsStreams and SdsTypes in order to provide unit information for stream data that model measurable quantities. If data has unit information associated with it, SDS is able to support unit conversions when retrieving data. See [Reading data](xref:sdsReadingData) for more information.
+The Sequential Data Store (SDS) provides a collection of built-in units of measure (Uom). These units of measure can be [associated](#associating-a-unit-of-measure-with-a-sdstype) with SdsStreams and SdsTypes in order to provide unit information for stream data that model measurable quantities. If data has unit information associated with it, SDS is able to support unit conversions when retrieving data. For more information, see [Reading data](xref:sdsReadingData).
 
-Since a unit of measurement (i.e. meter) defines the magnitude of a quantity (i.e. Length), SDS represents this via two objects: SdsUom and SdsUomQuantity.
+Since a unit of measurement (that is meter) defines the magnitude of a quantity (that is Length), SDS represents this through two objects: SdsUom and SdsUomQuantity.
 
 ## SdsUom
 
@@ -14,7 +14,7 @@ A SdsUom represents a single unit of measure, such as 'meter'.
 
 The following table shows the required and optional SdsUom fields.
 
-| Property         | Type   | Optionality | Details | Example  |
+| Property         | Type   | Optionality | Description | Example  |
 | ---------------- | ------ | ----------- | ------- | -------- |
 | Id               | String | Required    | Unique identifier for the unit of measure | meters per second |
 | Abbreviation     | String | Optional    | Abbreviation for the unit of measure  | m/s |
@@ -30,7 +30,7 @@ Represents a single measurable quantity (i.e. Length)
 
 The following table shows the required and optional SdsUomQuantity fields.
 
-| Property   | Type    | Optionality | Details | Example  |
+| Property   | Type    | Optionality | Description| Example  |
 | ---------- | ------- | ----------- | ------- | ---------|
 | Id         | String  | Required    | Unique identifier for the quantity | Velocity |
 | Name       | String  | Optional    | Full name for the quantity | Velocity |
@@ -291,7 +291,7 @@ A list of the supported units of measure is below. Supported units of measure ar
 
 # SdsUomQuantity API
 
-The REST APIs provide programmatic access to read and write SDS data. The APIs in this section interact with SdsUomQuantitys. See [Units of Measure](#units-of-measure) for general [SdsUomQuantity](#sdsuomquantity) information.
+The REST APIs provide programmatic access to read and write SDS data. The APIs in this section interact with SdsUomQuantitys. For general [SdsUomQuantity](#sdsuomquantity) information, see [Units of Measure](#units-of-measure) .
 *****
 
 ## `Get Quantity`
@@ -525,7 +525,7 @@ Content-Type: application/json
 
 # SdsUom API
 
-The REST APIs provide programmatic access to read and write SDS data. The APIs in this section interact with SdsUoms. See [Units of Measure](#units-of-measure) for general [SdsUom](#sdsuom) information.
+The REST APIs provide programmatic access to read and write SDS data. The APIs in this section interact with SdsUoms. For general [SdsUom](#sdsuom) information, see [Units of Measure](#units-of-measure).
 *****
 
 ## ``Get Uom``
@@ -632,7 +632,7 @@ Content-Type: application/json
 
 ## Associating a unit of measure with a SdsType
 
-At [SdsType](xref:sdsTypes) creation, a SdsUom can be associated with a [SdsTypeProperty](xref:sdsTypes#sdstypeproperty).
+At [SdsType](xref:sdsTypes) creation, you can associate a SdsUom with a [SdsTypeProperty](xref:sdsTypes#sdstypeproperty).
 
 ## Associating a unit of measure with a SdsStream
 
