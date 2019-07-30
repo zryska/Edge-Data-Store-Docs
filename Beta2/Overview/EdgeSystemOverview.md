@@ -2,11 +2,11 @@
 uid: edgeSystemOverview
 ---
 
-# Edge System Overview
+# Edge System overview
 
 The Edge System is a cross-platform component based application framework that is designed to host connectivity components (adapters such as Modbus and Opc Ua), and other components such as Storage. In the future the same framework will be used to host other adapters.
 
-## Configuring the Edge System
+## Configure the Edge System
 
 The Edge System hosts other components. While the initial release of the Edge System includes Modbus, Opc Ua, and Storage components, they are only active if the system is configured to use them. The System itself has a relatively small configuration surface area - the list of components and the HTTP Port used for REST calls.
 
