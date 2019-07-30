@@ -39,13 +39,14 @@ The following parameters are available for configuring a OPC UA data source.
 
 | Parameter | Required | Type |	Description |
 |-----------|----------|------|-------------|
-| **EndpointURL** | Required | string | The endpoint URL of the OPC UA server. The following is an example of the URL format: opc.tcp://OPCServerHost:Port/OpcUa/SimulationServer<br><br>**Note:** If the EndpointURL is changed on a configured OPC UA connectivity that has DataCollection.config.csv file exported, the DataCollection.config.csv file will need to be relocated from the configuration directory to trigger a new browse (export).|
+| **EndpointURL** | Required | string | The endpoint URL of the OPC UA server. The following is an example of the URL format: opc.tcp://OPCServerHost:Port/OpcUa/SimulationServer<br><br>**Note:** If the EndpointURL is changed on a configured OPC UA connectivity that has <connectivityId>_DataSelection.json file exported, the <connectivityId>_DataSelection.json file will need to be relocated from the configuration directory to trigger a new browse (export).|
 | **UseSecureConnection**|Optional | bool | When set to true, the OPC UA connectivity connects to a secure endpoint using OPC UA certificate exchange operation. The default is true. When set to false, the OPC UA connectivity connects to an unsecured endpoint of the server and certificate exchange operation is not required.<br><br>**Note:** OSIsoft recommends setting this option to false for testing purposes only.|
 | **UserName** | Optional | string | User name for accessing the OPC UA server. |
 | **Password** | Optional | string | Password for accessing the OPC UA server.<br><br>**Note:** OSIsoft highly recommends using REST to configure the data source when the password must be specified.|
 | **RootNodeIds** | Optional | string |List of comma-separated NodeIds of those objects from which the OPC UA connectivity browses the OPC UA server address space. This option allows selecting only subsets of the OPC UA address by explicitly listing one or more NodeIds which are used to start the initial browse. For example: ns=5;s=85/0:Simulation, ns=3;s=DataItems<br><br>If not specified means the whole address space will be browsed.|
 | **IncomingTimestamp**	| Optional | string | Specifies whether the incoming timestamp is taken from the source, from the OPC UA server, or should be created by the OPC UA connectivity instance.<br><br>**Source** - Default and recommended setting. The timestamp is taken from the source timestamp field. The source is what provides data for the item to the OPC UA server, such as a field device.<br><br>**Server** - In case the OPC UA item has an invalid source timestamp field, the Server timestamp can be used.<br><br>**Connector** - The OPC UA connectivity generates a timestamp for the item upon receiving it from the OPC UA server.|
 | **StreamIdPrefix** | Optional | string | Specifies what prefix is used for Stream IDs. Naming convention is StreamIdPrefix.NodeId. <br>**Note:** An empty string means no prefix will be added to the Stream IDs.|
+
 
 ### OPC UA Data Source Example
 
@@ -65,7 +66,7 @@ Below is an example of valid OPC UA Data Source configuration.
 
 ## Configuration of OPC UA Data Selection
 
-In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the OPC UA connectivity to collect from the data sources.
+In addition to the data source configuration, you need to provide a data selection configuration to specify the data you want the OPC UA connectivity to collect from the data source.
 
 ### Procedure for Configuring OPC UA Data Selection
 
@@ -73,7 +74,7 @@ In addition to the data source configuration, you need to provide a data selecti
 
 The following procedure is for configuring OPC UA data selection.
 
-1. Using any text editor, create a file that contains a OPC UA data selection in JSON form
+1. Using any text editor, create a file or use the file created by the adapter (discovered from OPC UA server) that contains a OPC UA data selection in JSON form
     - See OPC UA Data Selection Example section below for content structure
     - See Parameters for OPC UA Data Selection section below for a table of all available parameters
 1. Save the file as "DataSelection.config.json"
@@ -81,7 +82,7 @@ The following procedure is for configuring OPC UA data selection.
     - Example using cURL:
 
 ```bash
-curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection"
+curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" -X PUT "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection"
 ```
 
 ### Parameters for OPC UA Data Selection
