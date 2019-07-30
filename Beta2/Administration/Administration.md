@@ -6,7 +6,7 @@ uid: edgeSystemAdministration
 
 The Edge System provides a number of administration level functions.
 
-## Resetting Edge System
+## Reset Edge System
 
 Edge System provides a method of performing a complete reset of the product. When you perform a reset, all event data and Edge System configuration is deleted, and the product is restarted.
 
@@ -27,7 +27,7 @@ curl -v -d "" -X POST http://localhost:5590/api/v1/Administration/System/Reset
 
 An HTTP status 204 message indicates success.
 
-## Resetting the Edge Storage Component
+## Reset the Edge Storage Component
 
 Edge System provides a method by which a user may delete and reset all event and configuration data related to the Edge Data Store component, after which the product will be restarted.
 
@@ -47,11 +47,11 @@ curl -v -d "" -X POST http://localhost:5590/api/v1/Administration/Storage/Reset
 
 An HTTP status 204 message indicates success.
 
-## Stopping and Starting an Edge Connectivity Component
+## Stop and Start an Edge Connectivity Adapter
 
 Edge System provides the ability to stop and start connectivity components. By default, when Edge System starts, all currently configured connectivity components are started and remain running until the product shuts down.
 
-### Stopping a Connectivity Component
+### Stop a Connectivity Adapter
 
 To stop an individual connectivity component, use any REST client and make a request using one of the following:
 
@@ -71,7 +71,7 @@ curl -v -d "" -X POST http://localhost:5590/api/v1/Administration/ConnectivityId
 
 An HTTP status 204 message indicates success.
 
-### Starting a Connectivity Component
+### Start a Connectivity Adapter
 
 To start an individual connectivity component, use any REST client and make a request using the following:
 
