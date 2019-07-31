@@ -84,7 +84,7 @@ This schema is used to configure data egress from Edge System to a PI Server or 
 ]
 ```
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                                                 |
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined Ii                                                                                 |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------------------------------------ |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Storage_PeriodicEgressEndpoints_schema.json](Storage_PeriodicEgressEndpoints_schema.json) |
 
