@@ -12,7 +12,7 @@ The Modbus TCP Connectivity Adapter communicates with any device conforming to t
 
 ## Configuration of Modbus data source
 
-To utilize the Modbus TCP Connectivity Adapter of Edge System, you must configure it for the Modbus data source from which it will be polling data.
+To use the Modbus TCP Connectivity Adapter of Edge System, you must configure it for the Modbus data source from which it will be polling data.
 
 ### Procedure for configuring Modbus data source
 
