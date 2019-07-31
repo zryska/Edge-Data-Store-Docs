@@ -2,9 +2,23 @@
 uid: modbus_DataSource_schema
 ---
 
+# Sample Modbus data source configuration
+
+```json
+{
+    "IpAddress": "<Modbus IP Address>",
+    "Port": <Port - usually 502>,
+    "ConnectTimeout": 15000,
+    "ReconnectInterval": 5000,
+    "RequestTimeout": 9000,
+    "DelayBetweenRequests": 0,
+    "MaxResponseDataLength": 250
+}
+```
+
 # Modbus data source configuration schema
 
-| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined In                                                     |
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                                     |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Modbus_DataSource_schema.json](Modbus_DataSource_schema.json) |
 
