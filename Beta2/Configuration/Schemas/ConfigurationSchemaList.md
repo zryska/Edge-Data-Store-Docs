@@ -4,7 +4,6 @@ uid: configurationSchemaList
 
 # Configuration schemas
 
-
 ## Edge System configuration schemas
 
 Use the following schemas to configure Edge System:
