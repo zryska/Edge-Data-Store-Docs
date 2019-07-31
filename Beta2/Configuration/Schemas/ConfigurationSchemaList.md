@@ -4,6 +4,7 @@ uid: configurationSchemaList
 
 # Configuration schemas
 
+
 ## Edge System configuration schemas
 
 Use the following schemas to configure Edge System:
@@ -29,9 +30,10 @@ Use the following schemas to configure Connectivity Adapters:
 - [DataSelectionConfiguration](.\Modbus_DataSelection_schema.md)
 - [EdgeLoggerConfiguration](.\Modbus_Logging_schema.md)
 
-## Storage Configuration Schemas
+## Storage configuration schemas
 
 Use the following schemas to configure the Storage component:
+
   - [EdgeLoggerConfiguration](.\Storage_Logging_schema.md)
   - [StorageRuntimeConfiguration](.\Storage_Runtime_schema.md)
   - [OEMConfiguration](.\Storage_OEM_schema.md)
