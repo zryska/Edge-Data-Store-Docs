@@ -1,14 +1,25 @@
 ---
-uid: opcUa_DataSelection_Schema
+uid: opcUa_DataSource_Schema
 ---
+
+
+# Sample Opc Ua data source configuration
+
+```json
+{
+    "EndpointUrl": "opc.tcp://<ip address>:<port - often 62541>/<server path>",
+    "UseSecureConnection": false,
+    "UserName": null,
+    "Password": null,
+    "RootNodeIds": null,
+    "IncomingTimestamp": "Source",
+    "StreamIdPrefix": "OpcUa"
+}
+```
 
 # OPC UA data source configuration schema
 
-```
-
-```
-
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                   |
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                                   |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------ |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [OpcUa_DataSource_schema.json](OpcUa_DataSource_schema.json) |
 

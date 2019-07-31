@@ -64,7 +64,7 @@ The next step in setting up Opc Ua is to select the Opc Ua data you wish to stor
         "Name": "Hot Side Outlet Temperature",
         "NodeId": "ns=2;s=Line1.HeatExchanger1002.HotSideOutletTemperature",
         "StreamId": null
-    } 
+    }
 ]
 ```
 
