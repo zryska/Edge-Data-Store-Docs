@@ -2,7 +2,8 @@
 uid: storage_PeriodicEgressEndpoints_schema
 ---
 
-# Storage periodic egress configuration schema
+# Periodic egress configuration schema
+
 This schema is used to configure data egress from Edge System to a PI Server or to OCS.
 
 ## Sample periodic egress configuration file

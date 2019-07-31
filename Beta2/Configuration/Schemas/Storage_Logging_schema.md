@@ -4,11 +4,11 @@ uid: Storage_Logging_schema
 
 # Storage logging schema
 
-| Abstract            | Extensible | Status       | Identifiable | Custom Properties | Additional Properties | Defined In                                                 |
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                                 |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ---------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Storage_Logging_schema.json](Storage_Logging_schema.json) |
 
-# EdgeLoggerConfiguration Properties
+# StorageLoggerConfiguration Properties
 
 | Property                                        | Type      | Required | Nullable | Defined by                            |
 | ----------------------------------------------- | --------- | -------- | -------- | ------------------------------------- |
