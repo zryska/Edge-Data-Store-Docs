@@ -3,8 +3,9 @@ uid: storage_PeriodicEgressEndpoints_schema
 ---
 
 # Periodic egress configuration schema
-EDS egress enables the copy/transfer of data from EDS to another device or destination. Supported destinations are OSIsoft Cloud Services or PI Server. Periodic egress configuration specifies zero or more egress endpoints, which represent destinations to which EDS data will be sent. 
-		
+
+This schema is used to configure data egress from Edge System to a PI Server or to OCS.
+
 ## Sample periodic egress configuration file
 
 ```json
