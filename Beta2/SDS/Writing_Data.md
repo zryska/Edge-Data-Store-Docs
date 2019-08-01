@@ -2,13 +2,13 @@
 uid: sdsWritingData
 ---
 
-# Writing data
+# Write data
 
 The SDS REST APIs provide programmatic access to read and write SDS data. This topic describes the APIs used to write SdsStream data.
 
 All writes rely on a stream’s key or primary index. The primary index determines the order of events in the stream. Secondary indexes are updated, but they do not contribute to the request. All references to indexes are to the primary index.
 
-## Single Stream Writes
+## Single stream writes
 
 The following support writing multiple values:
 
@@ -31,7 +31,7 @@ default or diagnostics
 ``string streamId``  
 The stream identifier  
 
-## Request Body Format
+## Request body format
 
 With the exception of Remove Values, all single stream write calls require a request body containing the events to insert or modify.
 The events must be formatted as a serialized JSON array of the stream's type. JSON arrays are comma-delimited lists of a type enclosed within square brackets. The following code shows a list of three WaveData events that are properly formatted for insertion. For the complete example, see the [OCS-Samples](https://github.com/osisoft/OCS-Samples).
@@ -76,7 +76,7 @@ The events must be formatted as a serialized JSON array of the stream's type. JS
 
 You can serialize your data using one of many available JSON serializers available at [Introducing JSON](http://json.org/index.html).
 
-## Response Format
+## Response format
 
 Supported response formats include JSON, verbose JSON, and SDS.
 
