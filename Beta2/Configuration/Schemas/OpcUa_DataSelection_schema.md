@@ -42,6 +42,7 @@ uid: opcUa_DataSelection_schema
 
 # OPC UA data collection item schema
 
+
 | Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                                         |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ------------------------------------------------------------------ |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [OpcUa_DataSelection_schema.json](OpcUa_DataSelection_schema.json) |

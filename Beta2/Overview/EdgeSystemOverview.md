@@ -6,52 +6,29 @@ uid: edgeSystemOverview
 
 The Edge System is a cross-platform component based application framework that is designed to host connectivity components (adapters such as Modbus and Opc Ua), and other components such as Storage. In the future the same framework will be used to host other adapters.
 
-## Configuring the Edge System
+## Installation of the Edge System
 
-The Edge System hosts other components. While the initial release of the Edge System includes Modbus, Opc Ua, and Storage components, they are only active if the system is configured to use them. The System itself has a relatively small configuration surface area - the list of components and the HTTP Port used for REST calls.
+The Edge System can be installed on both Linux and Windows: [Edge System Installation Overview](xref:installationOverview).
 
-### System_Port.json
+## Data Ingress to the Edge System
 
-System_Port.json specifies the port on which the System is listening for REST API calls. The same port is used for configuration and for writing data to OMF and SDS. The default configuration port is 5590. The default System_Port.json file installed is:
+The Edge System can store (ingress) data in a number of ways. There are two built-in adapters - [Modbus](xref:modbusQuickStart) and [OPC UA](xref:opcUaQuickStart). In addition data can be ingressed using OSIsoft Message Format [(OMF)](xref:omfQuickStart) and the Sequential Data Store [SDS](xref:sdsWritingData) REST APIs.
 
-```json
-{
-  "Port": 5590
-}
-```
+The Modbus and OPC UA adapters require additional configuration of data source and data selection before they will collect data in the Edge System. For OMF data ingress, once the Edge System is installed OMF ingress can be started with no further configuration steps.
 
-Allowable ports are in the range of 1024-65535. Before you change the default, ensure that no other service or application on the computer running the EdgeSystem is using that port - only one application or service can use a port. The Edge System must be restarted if the port number changes through the REST API or the command line.
+The Edge System is composed of components and is designed to allow the addition at a later date of additional adapters. Edge System Beta 2 comes pre-configured with one Modbus and one OPC UA adapter. This behavior will change in the final release.
 
-### System_Components.json
+## Local Data Read and Write Access
 
-The minimum System_Components.json file for the System is below. The Storage component is required for this initial release for the System to run. With later releases of the Edge System, the storage component may not be required.
+All data in the Edge System storage can be accessed using the Sequential Data Store [SDS](xref:sdsQuickStart) REST API.
 
-```json
-[
-  {
-    "ComponentId": "Storage",
-    "ComponentType": "EDS.Component"
-  }
-]
-```
+## Data Egress from the Edge System
 
-The default System_Components.json for Beta 2 is given below. It includes three components - Storage, a single Modbus adapter (Modbus1), a single Opc Ua Adapter (OpcUa1), and a Storage component (EDS.Component).
+The Edge System can send data on to both the PI Data Archive (using [PI Web API](xref:piEgressQuickStart)) and OSIsoft Cloud Services ([OCS](xref:ocsEgressQuickStart)).
 
- ```json
-[
-  {
-    "ComponentId": "OpcUa1",
-    "ComponentType": "OpcUa"
-  },
-  {
-    "ComponentId": "Modbus1",
-    "ComponentType": "Modbus"
-  },
-  {
-    "ComponentId": "Storage",
-    "ComponentType": "EDS.Component"
-  }
-]
- ```
+Additional configuration is necessary to send data to both OCS and PI Web API after the Edge System is installed.
 
- Additional Modbus and Opc Ua components can be added if desired, but only a single Storage component is supported. In Beta 2 the system must be restarted if a component is added or deleted using the REST API or the command line.
+## Configuring Edge System
+
+After the Edge System is installed the behavior of the system can be modified to meet user needs using the configuration APIs:
+[Edge System Configuration Overview](xref:edgeSystemConfiguration)

@@ -205,6 +205,7 @@ ExtrapolationMode works with the InterpolationMode to determine how a stream res
 | Backward            | 3                   | No event is returned| No event is returned|
 
 **ExtrapolationMode with InterpolationMode = StepwiseContinuousLeading**  
+
 | ExtrapolationMode   | Enumeration value   | Index before data          | Index after data          |
 |---------------------|---------------------|----------------------------|---------------------------|
 | All                 | 0                   | Returns first data value   | Returns last data value   |
@@ -213,6 +214,7 @@ ExtrapolationMode works with the InterpolationMode to determine how a stream res
 | Backward            | 3                   | Returns first data value   | No event is returned      |
 
 **ExtrapolationMode with InterpolationMode = StepwiseContinuousTrailing**  
+
 | ExtrapolationMode   | Enumeration value   | Index before data          | Index after data          |
 |---------------------|---------------------|----------------------------|---------------------------|
 | All                 | 0                   | Returns first data value   | Returns last data value   |
