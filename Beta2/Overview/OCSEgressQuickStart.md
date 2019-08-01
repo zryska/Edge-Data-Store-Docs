@@ -38,8 +38,8 @@ OSIsoft also recommends that each device have a unique StreamPrefix and TypePref
 This configuration is set up to send all stream data to the PI System. 
 **Note:** If you want to only send specific streams, edit the EgressFilter value. 
 For examples of more advanced scenarios, see the Egress section of this documentation.
-5. Save the JSON with the file name PeriodicEgressEndpoints.json.
-6. Run the following curl script in the same directory where the file exists, on the device where the Edge System is installed. You can run the file and curl script from any directory on the device:
+4. Save the JSON with the file name PeriodicEgressEndpoints.json.
+5. Run the following curl script in the same directory where the file exists, on the device where the Edge System is installed. You can run the file and curl script from any directory on the device:
 
 ```bash
 curl -i -d "@PeriodicEgressEndpoints.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/storage/PeriodicEgressEndpoints/
