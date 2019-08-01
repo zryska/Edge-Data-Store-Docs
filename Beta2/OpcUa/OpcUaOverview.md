@@ -23,8 +23,8 @@ To use the OPC UA connectivity component of Edge System, you must configure from
 The following procedure is for configuring OPC UA data source.
 
 1. Use any text editor and create a file that contains an OPC UA data source in JSON form
-    - For content structure, see the following OPC UA data source example section
-    - For a table of all available parameters, see the following Parameters for OPC UA data source section
+    - For content structure, see the following OPC UA data source example section.
+    - For a table of all available parameters, see the following Parameters for OPC UA data source section.
 2. Save the file as DataSource.config.json.
 3. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`
     - Example using cURL:
@@ -49,7 +49,7 @@ The following parameters are available for configuring an OPC UA data source.
 
 ### OPC UA data source example
 
-The following is an example of valid OPC UA data source configuration.
+The following is an example of valid OPC UA data source configuration:
 
 ```json
 {
@@ -71,12 +71,12 @@ In addition to the data source configuration, you need to provide a data selecti
 
 > **Note:** You cannot modify OPC UA data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
 
-The following procedure is for configuring OPC UA data selection.
+The following procedure is for configuring OPC UA data selection:
 
 1. Use any text editor and create a file that contains an OPC UA data selection in JSON form
-    - For content structure, see the following OPC UA data selection example
-    - For a table of all available parameters, see the following Parameters for OPC UA data selection section
-2. Save the file as DataSelection.config.json
+    - For content structure, see the following OPC UA data selection example.
+    - For a table of all available parameters, see the following Parameters for OPC UA data selection section.
+2. Save the file as DataSelection.config.json.
 3. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection/`
     - Example using cURL:
 
@@ -96,7 +96,7 @@ Configuration parameters for OPC UA data selection
 
 ### OPC UA data selection example
 
-The following is an example of valid OPC UA Data Selection configuration.
+The following is an example of valid OPC UA Data Selection configuration:
 
 ```json
 [
