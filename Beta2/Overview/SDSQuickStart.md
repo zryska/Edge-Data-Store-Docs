@@ -1,5 +1,5 @@
 ---
-uid: sddQuickStart
+uid: sdsQuickStart
 ---
 
 # Edge Storage SDS Quick Start

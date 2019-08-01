@@ -44,21 +44,21 @@ uid: index
 
   - [Edge System Schema](xref:edge_system_schema)
   - System
-    - [System Schema](xref:)
+    - [System Schema](xref:system_schema)
     - [System Port Schema](xref:system_Port_schema)
   - Modbus
     - [Modbus Data Source Schema](xref:modbus_DataSource_schema)
     - [Modbus Data Selection Schema](xref:modbus_DataSelection_schema)
     - [Modbus Logging Schema](xref:modbus_Logging_schema)
   - OPC UA
-    - [OPC UA Data Source Schema](xref:opcUa_DataSource_schema)
-    - [OPC UA Data Selection Schema](xref:opcUa_DataSeletion_schema)
+    - [OPC UA Data Source Schema](xref:opcUa_DataSource_Schema)
+    - [OPC UA Data Selection Schema](xref:opcUa_DataSelection_schema)
     - [OPC UA Logging Schema](xref:opcUa_Logging_schema)
   - Storage
     - [Storage Schema](xref:storage_schema)
-    - [Storage Logging Schema](xref:storage_Logging_schema)
+    - [Storage Logging Schema](xref:Storage_Logging_schema)
     - [Storage Periodic Egress Endpoints Schema](xref:storage_PeriodicEgressEndpoints_schema)
-    - [Storage Runtime Schema](xref:storageRuntimeschema)
+    - [Storage Runtime Schema](xref:storage_Runtime_schema)
     - [Storage OEM Schema](xref:storage_OEM_schema)
 - [Health](xref:edgeSystemHealth)
 - [Diagnostics](xref:edgeSystemDiagnostics)
