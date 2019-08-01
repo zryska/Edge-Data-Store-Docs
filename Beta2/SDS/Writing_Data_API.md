@@ -4,12 +4,12 @@ uid: sdsWritingDataApi
 
 # API calls for writing data
 
-#### Example Type, Stream, and Data
+#### Example type, stream, and data
 
-Many of the API methods described following contain example requests and responses in JSON to highlight usage and specific behaviors. The following type, stream, and data are used in the examples.
+Many of the following API methods descriptions following contain example requests and responses in JSON to highlight usage and specific behaviors. The following type, stream, and data are used in the examples:
 
-**Example Type**  
-``SimpleType`` is an SdsType with a single index and two additional properties. This type is defined in Python, and Javascript:
+**Example type**  
+``SimpleType`` is an SdsType with a single index and two additional properties. This type is defined in Python and Javascript:
 
 ###### Python
 
@@ -141,7 +141,7 @@ default or diagnostics
 The stream identifier
 
 ``string selectExpression``  
-Comma-separated list of strings that indicates the event fields that will be changed in stream events  
+Comma-separated list of strings that indicates the event fields to be changed in stream events  
 
 **Request Body**  
 A serialized collection of one or more patch property events
