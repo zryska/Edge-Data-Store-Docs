@@ -8,7 +8,7 @@ Edge System is a cross-platform component based application framework that is de
 
 ## Configuring Edge System
 
-Edge System hosts other components. While the initial release of Edge System includes Modbus TCP, OPC UA, and Storage components, they are only active if the system is configured to use them. The System itself has a relatively small configuration surface area - the list of components and the HTTP Port used for REST calls.
+Edge System hosts other components. While the initial release of Edge System includes Modbus TCP, OPC UA, and Storage components, they are only active if the system is configured to use them. The system itself has a relatively small configuration surface area - the list of components and the HTTP Port used for REST calls.
 
 ### System_Port.json
 
@@ -54,4 +54,4 @@ The default System_Components.json for Beta 2 is given below. It includes three 
 ]
  ```
 
-You can add additional Modbus TCP and OPC UA components if you want, but only a single Storage component is supported. In Beta 2, you must restart the system must if you add or delete a component using the REST API or the command line.
+You can add additional Modbus TCP and OPC UA components if you want, but only a single Storage component is supported. In Beta 2, you must restart the system if you add or delete a component using the REST API or the command line.
