@@ -2,31 +2,29 @@
 uid: modbusOverview
 ---
 
-# Modbus Connectivity
+# Modbus connectivity
 
 ## Overview
 
-The Modbus TCP Connectivity transfers time-series data from Modbus TCP slave devices into the Edge System.
+Modbus is a commonly available communication protocol used for connecting and transmitting information between industrial electronic devices. The Modbus TCP Connectivity Adapter polls Modbus TCP slave devices, and transfers time series data from the data source devices into Edge System.  Polling is based on the measurement configuration provided, and models the register measurements in a Modbus data source.
 
-The Modbus TCP connectivity models the register measurements in a Modbus data source by polling data from the Modbus devices, based on the measurement configuration provided.
+The Modbus TCP Connectivity Adapter communicates with any device conforming to the Modbus TCP/IP protocol through a gateway or router. The Modbus slave devices and routers do not need to be on the same subnet as Edge System.
 
-Modbus is a commonly available communication protocol used for connecting and transmitting information between industrial electronic devices. The Modbus TCP connectivity communicates with any device conforming to the Modbus TCP/IP protocol through a gateway or router. The Modbus slave devices and routers do not need to be on the same subnet as Edge System.
+## Configuration of Modbus data source
 
-## Configuration of Modbus Data Source
+To use the Modbus TCP Connectivity Adapter of Edge System, you must configure it for the Modbus data source from which it will be polling data.
 
-To utilize the Modbus TCP connectivity component of the Edge System, it must be configured to which Modbus data source it will be polling data from.
-
-### Procedure for Configuring Modbus Data Source
+### Procedure for configuring Modbus data source
 
 > **Note:** You cannot modify Modbus data source configurations manually. You must use the REST endpoints to add/edit the configuration. 
 
-The following procedure is for configuring Modbus data source.
+Complete the following to configure the Modbus data source:
 
-1. Using any text editor, create a file that contains a Modbus data source in JSON form
+1. Using any text editor, create a file that contains a Modbus data source in JSON form.
     - See Modbus Data Source Example section below for content structure
     - See Parameters for Modbus Data Source section below for a table of all available parameters
-1. Save the file as DataSource.config.json.
-1. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`
+2. Save the file as DataSource.config.json.
+3. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`
 
 - Example using cURL:
 
@@ -34,7 +32,7 @@ The following procedure is for configuring Modbus data source.
   curl -v -d "@DataSource.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource"
   ```
 
-### Parameters for Modbus Data Source
+### Parameters for Modbus data source
 
 The following parameters are available for configuring a Modbus data source.
 
@@ -49,9 +47,9 @@ The following parameters are available for configuring a Modbus data source.
 |**DelayBetweenRequests** | Optional          |number|Parameter to specify the minimum time (in milliseconds) between two successive requests sent to the data source. The value ranges from 0 ms to 1000 ms. The default value is 0 ms.|
 |**MaxResponseDataLength**| Optional          |number    |Parameter to limit the maximum length (in bytes) of data that can be read within one transaction. This feature is provided to support devices that limit the number of bytes that can be returned. If there is no device limitation, the request length should be the maximum length of 250 bytes. The value ranges from 2 to 250. The default value is 250 ms.|
 
-### Modbus Data Source Example
+### Modbus data source example
 
-Below is an example of valid Modbus Data Source configuration.
+The following is an example of valid Modbus data source configuration:
 
 ```json
 {
@@ -62,17 +60,17 @@ Below is an example of valid Modbus Data Source configuration.
 }
 ```
 
-## Configuration of Modbus Data Selection
+## Configuration of Modbus data selection
 
 Once a data source is configured for a Modbus instance, which data is to be collected from the Modbus slave device must be configured.
 
-### Procedure for Configuring Modbus Data Selection
+### Procedure for configuring Modbus data selection
 
 > **Note:** You cannot modify Modbus data selection configurations manually. You must use the REST endpoints to add/edit the configuration.
 
-The following procedure is for configuring Modbus data selection.
+Complete the following to configure Modbus data selection:
 
-1. Using any text editor, create a file that contains a Modbus data selection in JSON form
+1. Using any text editor, create a file that contains a Modbus data selection in JSON form.
     - See Modbus Data Selection Example section below for content structure
     - See Parameters for Modbus Data Selection section below for a table of all available parameters
 2. Save the file as DataSelection.config.json.
@@ -83,9 +81,9 @@ The following procedure is for configuring Modbus data selection.
 curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection"
 ```
 
-### Parameters for Modbus Data Selection
+### Parameters for Modbus data selection
 
-The following parameters are available for configuring a Modbus data selection.
+The following parameters are available for configuring Modbus data selection.
 
 | Parameter | Required | Type | Description |
 |-----------|----------|------|-------------|
@@ -103,11 +101,11 @@ The following parameters are available for configuring a Modbus data selection.
 
 Each JSON object in the file represents a measurement. You can modify the fields in each object to configure the measurement parameters. To add more measurements, you need to create more JSON objects with properly completed fields.
 
-### Data Selection Examples
+### Data selection examples
 
-Below is an example of valid Modbus Data Source configuration.
+Below is an example of a valid Modbus data source configuration.
 
-**Modbus Data Selection example.**
+**Modbus data selection example.**
 
 ```json
 [
