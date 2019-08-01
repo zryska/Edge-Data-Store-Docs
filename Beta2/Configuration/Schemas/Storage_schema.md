@@ -4,8 +4,20 @@ uid: storage_schema
 
 # StorageConfiguration schema
 
-```
-
+```json
+  "Storage": {
+        "Runtime": {
+            "streamStorageLimitMb": 2,
+            "streamStorageTargetMb": 1,
+            "ingressDebugExpiration": "0001-01-01T00:00:00"
+        },
+        "Logging": {
+            "logLevel": "Information",
+            "logFileSizeLimitBytes": 34636833,
+            "logFileCountLimit": 31
+        },
+        "PeriodicEgressEndpoints": []
+    }
 ```
 
 | Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                               |
