@@ -2,7 +2,7 @@
 uid: unitsOfMeasure
 ---
 
-# Units of Measure
+# Units of measure
 
 The Sequential Data Store (SDS) provides a collection of built-in units of measure (Uom). These units of measure can be [associated](#associating-a-unit-of-measure-with-a-sdstype) with SdsStreams and SdsTypes in order to provide unit information for stream data that model measurable quantities. If data has unit information associated with it, SDS is able to support unit conversions when retrieving data. For more information, see [Reading data](xref:sdsReadingData).
 
@@ -630,10 +630,10 @@ Content-Type: application/json
 
 *****
 
-## Associating a unit of measure with a SdsType
+## Associate a unit of measure with an SdsType
 
-At [SdsType](xref:sdsTypes) creation, you can associate a SdsUom with a [SdsTypeProperty](xref:sdsTypes#sdstypeproperty).
+At [SdsType](xref:sdsTypes) creation, you can associate an SdsUom with a [SdsTypeProperty](xref:sdsTypes#sdstypeproperty).
 
-## Associating a unit of measure with a SdsStream
+## Associate a unit of measure with an SdsStream
 
-At [SdsStream](xref:sdsStreams) creation, you can override any unit of measure associated with a SdsTypeProperty belonging to the SdsType of the stream. This enables the reuse of a SdsType that may have default unit information associated with it already.
+At [SdsStream](xref:sdsStreams) creation, you can override any unit of measure associated with an SdsTypeProperty belonging to the SdsType of the stream. This enables the reuse of an SdsType that may have default unit information associated with it already.
