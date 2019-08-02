@@ -14,7 +14,7 @@ Edge System is supported on a variety of platforms and processors. OSIsoft provi
 
 In addition to ready to use install kits, OSIsoft also provides examples of how to create [Docker containers](xref:edgeDocker), and tar.gz files are provided with binaries for customers who wish to build their own custom installers or containers for Linux.
 
-## Installing Edge System on a device using an install kit
+## Install Edge System on a device using an install kit
 
 To use any of the installers, copy the appropriate file to the file system of the device.
 
@@ -36,7 +36,7 @@ msiexec /i EdgeSystem.msi PORT=5590 INSTALLFOLDER="C:\otherdir"
 ```
 The PORT (shown above as the default value; must be in all caps) is optional, and can be changed to a valid value of the user's preference. If PORT=nnnn is omitted, the default will be used. The UI will launch with the port pre-set to the value specified; validity will be checked as mentioned above, with the install proceeding only when a valid port number is provided. If, however, the "quiet" or "no ui" flag for msiexec is specified, and the PORT value on the command line is not valid, the install will proceed with the default 5590 value.
 
-The INSTALLFOLDER (must be all caps) is also optional; this allows the user to specify an alternate location for Edge System's binary components. The default value is "C:\Program Files\OSISoft\EdgeSystem". Using the default value is recommended.
+The INSTALLFOLDER (must be all caps) is also optional; you can specify an alternate location for Edge System's binary components. The default value is "C:\Program Files\OSISoft\EdgeSystem". OSIsoft recommends you use the default value.
 
 #### Windows uninstallation
 
