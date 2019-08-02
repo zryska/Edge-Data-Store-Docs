@@ -4,8 +4,31 @@ uid: system_schema
 
 # SystemConfiguration schema
 
-```
-
+```json
+   "System": {
+        "Logging": {
+            "logLevel": "Information",
+            "logFileSizeLimitBytes": 34636833,
+            "logFileCountLimit": 31
+        },
+        "Components": [{
+                "componentId": "OpcUa1",
+                "componentType": "OpcUa"
+            },
+            {
+                "componentId": "Modbus1",
+                "componentType": "Modbus"
+            },
+            {
+                "componentId": "Storage",
+                "componentType": "EDS.Component"
+            }
+        ],
+        "HealthEndpoints": [],
+        "Port": {
+            "port": 5590
+        }
+    }
 ```
 
 | Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                               |
@@ -40,4 +63,3 @@ uid: system_schema
 
 - is optional
 - type: [`SystemPortConfiguration`](xref:portschema)
-

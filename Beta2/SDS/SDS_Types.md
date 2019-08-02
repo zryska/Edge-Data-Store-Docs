@@ -205,6 +205,7 @@ ExtrapolationMode works with the InterpolationMode to determine how a stream res
 | Backward            | 3                   | No event is returned| No event is returned|
 
 **ExtrapolationMode with InterpolationMode = StepwiseContinuousLeading**  
+
 | ExtrapolationMode   | Enumeration value   | Index before data          | Index after data          |
 |---------------------|---------------------|----------------------------|---------------------------|
 | All                 | 0                   | Returns first data value   | Returns last data value   |
@@ -213,6 +214,7 @@ ExtrapolationMode works with the InterpolationMode to determine how a stream res
 | Backward            | 3                   | Returns first data value   | No event is returned      |
 
 **ExtrapolationMode with InterpolationMode = StepwiseContinuousTrailing**  
+
 | ExtrapolationMode   | Enumeration value   | Index before data          | Index after data          |
 |---------------------|---------------------|----------------------------|---------------------------|
 | All                 | 0                   | Returns first data value   | Returns last data value   |
@@ -264,8 +266,7 @@ For a list of units of measures that are supported for an SdsTypeProperty, see [
 
 ## Working with SdsTypes
 
-The following discussion refers to the following types and are defined in [Python](https://github.com/osisoft/OCS-Samples/tree/master/basic_samples/SDS/Python/SDSPy) and [JavaScript](https://github.com/osisoft/OCS-Samples/tree/master/basic_samples/SDS/JavaScript) samples. Samples in other languages can be found here: [Samples](https://github.com/osisoft/OCS-Samples/tree/master/basic_samples).
-
+The following discussion refers to the following types and are defined in Python and JavaScript samples. 
 In the sample code, ``SdsType``, ``SdsTypeProperty``, and ``SdsTypeCode`` are defined as in the code snippets shown here:
 
 **Python**

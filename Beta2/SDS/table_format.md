@@ -5,7 +5,7 @@ uid: sdsTableFormat
 Table format
 ============
 
-A table is a convenient structure for analytics and display. The REST APIs for retrieving multiple events from the data store supports returning results in a table. The form variable can be set to specify a table or a table with headers. Table format can be applied to any read that returns multiple values and summaries.
+A table is a convenient structure for analytics and display. The REST APIs for retrieving multiple events from the data store supports returning results in a table. You can set the form variable to specify a table or a table with headers. You can apply table format to any read that returns multiple values and summaries.
 
 The following is a request to retrieve values using the window parameters:
 
