@@ -2,9 +2,9 @@
 uid: edgeSystemOverview
 ---
 
-# Edge System Overview
+# Edge System overview
 
-The Edge System is a cross-platform component based application framework that is designed to host connectivity components (adapters such as Modbus and Opc Ua), and other components such as Storage. In the future the same framework will be used to host other adapters.
+Edge System is a cross-platform component based application framework that is designed to host connectivity components (adapters such as Modbus TCP and OPC UA), and other components such as Storage. In the future the same framework will be used to host other adapters.
 
 ## Installation of the Edge System
 
@@ -27,8 +27,3 @@ All data in the Edge System storage can be accessed using the Sequential Data St
 The Edge System can send data on to both the PI Data Archive (using [PI Web API](xref:piEgressQuickStart)) and OSIsoft Cloud Services ([OCS](xref:ocsEgressQuickStart)).
 
 Additional configuration is necessary to send data to both OCS and PI Web API after the Edge System is installed.
-
-## Configuring Edge System
-
-After the Edge System is installed the behavior of the system can be modified to meet user needs using the configuration APIs:
-[Edge System Configuration Overview](xref:edgeSystemConfiguration)
