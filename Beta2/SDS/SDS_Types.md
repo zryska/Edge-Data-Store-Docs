@@ -266,8 +266,7 @@ For a list of units of measures that are supported for an SdsTypeProperty, see [
 
 ## Working with SdsTypes
 
-The following discussion refers to the following types and are defined in [Python](https://github.com/osisoft/OCS-Samples/tree/master/basic_samples/SDS/Python/SDSPy) and [JavaScript](https://github.com/osisoft/OCS-Samples/tree/master/basic_samples/SDS/JavaScript) samples. Samples in other languages can be found here: [Samples](https://github.com/osisoft/OCS-Samples/tree/master/basic_samples).
-
+The following discussion refers to the following types and are defined in Python and JavaScript samples. 
 In the sample code, ``SdsType``, ``SdsTypeProperty``, and ``SdsTypeCode`` are defined as in the code snippets shown here:
 
 **Python**

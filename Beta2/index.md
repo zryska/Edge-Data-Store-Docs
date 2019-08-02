@@ -19,6 +19,8 @@ uid: index
 - [System Configuration](xref:edgeSystemConfiguration)
 - Connectivity Adapters
   - [OpcUa](xref:opcUaOverview)
+    - [Linux Opc Ua Data Selection](xref:opcUaDataSelectionLinux)
+    - [Windows Opc Ua Data Selection](xref:opcUaDataSelectionWindows)
   - [Modbus](xref:modbusOverview)
 - [Storage](xref:)
   - [OMF](xref:omfOverview)
