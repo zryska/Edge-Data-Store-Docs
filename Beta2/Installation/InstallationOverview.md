@@ -61,7 +61,7 @@ sudo apt update
 sudo apt upgrade
 ```
 
-After the check for prerequisites succeeds, a prompt will appear asking if you want to change the default port (5590). If you wish to change the port type to another value in the acceptable range, type the desired port value and press Enter; if 5590 is acceptable, simply press Enter.
+After the check for prerequisites succeeds, a prompt will appear asking if you want to change the default port (5590). If you wish to change the port type to another value in the acceptable range, type the port value you want and press Enter; if 5590 is acceptable, simply press Enter.
 
 **Note** If an invalid value is specified for the port, the install will proceed with the default value of 5590 selected.
 
