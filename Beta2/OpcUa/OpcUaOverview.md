@@ -6,9 +6,10 @@ uid: opcUaOverview
 
 ## Overview
 
+
 The OPC UA connectivity transfers time-series data from OPC UA devices into Edge System.
 
-On startup, the OPC UA connectivity browses the entire OPC UA server address space and exports the available OPC UA variables into a .json file for data selection. Data is collected automatically based upon user demands.  OPC UA data from OPC UA variables is read through subscriptions (unsolicited reads).
+As with other Edge System adapters, the OPC UA adapter is configured using data source and data selection JSON documents. The data source configuration are identical with other adapters, but OPC UA supports an option to generate a template data selection file that can be manually edited and used for subsequent configuration. This optional process for generating and editing the file is different for [Windows](xref:opcUaDataSelectionWindows) and [Linux](xref:opcUaDataSelectionLinux). Once the template file is created it can be reused on both Linux and Windows without changes.
 
 OPC UA is a standard, which ensures open connectivity, interoperability, security, and reliability of industrial automation devices and systems. OPC UA is recognized as one of the key communication and data modeling technologies of Industry 4.0, due to the fact that it works with many software platforms and that it is completely scalable and flexible.
 
@@ -18,7 +19,7 @@ To use the OPC UA connectivity component of Edge System, you must configure from
 
 ### Procedure for Configuring OPC UA data source
 
-> **Note:** You cannot modify OPC UA data source configurations manually. You must use the REST endpoints to add or edit the configuration.
+**Note:** You cannot modify OPC UA data source configurations manually. You must use the REST endpoints to add or edit the configuration.
 
 The following procedure is for configuring OPC UA data source.
 
@@ -27,6 +28,7 @@ The following procedure is for configuring OPC UA data source.
     - For a table of all available parameters, see the following Parameters for OPC UA data source section.
 2. Save the file as DataSource.config.json.
 3. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`
+
     - Example using cURL:
 
 ```bash
@@ -46,6 +48,7 @@ The following parameters are available for configuring an OPC UA data source.
 | **RootNodeIds** | Optional | string |List of comma-separated NodeIds of those objects from which the OPC UA connectivity browses the OPC UA server address space. This option allows selecting only subsets of the OPC UA address by explicitly listing one or more NodeIds which are used to start the initial browse. For example: ns=5;s=85/0:Simulation, ns=3;s=DataItems. If not specified, it means that the whole address space will be browsed.|
 | **IncomingTimestamp**	| Optional | string | Specifies whether the incoming timestamp is taken from the source, from the OPC UA server, or should be created by the OPC UA connectivity instance. **Source** - Default and recommended setting. The timestamp is taken from the source timestamp field. The source is what provides data for the item to the OPC UA server, such as a field device. **Server** - In case the OPC UA item has an invalid source timestamp field, the Server timestamp can be used. **Connector** - The OPC UA connectivity generates a timestamp for the item upon receiving it from the OPC UA server.|
 | **StreamIdPrefix** | Optional | string | Specifies what prefix is used for Stream IDs. Naming convention is StreamIdPrefix.NodeId. **Note:** An empty string means no prefix will be added to the Stream IDs.|
+
 
 ### OPC UA data source example
 
@@ -69,7 +72,8 @@ In addition to the data source configuration, you need to provide a data selecti
 
 ### Procedure
 
-> **Note:** You cannot modify OPC UA data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
+
+**Note:** You cannot modify OPC UA data selection configurations manually. You must use the REST endpoints to add or edit the configuration.
 
 The following procedure is for configuring OPC UA data selection:
 
@@ -79,6 +83,7 @@ The following procedure is for configuring OPC UA data selection:
 2. Save the file as DataSelection.config.json.
 3. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection/`
     - Example using cURL:
+
 
 ```bash
 curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" -X POST "http://localhost:5590/api/v1/configuration/<connectivityId>/DataSelection"
