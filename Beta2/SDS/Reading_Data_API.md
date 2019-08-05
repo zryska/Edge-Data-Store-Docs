@@ -9,7 +9,7 @@ uid: sdsReadingDataApi
 Many of the API methods described below contain example requests and responses in JSON to highlight usage and specific behaviors. The following type, stream, and data are used in the examples.
 
 **Example Type**  
-``SimpleType`` is an SdsType with a single index. This type is defined below in Python, and Javascript:
+``SimpleType`` is an SdsType with a single index. This type is defined in Python and Javascript:
 
 ###### Python
 
@@ -255,7 +255,7 @@ Content-Type: application/json
 ]
 ```
 
-Note that `State` is not included in the JSON as its value is the default value.
+**Note:** `State` is not included in the JSON as its value is the default value.
 
 <a name="getvaluesrange"></a>
 
@@ -334,7 +334,7 @@ Content-Type: application/json
 ]
 ```
 
-Note that `State` is not included in the JSON as its value is the default value.
+**Note:** `State` is not included in the JSON as its value is the default value.
 
 **Example**  
 To reverse the direction of the request, set reversed to true. The following request will return up to 100 events starting at 13:00 and extending back toward the start of the stream:
@@ -361,7 +361,7 @@ Content-Type: application/json
 ]
 ```
 
-Note that `State` is not included in the JSON as its value is the default value.
+**Note:** `State` is not included in the JSON as its value is the default value.
 
 Further, `Measurement` is not included in the second, 12:00:00, event as zero is the default value for numbers.
 
@@ -522,7 +522,7 @@ Content-Type: application/json
 ]
 ```
 
-Note that `State` is not included in the JSON as its value is the default value.
+**Note:** `State` is not included in the JSON as its value is the default value.
 
 **Example**  
 When the request is modified to specify a boundary type of Outside, the value before 13:30 and the value after 15:30 are included:
@@ -813,7 +813,7 @@ GET api/v1/Tenants/default}/Namespaces/{namespaceId}/Streams/Simple/Data/
     Interpolated?startIndex=2017-11-23T13:00:00Z&endIndex=2017-11-23T15:00:00Z&count=3
 ```
 
-the start and end fall exactly on event indexes, and the number of events from start to end match the count of three (3).
+The start and end fall exactly on event indexes, and the number of events from start to end match the count of three (3).
 
 **Response body**
 
@@ -1033,7 +1033,7 @@ Content-Type: application/json
 
 ## ``Get Sampled Values``
 
-Returns representative data sampled by intervals between a specified start and end index.
+Returns data sampled by intervals between a specified start and end index.
 
 Sampling is driven by a specified property or properties of the stream's Sds Type. Property types that cannot be interpolated do not support sampling requests. Strings are an example of a property that cannot be interpolated. For more information see [Interpolation.](xref:sdsTypes#interpolation)
 
@@ -1135,7 +1135,7 @@ Content-Type: application/json
 ]
 ```
 
-Note that `State` is not included in the JSON when its value is the default value.
+**Note:** `State` is not included in the JSON when its value is the default value.
 *****
 
 ## ``Join Values``
@@ -1175,7 +1175,7 @@ default or diagnostics
 Commas separated list of stream identifiers
 
 ``SdsJoinMode joinMode``  
-Type of join, i.e. inner, outer, etc.
+Type of join, that is inner, outer, and so on.
 
 ``string startIndex``  
 Index identifying the beginning of the series of events to return
@@ -1373,7 +1373,7 @@ GET api/v1/Tenants/default/Namespaces/{namespaceId}/Bulk/Streams/Data/Joins
  ```
 
 **Response**  
-All Measurements from both Streams with missing values interpolated. If the missing values are between valid Measurements within a Stream, they are interpolated. If the missing values are outside of the boundary values, they are extrapolated.
+All measurements from both Streams with missing values interpolated. If the missing values are between valid measurements within a stream, they are interpolated. If the missing values are outside of the boundary values, they are extrapolated.
 
 **Response body**
 
@@ -1478,7 +1478,7 @@ GET api/v1/Tenants/default/Namespaces/{namespaceId}/Bulk/Streams/Data/Joins
  ```
 
 **Response**  
-This is similar to [OuterJoin](#outerjoin-request), but value at each index is the first available value at that index when iterating the given list of streams from left to right.
+This is similar to [OuterJoin](#outerjoin-request), but the value at each index is the first available value at that index when iterating the given list of streams from left to right.
 
 **Response body**
 
@@ -1534,7 +1534,7 @@ GET api/v1/Tenants/default/Namespaces/{namespaceId}/Bulk/Streams/Data/Joins
  ```
 
 **Response**  
-This is similar to [OuterJoin](#outerjoin-request), but value at each index is the first available value at that index when iterating the given list of streams from right to left.
+This is similar to [OuterJoin](#outerjoin-request), but the value at each index is the first available value at that index when iterating the given list of streams from right to left.
 
 **Response body**
 
@@ -1595,7 +1595,7 @@ POST api/v1/Tenants/default/Namespaces/{namespaceId}/Bulk/Streams/Data/Joins
 default or diagnostics
 
 ``SdsJoinMode joinMode``  
-Type of join, i.e. inner, outer, etc.
+Type of join, that is inner, outer, and so on.
 
 **Request Body**  
 Read options specific to each stream.
@@ -1693,6 +1693,6 @@ Content-Type: application/json
 ]
 ```
 
-Notice that not all the values from Streams were included since they are restricted by individual queries for each Stream.
+**Note:** Not all the values from streams were included since they are restricted by individual queries for each Stream.
 *****
   
