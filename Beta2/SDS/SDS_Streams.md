@@ -6,13 +6,13 @@ uid: sdsStreams
 
 SDS stores collections of events and provides convenient ways to find and associating events. Events of consistent structure are stored in streams, called SdsStreams. An SdsType defines the structure of events in an SdsStream.
 
-SdsStreams are referenced by their identifier or Id field. SdsStream identifiers must be unique within a Namespace.
+SdsStreams are referenced by their identifier or Id field. SdsStream identifiers must be unique within a namespace.
 
 An SdsStream must include a TypeId that references the identifier of an existing SdsType. When an SdsStream contains data, you must use a stream view to update the stream type.
 
 The following table shows the required and optional SdsStream fields. Fields not listed are reserved for internal SDS use.
 
-| Property          | Type                             | Optionality | Searchable | Details |
+| Property          | Type                             | Optionality | Searchability | Details |
 |-------------------|----------------------------------|-------------|------------|---------|
 | Id                | String                           | Required    | Yes        | An identifier for referencing the stream |
 | TypeId            | String                           | Required    | Yes        | The SdsType identifier of the type to be used for this stream |
@@ -109,7 +109,7 @@ Content-Type: application/json
 
 Returns a list of streams.
 
-If specifying the optional search query parameter, the list of streams returned will match the search criteria. If the search query parameter is not specified, the list will include all streams in the Namespace. See [Searching](xref:sdsSearching) for information about specifying those respective parameters.
+If the optional search query parameter is specified, the list of streams returned will match the search criteria. If the search query parameter is not specified, the list will include all streams in the namespace. See [Searching](xref:sdsSearching) for information about specifying those respective parameters.
 
 **Request**
 
@@ -122,7 +122,7 @@ GET api/v1/Tenants/default/Namespaces/{namespaceId}/Streams?query={query}&skip={
 default or diagnostics
 
 `string query`  
-An optional parameter representing a string search. See [Searching](xref:sdsSearching) for information about specifying the search parameter.
+An optional parameter representing a string search. For information about specifying the search parameter, see [Searching](xref:sdsSearching).
 
 `int skip`  
 An optional parameter representing the zero-based offset of the first SdsStream to retrieve. If not specified, a default value of 0 is used.
