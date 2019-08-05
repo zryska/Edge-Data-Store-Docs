@@ -1,5 +1,5 @@
 ---
-uid: edgeSystemLogging
+uid: loggingConfiguration
 ---
 
 # Edge System Logging
@@ -17,5 +17,3 @@ Edge System and all loaded components provide the ability to configure logging p
   "LogFileCountLimit": 31
 }
 ```
-
-
