@@ -5,7 +5,7 @@ uid: sdsSearching
 Searching
 =====================
 
-Search in SDS provides a way to search text, fields, etc. across the Sequential Data Store. This document covers the searching for SdsStreams, SdsTypes, and SdsStreamViews.
+Search in SDS provides a way to search text, fields, and so on across the Sequential Data Store. This topic covers the searching for SdsStreams, SdsTypes, and SdsStreamViews.
 
 Searching for Streams
 =====================
@@ -33,12 +33,12 @@ Searching for streams is possible using the REST API and specifying the optional
 GET api/v1/Tenants/default/Namespaces/{namespaceId}/Streams?query={query}&skip={skip}&count={count}
 ```
 
-The Stream fields valid for search are identified in the fields table located on the [Streams](xref:sdsStreams) page. Note that Stream Metadata has unique syntax rules, see [How Searching Works: Stream Metadata](#Stream_Metadata_search_topic).
+The Stream fields valid for search are identified in the fields table located on the [Streams](xref:sdsStreams) page. **Note:** Stream Metadata has unique syntax rules. For more information, see [How Searching Works: Stream Metadata](#Stream_Metadata_search_topic).
 
 Searching for Types
 =====================
 
-Similarly, the search functionality for types is also exposed through REST API. The query syntax and the request parameters are the same. The only difference is the resource you're searching on, and you can search on different properties for types than for streams. The searchable properties are below. See [Types](xref:sdsTypes) for more information.
+Similarly, the search functionality for types is also exposed through REST API. The query syntax and the request parameters are the same. The only difference is the resource you're searching on. You can search on different properties for types than for streams. The searchable properties are below. For more information, see [Types](xref:sdsTypes).
 
 | Property          | Searchable |
 |-------------------|------------|
@@ -50,20 +50,18 @@ Similarly, the search functionality for types is also exposed through REST API. 
 | ExtrapolationMode | No         |
 | Properties        | Yes, with limitations |
 
-As previously mentioned, searching for types is also possible using the REST API and specifying the optional `query` parameter, as shown here:
+Searching for types is also possible using the REST API and specifying the optional `query` parameter, as shown here:
 
 ```text
 GET api/v1/Tenants/default/Namespaces/{namespaceId}/Types?query={query}&skip={skip}&count={count}
 ```
 
-The Type fields valid for search are identified in the fields table located on the [Types](xref:sdsTypes) page. The Properties field is identified
-as being searchable but with limitations: Each SdsTypeProperty of a given SdsType has its Name and Id included in the Properties field. This includes nested
-SdsTypes of the given SdsType. Therefore, the searching of Properties will distinguish SdsTypes by their respective lists of relevant SdsTypeProperty Ids and Names.
+The Type fields valid for search are identified in the fields table located on the [Types](xref:sdsTypes) page. The Properties field is identified as being searchable but with limitations: Each SdsTypeProperty of a given SdsType has its Name and Id included in the Properties field. This includes nested SdsTypes of the given SdsType. Therefore, the searching of Properties will distinguish SdsTypes by their respective lists of relevant SdsTypeProperty Ids and Names.
 
 Searching for Stream Views
 =====================
 
-Similarly, the search functionality for stream views is also exposed through REST API. The query syntax and the request parameters are the same. The only difference is the resource you're searching on, and you can match on different properties for stream views than for streams and types. The searchable properties are below. See [Stream Views](xref:sdsStreamViews) for more information.
+Similarly, the search functionality for stream views is also exposed through REST API. The query syntax and the request parameters are the same. The only difference is the resource you are searching on. You can match on different properties for stream views than for streams and types. The searchable properties are below. For more information, see [Stream Views](xref:sdsStreamViews).
 
 | Property     | Searchable |
 |--------------|------------|
@@ -80,16 +78,14 @@ As previously mentioned, searching for stream views is also possible using the R
 GET api/v1/Tenants/default/Namespaces/{namespaceId}/StreamViews?query={query}&skip={skip}&count={count}
 ```
 
-The Stream View fields valid for search are identified in the fields table located on the [Stream Views](xref:sdsStreamViews) page. The Properties field
-is identified as being searchable but with limitations because SdsStreamViewProperty objects are not searchable. Only the SdsStreamViewProperty's
-SdsStreamView is searchable by its Id, SourceTypeId, and TargetTypeId, which are used to return the top level SdsStreamView object when searching. This includes nested SdsStreamViewProperties.
+The Stream View fields valid for search are identified in the fields table located on the [Stream Views](xref:sdsStreamViews) page. The Properties field is identified as being searchable with limitations because SdsStreamViewProperty objects are not searchable. Only the SdsStreamViewProperty's SdsStreamView is searchable by its Id, SourceTypeId, and TargetTypeId, which are used to return the top level SdsStreamView object when searching. This includes nested SdsStreamViewProperties.
 
 How Searching Works
 =====================
 
-The query parameter will be applied across all searchable fields of objects we’re searching on by default.
+The query parameter will be applied across all searchable fields of objects that are searched on by default.
 
-For example, assume that a namespace contains the following Streams:
+For example, you can assume that a namespace contains the following Streams:
 
 **streamId** | **Name**  | **Description**
 ------------ | --------- | ----------------
@@ -109,7 +105,7 @@ Using the stream data above, the following table shows the results of a call to 
 The ``skip`` and ``count`` parameters determine which items are returned when a large number of them match the ``query`` criteria. ``count`` indicates the maximum number of items returned. The maximum value of the ``count`` parameter is 1000. ``skip`` indicates the number of matched items to skip over before returning matching items. You use the skip parameter when more items match the search criteria than can be returned in a single call.
 
 The ``orderby`` parameter is supported for searching both the streams and types. The basic functionality of it is to search the items and then return the result in sorted order.
-The default value for ``orderby`` parameter is ascending order. It can be changed to descending order by specifying ``desc`` alongside the orderby field value. It can be used in conjunction with ``query``, ``skip``, and ``count`` parameters.
+The default value for ``orderby`` parameter is ascending order. You can change it to descending order by specifying ``desc`` alongside the orderby field value. It can be used in conjunction with ``query``, ``skip``, and ``count`` parameters.
 
 **Request**
 
@@ -134,15 +130,15 @@ Operators | Description
 ``OR``  | OR operator. For example, ``cat OR dog`` searches for streams containing either "cat" or "dog" or both.  OR must be in all caps.
 ``NOT`` | NOT operator. For example, ``cat NOT dog`` searches for streams that have the "cat" term or do not have "dog".  NOT must be in all caps.
 ``*``   | Wildcard operator. For example, ``cat*`` searches for streams that have a term that starts with "cat", ignoring case.
-``:``   | Field-scoped query.  For example, ``id:stream*`` will search for streams where the ``id`` field starts with "stream", but will not search on other fields like ``name`` or ``description``.  *Note that field names are camel case and are case sensitive.*
+``:``   | Field-scoped query.  For example, ``id:stream*`` will search for streams where the ``id`` field starts with "stream", but will not search on other fields like ``name`` or ``description``.  **Note:** Field names are camel case and are case sensitive.
 ``( )`` | Precedence operator. For example, ``motel AND (wifi OR luxury)`` searches for streams containing the motel term and either wifi or luxury (or both).
 
-**Notes regarding wildcard operator ``*``:** The wildcard ``*`` can only be used once for each search term, except for the case of a Contains type query clause. In that case two wildcards are allowed: one as prefix and one as suffix e.g. ``*Tank*`` is valid but ``*Ta*nk``, ``Ta*nk*``, and ``*Ta*nk*`` are currently not supported. The wildcard ``*`` only works when specifying a single search term. For example, you can search for ``Tank*``, ``*Tank``, ``Ta*nk`` but not ``Tank Meter*``.
+**Notes regarding wildcard operator ``*``:** You can use the wildcard ``*`` only once for each search term, except for the case of a Contains type query clause. In that case, two wildcards are allowed: one as prefix and one as suffix for example, ``*Tank*`` is valid but ``*Ta*nk``, ``Ta*nk*``, and ``*Ta*nk*`` are currently not supported. The wildcard ``*`` only works when specifying a single search term. For example, you can search for ``Tank*``, ``*Tank``, ``Ta*nk`` but not ``Tank Meter*``.
 
 **: Operator**
 ---------------
 
-You can also qualify which fields are searched by using the following syntax:
+You can also determine which fields are searched by using the following syntax:
 
 ```text
 fieldname:fieldvalue
@@ -184,7 +180,7 @@ Other operators examples
 ``mud OR log`` | log mud<br>mud<br>log |
 ``mud AND (NOT log)`` | mud | mud log
 ``mud AND (log OR pump*)`` | mud log<br>mud pumps | mud bath
-``name:stream* AND (description:pressure OR description:pump)`` | The name starts with "stream" and the description has the either of the terms "pressure" or "pump" |
+``name:stream* AND (description:pressure OR description:pump)`` | The name starts with "stream" and the description includes either term "pressure" or term "pump" |
 
 ## <a name="Stream_Metadata_search_topic">How Searching Works: Stream Metadata</a>
 
@@ -205,7 +201,7 @@ A Stream Metadata key is only searchable in association with a Stream Metadata v
 myStreamMetadataKey:streamMetadataValue
 ```
 
-If the ``':'`` operator is not used within an individual search clause then Metadata Keys are not searched against but Metadata Values are searched against (along with the other searchable Stream fields).
+If the ``':'`` operator is not used within an individual search clause, Metadata Keys are not searched against.Instead, Metadata values are searched against (along with the other searchable Stream fields).
 
 **QueryString**     | **Streams returned**
 ------------------  | ----------------------------------------
@@ -222,9 +218,8 @@ GET api/v1/Tenants/default/Namespaces/{namespaceId}/Streams?query=manufacturer:c
 \* Operator
 -------------------
 
-For searching on Metadata values the ``'*'`` character is again used as a wildcard to specify an incomplete string. Additionally,
-this wildcard character can be used with the Metadata key as well. This is not supported for any other "fields", so by including a wildcard in a field
-(defined as a value to the immediate left of a ``':'`` operator) the query will only be valid against Stream Metadata.
+For searching on Metadata values, the ``'*'`` character is again used as a wildcard to specify an incomplete string. Additionally,
+you can use this wildcard character with the Metadata key as well. This is not supported for any other "fields". By including a wildcard in a field (defined as a value to the immediate left of a ``':'`` operator), the query will only be valid against Stream Metadata.
 
 **QueryString**     | **Streams returned**
 ------------------  | ----------------------------------------
@@ -234,7 +229,7 @@ this wildcard character can be used with the Metadata key as well. This is not s
 ``Id:stream*``  |  All three streams returned.
 ``Id*:stream*``  | Nothing returned.
 
-Note that in the final example nothing matches on a Stream's Id value because including ``'*'`` in a search clause's field prevents non-Stream Metadata fields from being searched.
+**Note:** In the final example nothing matches on a Stream's Id value because including ``'*'`` in a search clause's field prevents non-Stream Metadata fields from being searched.
 
 **Request**
 
