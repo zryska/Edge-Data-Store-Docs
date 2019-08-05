@@ -22,8 +22,8 @@ uid: index
     - [Linux Opc Ua Data Selection](xref:opcUaDataSelectionLinux)
     - [Windows Opc Ua Data Selection](xref:opcUaDataSelectionWindows)
   - [Modbus](xref:modbusOverview)
-- [Storage](xref:)
   - [OMF](xref:omfOverview)
+- [Storage](xref:)
   - [Sequential Data Store](xref:sdsOverview)
     - [Types](xref:sdsTypes)
     - [Streams](xref:sdsStreams)
@@ -42,8 +42,8 @@ uid: index
   - [Egress](xref:egress)
 - [Administration](xref:edgeSystemAdministration)
   - [Management Tools](xref:managementTools)
+  - [Logging Configuration](xref:loggingConfiguration)
 - [Configuration Schemas](xref:configurationSchemaList)
-
   - [Edge System Schema](xref:edge_system_schema)
   - System
     - [System Schema](xref:system_schema)

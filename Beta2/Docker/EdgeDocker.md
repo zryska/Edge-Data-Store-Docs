@@ -6,7 +6,7 @@ uid: edgeDocker
 
 Docker is a set of tools that can be used on Linux to manage application deployments. It is beyond the scope of this document to explain concepts behind Docker containers, and it is assumed that if a reader wants to use Docker they are familiar with the underlying technology and have determined it is appropriate for their planned use of the Edge System.
 
-The objective of this document is to provide examples of how to successfully create a Docker container with the Edge System, if it is decided Docker is desirable. Docker is not a requirement to use the Edge System and is regarded as an advanced user scenario.
+The objective of this document is to provide examples of how to successfully create a Docker container with the Edge System, if it is decided Docker is desirable. Docker is not a requirement to use the Edge System.
 
 ## Creating a Docker container containing the Edge System
 

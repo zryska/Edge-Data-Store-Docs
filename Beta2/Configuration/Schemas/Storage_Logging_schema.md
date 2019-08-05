@@ -4,9 +4,9 @@ uid: Storage_Logging_schema
 
 # Storage logging schema
 
-| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                                 |
-| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | ---------------------------------------------------------- |
-| Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Storage_Logging_schema.json](Storage_Logging_schema.json) |
+| Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties |
+| ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- |
+| Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             |
 
 # StorageLoggerConfiguration Properties
 
@@ -67,36 +67,3 @@ uid: Storage_Logging_schema
 | `LogFileCountLimit`     | integer | Optional |
 | `LogFileSizeLimitBytes` | integer | Optional |
 | `LogLevel`              |         | Optional |
-
-#### LogFileCountLimit
-
-`LogFileCountLimit`
-
-- is optional
-- type: `integer`
-
-##### LogFileCountLimit type
-
-`integer`, nullable
-
-#### LogFileSizeLimitBytes
-
-`LogFileSizeLimitBytes`
-
-- is optional
-- type: `integer`
-
-##### LogFileSizeLimitBytes type
-
-`integer`, nullable
-
-#### LogLevel
-
-`LogLevel`
-
-- is optional
-- type: reference
-
-##### LogLevel type
-
-- []() – `#/definitions/EdgeLogLevel`

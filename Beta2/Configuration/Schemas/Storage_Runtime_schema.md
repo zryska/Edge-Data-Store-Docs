@@ -58,6 +58,8 @@ Ingress Debug Expiration is a property that can be used when debugging OMF. If t
 - minimum value: `2`
 - maximum value: `2147483647`
 
+StreamStorageLimitMb is the maximum size in megabytes that a stream can reach. When a stream exceeds the size specified, older data will be deleted from the file. Data will be removed from the stream until the stream is at or below the StreamStorageTargetMb value. It is recommended that the target value be smaller than the limit since trimming can be an expensive operation and should be done infrequently.
+
 ## StreamStorageTargetMb
 
 `StreamStorageTargetMb`
@@ -72,6 +74,8 @@ Ingress Debug Expiration is a property that can be used when debugging OMF. If t
 
 - minimum value: `1`
 - maximum value: `2147483647`
+
+StreamStorageTargetMb is the size in megabytes that a stream will be reduced to after StreamStorageLimitMb size is reached for a single stream. When a stream exceeds the size specified, older data will be deleted from the file. Data will be removed from the stream until the stream is at or below the StreamStorageTargetMb value. It is recommended that the target value be smaller than the limit since trimming can be an expensive operation and should be done infrequently.
 
 **All** of the following _requirements_ need to be fulfilled.
 
@@ -89,44 +93,3 @@ Ingress Debug Expiration is a property that can be used when debugging OMF. If t
 | `StreamStorageLimitMb`   | integer | **Required** |
 | `StreamStorageTargetMb`  | integer | **Required** |
 
-#### IngressDebugExpiration
-
-`IngressDebugExpiration`
-
-- is **required**
-- type: `string`
-
-##### IngressDebugExpiration type
-
-`string`
-
-- format: `date-time` – date and time (according to [RFC 3339, section 5.6](http://tools.ietf.org/html/rfc3339))
-- minimum length: 1 characters
-
-#### StreamStorageLimitMb
-
-`StreamStorageLimitMb`
-
-- is **required**
-- type: `integer`
-
-##### StreamStorageLimitMb type
-
-`integer`
-
-- minimum value: `2`
-- maximum value: `2147483647`
-
-#### StreamStorageTargetMb
-
-`StreamStorageTargetMb`
-
-- is **required**
-- type: `integer`
-
-##### StreamStorageTargetMb type
-
-`integer`
-
-- minimum value: `1`
-- maximum value: `2147483647`

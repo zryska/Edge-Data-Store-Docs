@@ -14,7 +14,7 @@ The OMF specification may be found here: <http://omf-docs.osisoft.com>
 
 The route to the OMF endpoint provided by the Edge Storage component is:
 
-```
+```http
 Method: POST
 Endpoint: http://localhost:5590/api/v1/tenants/default/namespaces/default/omf
 ```

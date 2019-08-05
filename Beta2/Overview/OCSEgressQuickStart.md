@@ -31,11 +31,11 @@ Configure Edge Storage periodic egress for the PI Web API endpoint and credentia
 }]
 ```
 
-1. Edit the JSON above to add the URL of your OCS OMF endpoint. 
-2. Add a ClientId and ClientSecret that can write data to your OCS tenant and namespace. 
-OSIsoft also recommends that each device have a unique StreamPrefix and TypePrefix. These values will be used when creating unique streams on OCS. 
-3. Run the following curl script to configure the Edge Storage to send data to the PI System. 
-This configuration is set up to send all stream data to the PI System. 
+1. Edit the JSON above to add the URL of your OCS OMF endpoint.
+2. Add a ClientId and ClientSecret that can write data to your OCS tenant and namespace.
+The StreamPrefix and TypePrefix can be used to ensure uniqueness on the destination system, if required. If a StreamPrefix is specified it will be used to create a unique stream id on OCS.
+3. Run the following curl script to configure the Edge Storage to send data to the PI System.
+This configuration is set up to send all stream data to the PI System.
 **Note:** If you want to only send specific streams, edit the EgressFilter value. 
 For examples of more advanced scenarios, see the Egress section of this documentation.
 4. Save the JSON with the file name PeriodicEgressEndpoints.json.
