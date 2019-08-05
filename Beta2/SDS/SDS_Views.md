@@ -12,9 +12,9 @@ When SDS is unable to determine how to map a source property, the property is re
 
 To map a property that is beyond the ability of SDS to map on its own, you should define an SdsStreamViewProperty and add it to the SdsStreamView’s Properties collection.
 
-The following table shows the required and optional SdsStreamView fields. Fields that are not included are reserved for internal SDS use. See the [Searching](xref:sdsSearching) topic regarding limitations on search.
+The following table shows the required and optional SdsStreamView fields. Fields that are not included are reserved for internal SDS use. For more information on search limitations, see [Searching](xref:sdsSearching).
 
-| Property     | Type                   | Optionality | Searchable | Details |
+| Property     | Type                   | Optionality | Searchability | Details |
 |--------------|------------------------|-------------|------------|---------|
 | Id           | String                 | Required    | Yes        |Identifier for referencing the stream view |
 | Name         | String                 | Optional    | Yes        |Friendly name |
@@ -32,7 +32,7 @@ The following table shows the required and optional SdsStreamView fields. Fields
 
 ## Properties / SdsStreamViewProperty
 
-The SdsStreamView Properties collection provides detailed instructions for specifying the mapping of event properties. Each SdsStreamViewProperty in the Properties collection defines the mapping of an event’s property. SdsStreamView Properties are required only when property mapping is not straightforward. Additionally, if you do not want a type property mapped, it is not necessary to create an SdsStreamView property for it.
+The SdsStreamView Properties collection provides detailed instructions for specifying the mapping of event properties. Each SdsStreamViewProperty in the properties collection defines the mapping of an event’s property. SdsStreamView properties are required only when property mapping is not straightforward. Additionally, if you do not want a type property mapped, it is not necessary to create an SdsStreamView property for it.
 
 The following table shows the required and optional SdsStreamViewProperty fields.
 
@@ -59,7 +59,7 @@ The following table shows the SdsStreamViewMap fields. The SdsStreamViewMap cann
 ### Properties / SdsStreamViewMapProperty
 
 The SdsStreamViewMapProperty is similar an SdsStreamViewProperty but adds a Mode detailing one or more actions taken on
-the Property.
+the property.
 
 The following table shows the SdsStreamViewMapProperty fields. The SdsStreamViewMap cannot be written; it can only be
 retrieved from SDS, so required and optional have no meaning.
@@ -71,7 +71,7 @@ retrieved from SDS, so required and optional have no meaning.
 | Mode         | SdsStreamViewMode | Aggregate of actions applied to the properties. SdsStreamViewModes are combined via binary arithmetic |
 | SdsStreamViewMap   | SdsStreamViewMap  | Mapping for derived types |
 
-The available SdsStreamViewModes are shown in the table below.
+The available SdsStreamViewModes are shown in the following table.
 
 | Name                   | Value  | Description |
 |------------------------|--------|-------------|
@@ -266,7 +266,7 @@ GET api/v1/Tenants/default/Namespaces/{namespaceId}/StreamViews?query={query}&sk
 default or diagnostics
 
 `string query`  
-An optional parameter representing a string search. See [Searching](xref:sdsSearching) for information about specifying the search parameter.
+An optional parameter representing a string search. For information about specifying the search parameter, see [Searching](xref:sdsSearching).
 
 `int skip`  
 An optional parameter representing the zero-based offset of the first SdsStreamView to retrieve. If not specified, a default value of 0 is used.
