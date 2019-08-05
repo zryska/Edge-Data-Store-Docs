@@ -2,13 +2,13 @@
 uid: piEgressQuickStart
 ---
 
-# PI System (PI Web API) Egress Quick Start
+# PI System (PI Web API) egress quick start
 
 This document is a quick tour of getting data stored in the Edge System into a remote PI System. This is accomplished using PI Web API which is configured for Basic authentication.
 
-## Create a Periodic Egress Configuration
+## Create a periodic egress configuration
 
-The first step is to configure Edge Storage Periodic Egress for the PI Web API endpoint and credentials:
+Configure Edge Storage periodic egress for the PI Web API endpoint and credentials:
 
 ```json
 [{
@@ -39,4 +39,4 @@ Save the JSON with the file name PeriodicEgressEndpoints.json and run the follow
 curl -i -d "@PeriodicEgressEndpoints.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/storage/PeriodicEgressEndpoints/
 ```
 
-When this command completes successfully data will start being sent to the PI System.
+When this command completes successfully, data will start being sent to the PI System.
