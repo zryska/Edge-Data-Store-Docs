@@ -6,25 +6,25 @@ uid: sdsTypes
 
 The Sequential Data Store (SDS) stores streams of events and provides convenient ways to find and associate events. Events are stored in streams, called SdsStreams. An SdsType defines the shape or structure of the event and how to associate events within the SdsStream.
 
-SdsTypes can define simple atomic types, such as integers, floats, strings, arrays, and dictionaries, or they can define complex types using SdsTypes. You can define complex, nested types using the Properties collection of an SdsType.
+SdsTypes can define simple atomic types, such as integers, floats, strings, arrays, and dictionaries. They can also define complex types using SdsTypes. You can define complex, nested types using the Properties collection of an SdsType.
 
-An SdsType used to define an SdsStream must have a Key. A Key is a Property, or a combination of Properties that constitute an ordered, unique identity. The Key is ordered, so it functions as an index; it is known as the Primary Index. While a timestamp (DateTime) is a very common type of Key, any type that can be ordered is permitted. Other indexes (secondary indexes), are defined in the SdsStream. Indexes are discussed in greater detail here: [Indexes](xref:sdsIndexes)
+An SdsType used to define an SdsStream must have a Key. A Key is a property, or a combination of properties that constitute an ordered, unique identity. The Key is ordered, so it functions as an index. It is known as the Primary Index. While a timestamp (DateTime) is a very common type of Key, any type that can be ordered is permitted. Other indexes (secondary indexes), are defined in the SdsStream. For more details on indexes, see [Indexes](xref:sdsIndexes).
 
-When defining a type, consider how the events will be represented in a stream. The SdsType defines each event in the stream. An event is a single unit whose properties have values that relate to the index; that is, each property of an SdsType event is related to the event’s index. Each event is a single unit.
+When you define a type, consider how the events will be represented in a stream. The SdsType defines each event in the stream. An event is a single unit whose properties have values that relate to the index; that is, each property of an SdsType event is related to the event’s index. Each event is a single unit.
 
 An SdsType is referenced by its identifier or Id field. SdsType identifiers must be unique within a Namespace.
 
 An SdsType can also refer other SdsTypes by using their identifiers. This enables type re-usability. Nested types and base types are automatically created as separate types. For further information, see [Type Reusability](#type-reusability)
 
-SdsTypes define how events are associated and read within a collection of events, or SdsStream. The read characteristics when attempting to read non-existent indexes, indexes that fall between, before or after existing indexes, are determined by the interpolation and extrapolation settings of the SdsType. For more information about read characteristics see [Interpolation](#interpolation) and [Extrapolation](#extrapolation).
+SdsTypes define how events are associated and read within a collection of events, or SdsStream. The read characteristics when attempting to read non-existent indexes, indexes that fall between, before or after existing indexes, are determined by the interpolation and extrapolation settings of the SdsType. For more information about read characteristics, see [Interpolation](#interpolation) and [Extrapolation](#extrapolation).
 
-SdsTypes are immutable. After an SdsType is created, its definition cannot change. An SdsType must be deleted and recreated if the definition is incorrect. In addition, the SdsType may be deleted only if no streams, stream views, or types reference it.
+SdsTypes are immutable. After you create an SdsType, you cannot change its definition. If the definition of an SdsType is incorrect, you must delete and recreate it. In addition, the SdsType may be deleted only if no streams, stream views, or types reference it.
 
-Only SdsTypes used to define SdsStreams or SdsStreamViews are required to be added to the Sequential data store. SdsTypes that define Properties or base types are contained within the parent SdsType and are not required to be added to the Data Store independently.
+Only SdsTypes used to define SdsStreams or SdsStreamViews are required to be added to the Sequential data store. SdsTypes that define properties or base types are contained within the parent SdsType and are not required to be added to the Data Store independently.
 
 The following table shows the required and optional SdsType fields. Fields that are not included are reserved for internal SDS use.
 
-See the [Searching](xref:sdsSearching) topic regarding limitations on search.
+For search limitations, see the [Searching](xref:sdsSearching).
 
 | Property          | Type                   | Optionality | Searchable | Details |
 |-------------------|------------------------|-------------|---------|---------|
@@ -180,7 +180,7 @@ Decimal.MaxValue) the call might result in a BadRequest exception.
 
 \**Nullable types are interpolated in the same manner as their non-nulllable equivalents as long as the values surrounding the desired interpolation index are non-null. If either of the values are null, the interpolated value will be null.
 
-If the InterpolationMode is not assigned, the events are interpolated in the default manner, unless the interpolation mode is overridden in the SdsTypeProperty or the SdsStream. For more information on overriding the interpolation mode on a specific type property see [SdsTypeProperty](#sdstypeproperty). For more information on overriding the interpolation mode for a specific stream see [Sds Streams](xref:sdsStreams).
+If the InterpolationMode is not assigned, the events are interpolated in the default manner, unless the interpolation mode is overridden in the SdsTypeProperty or the SdsStream. For more information on overriding the interpolation mode on a specific type property, see [SdsTypeProperty](#sdstypeproperty). For more information on overriding the interpolation mode for a specific stream, see [Sds Streams](xref:sdsStreams).
 
 ## Extrapolation
 
@@ -222,7 +222,7 @@ ExtrapolationMode works with the InterpolationMode to determine how a stream res
 | Forward             | 2                   | No event is returned       | Returns last data value   |
 | Backward            | 3                   | Returns first data value   | No event is returned      |
 
-If the ExtrapolationMode is not assigned, the events are extrapolated in the default manner, unless the extrapolation mode is overridden on the SdsStream. For more information on overriding the extrapolation mode on a specific stream see [Sds Streams](xref:sdsStreams).
+If the ExtrapolationMode is not assigned, the events are extrapolated in the default manner, unless the extrapolation mode is overridden on the SdsStream. For more information on overriding the extrapolation mode on a specific stream, see [Sds Streams](xref:sdsStreams).
 
 For additional information about the effect of read characteristics, see the documentation on the [read method](xref:sdsReadingDataApi) you are using.
 
@@ -252,13 +252,13 @@ In a compound key, each Property that is included in the Key is specified as IsK
 
 The Value field is used for properties that represent a value. An example of a property with a value is an enum’s named constant. When representing an enum in a SdsType, the SdsType’s Properties collection defines the enum’s constant list. The SdsTypeProperty’s Identifier represents the constant’s name and the SdsTypeProperty’s Value represents the constant’s value (see the enum State definitions below).
 
-InterpolationMode is assigned when the Property of the event should be interpolated in a specific way that differs from the InterpolationMode of the SdsType. InterpolationMode is only applied to a Property that is not part of the Index. If the InterpolationMode is not set, the Property is are interpolated in the manner defined by the SdsType’s IntepolationMode.
+InterpolationMode is assigned when the property of the event should be interpolated in a specific way that differs from the InterpolationMode of the SdsType. InterpolationMode is only applied to a property that is not part of the Index. If the InterpolationMode is not set, the property is are interpolated in the manner defined by the SdsType’s IntepolationMode.
 
-An SdsType with the InterpolationMode set to ``Discrete`` cannot have a Property with an InteroplationMode. For more information on interpolation of events see [Interpolation](#interpolation).
+An SdsType with the InterpolationMode set to ``Discrete`` cannot have a Property with an InteroplationMode. For more information on interpolation of events, see [Interpolation](#interpolation).
 
-Uom is the unit of measure for the Property. The Uom of a Property may be specified by the name or the abbreviation. The names and abbreviations of Uoms are case sensitive.
+Uom is the unit of measure for the property. The Uom of a property may be specified by the name or the abbreviation. The names and abbreviations of Uoms are case sensitive.
 
-The InterpolationMode and Uom of a Property can be overridden on the stream. For more information, see [Streams](xref:sdsStreams#propertyoverrides).
+The InterpolationMode and Uom of a property can be overridden on the stream. For more information, see [Streams](xref:sdsStreams#propertyoverrides).
 
 ## Supported Units of Measure
 
@@ -637,7 +637,7 @@ For example, if there is a common index and value property for a group of types 
 }
 ```
 
-If a new type should be created with properties additional to the ones above, a reference to the base type can be added by simply specifying the base type's Id.
+If a new type should be created with properties additional to the ones above, you can add a reference to the base type by simply specifying the base type's Id.
 
 ```json
 {
@@ -659,7 +659,7 @@ If a new type should be created with properties additional to the ones above, a 
 }
 ```
 
-The new type may also include the full type definition of the reference type instead of specifying only the Id. For example,
+The new type may also include the full type definition of the reference type instead of specifying only the Id. For example:
 
 ```json
 {
@@ -700,7 +700,7 @@ The new type may also include the full type definition of the reference type ins
 }
 ```
 
-If the full definition is sent, the referenced types (base type "Simple" in the above example) should match the actual type initially created. If the full definition is sent and the referenced types do not exist, they will be created automatically by SDS. Further type creations can reference them as demonstrated above. Note that when trying to get types back from SDS, the results will also include types that were automatically created by SDS.
+If the full definition is sent, the referenced types (base type "Simple" in the above example) should match the actual type initially created. If the full definition is sent and the referenced types do not exist, they will be created automatically by SDS. Further type creations can reference them as demonstrated above. **Note:** When trying to get types back from SDS, the results will also include types that were automatically created by SDS.
 
 Base types and properties of type Object, Enum, user-defined collections, such as, Array, List and Dictionary will be treated as referenced types. Note that streams cannot be created using these referenced types. If a stream of particular type is to be created, the type should contain at least one property with a valid index type as described in this section, [Indexes](xref:sdsIndexes). The index property may also be in the base type as shown in the example above.
 
@@ -794,7 +794,7 @@ Content-Type: application/json
 
 ## `Get Type Reference Count`
 
-Returns a dictionary mapping the object name to the number of references held by streams, stream views and parent types for the specified type. See [Streams](xref:sdsstreams) and [Steam Views](xref:sdsStreamViews) for more information on the use of types to define streams and stream views. For further details about type referencing please see: [Type Reusability](#type-reusability).
+Returns a dictionary mapping the object name to the number of references held by streams, stream views and parent types for the specified type. For more information on the use of types to define streams and stream views, see [Streams](xref:sdsstreams) and [Steam Views](xref:sdsStreamViews). For further details about type referencing, see: [Type Reusability](#type-reusability).
 
 **Request**
 
@@ -831,9 +831,9 @@ Example response body:
 
 Returns a list of types within a given namespace.
 
-If specifying the optional search query parameter, the list of types returned will match the search criteria. If the search query parameter is not specified, the list will include all types in the Namespace. See [Searching](xref:sdsSearching) for information about specifying those respective parameters.
+If specifying the optional search query parameter, the list of types returned will match the search criteria. If the search query parameter is not specified, the list will include all types in the namespace. For information about specifying those respective parameters, see [Searching](xref:sdsSearching).
 
-Note that the results will also include types that were automatically created by SDS as a result of type referencing. For further details about type referencing please see: [Type Reusability](#type-reusability)
+**Note:** The results will also include types that were automatically created by SDS as a result of type referencing. For further details about type referencing, see: [Type Reusability](#type-reusability).
 
 **Request**
 
@@ -846,7 +846,7 @@ GET api/v1/Tenants/default/Namespaces/{namespaceId}/Types?query={query}&skip={sk
 default or diagnostics
 
 `string query`  
-An optional query string to match which SdsTypes will be returned.  See the [Searching](xref:sdsSearching) topic for information about specifying the query parameter.
+An optional query string to match which SdsTypes will be returned. For information about specifying the query parameter, see the [Searching](xref:sdsSearching) topic.
 
 `int skip`  
 An optional value representing the zero-based offset of the first SdsType to retrieve. If not specified, a default value of 0 is used.
@@ -930,11 +930,11 @@ Creates the specified type. If a type with a matching identifier already exists,
 
 If the types are identical, a ``Found`` (302) error is returned with the Location header set to the URI where the type may be retrieved using a Get function.
 
-If the types do not match, a ``Conflict`` (409) error is returned. Note that a ``Conflict`` (409) error will also be returned if the type contains reference to any existing type, but the referenced type definition in the body does not match the existing type. You may reference an existing type without including the reference type definition in the body by using only the Ids. For further details about type referencing please see: [Type Reusability](#type-reusability).
+If the types do not match, a ``Conflict`` (409) error is returned. **Note:** A ``Conflict`` (409) error will also be returned if the type contains reference to any existing type, but the referenced type definition in the body does not match the existing type. You may reference an existing type without including the reference type definition in the body by using only the Ids. For further details about type referencing, see: [Type Reusability](#type-reusability).
 
 For a matching type (``Found``), clients that are capable of performing a redirect that includes the authorization header can automatically redirect to retrieve the type. However, most clients, including the .NET HttpClient, consider redirecting with the authorization token to be a security vulnerability.
 
-When a client performs a redirect and strips the authorization header, SDS cannot authorize the request and returns ``Unauthorized`` (401). For this reason, it is recommended that when using clients that do not redirect with the authorization header, you should disable automatic redirect and perform the redirect manually.
+When a client performs a redirect and strips the authorization header, SDS cannot authorize the request and returns ``Unauthorized`` (401). For this reason, OSIsoft recommends that when using clients that do not redirect with the authorization header, you should disable automatic redirect and perform the redirect manually.
 
 **Request**  
 
@@ -1010,7 +1010,7 @@ Example SdsType content:
 The response includes a status code and a response body.
 
 **Response body**  
-The request content is the serialized SdsType. It is recommended that you use JSON.
+The request content is the serialized SdsType. OSIsoft recommends that you use JSON.
 
 Example Response body:
 
