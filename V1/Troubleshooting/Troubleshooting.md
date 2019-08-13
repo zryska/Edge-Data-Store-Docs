@@ -2,13 +2,13 @@
 uid: troubleShooting
 ---
 
-# Edge System troubleshooting
+# Edge Data Store troubleshooting
 
-If you encounter errors while using or developing against Edge System, you have both local and remote means of diagnosing issues.
+If you encounter errors while using or developing against Edge Data Store, you have both local and remote means of diagnosing issues.
 
-Edge System supports a diagnostics namespace that is used to store streams containing diagnostic information from Edge System itself. As with any other stream data stored in the Edge Storage component, you can egress this to either PI Web API or OSIsoft Cloud Services to monitor the state of a system remotely.
+Edge Data Store supports a diagnostics namespace that is used to store streams containing diagnostic information from Edge Data Store itself. As with any other stream data stored in the Edge Storage component, you can egress this to either PI Web API or OSIsoft Cloud Services to monitor the state of a system remotely.
 
-In addition, all components in Edge System support OMF Health messages that can be configured using the Health Endpoint configuration so that OMF Health messages are sent to remote PI Web API or OSIsoft Cloud Service endpoints to support remote monitoring of devices.
+In addition, all components in Edge Data Store support OMF Health messages that can be configured using the Health Endpoint configuration so that OMF Health messages are sent to remote PI Web API or OSIsoft Cloud Service endpoints to support remote monitoring of devices.
 
 ## Ingress
 
@@ -36,7 +36,7 @@ You can find log messages related to egress in the Storage logs. If you set the 
 
 ### Egress debugging
 
-In order to troubleshoot problems between Edge System and the destination, enable debugging. If you set an appropriate value for the *DebugExpiration* property in an egress configuration, debugging for that destination will be enabled, and HTTP request and response content will be stored to disk for review. The property represents the date and time when debugging should no longer be enabled. You can also disable debugging if you set the value to *null*. 
+In order to troubleshoot problems between Edge Data Store and the destination, enable debugging. If you set an appropriate value for the *DebugExpiration* property in an egress configuration, debugging for that destination will be enabled, and HTTP request and response content will be stored to disk for review. The property represents the date and time when debugging should no longer be enabled. You can also disable debugging if you set the value to *null*. 
 
 Examples of valid strings representing date and time:
 
@@ -44,7 +44,7 @@ Examples of valid strings representing date and time:
 
     Local: “mm-dd-yyyy hh:mm:ss”
 
-The content length of each request/response and the overall number of requests/responses, can be quite large. As a result, debug information is stored to disk in a separate location than the typical log messages. Debug folders/files will be created under the Edge System data folder. The debug folder/file structure is:
+The content length of each request/response and the overall number of requests/responses, can be quite large. As a result, debug information is stored to disk in a separate location than the typical log messages. Debug folders/files will be created under the Edge Data Store data folder. The debug folder/file structure is:
 
     Windows: %programdata%\OSIsoft\EdgeSystem\Storage\egressdump\{tenantId}\{namespaceId}\{egressId}\{omfType}\{Ticks}-{Guid}-{Req/Res}.txt
 

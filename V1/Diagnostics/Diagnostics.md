@@ -2,9 +2,9 @@
 uid: edgeSystemDiagnostics
 ---
 
-# Edge System diagnostics
+# Edge Data Store diagnostics
 
-Edge System and its components produce diagnostics data which is stored locally in the Storage component, and may be queried locally and/or egressed to PI Web API endpoints or the OSIsoft Cloud Services.
+Edge Data Store and its components produce diagnostics data which is stored locally in the Storage component, and may be queried locally and/or egressed to PI Web API endpoints or the OSIsoft Cloud Services.
 
 Diagnostics data is stored within the 'diagnostics' namespace of Edge Storage.  Local access to this data is available via the [Sds](xref:sdsReadingData) methods.
 
@@ -12,12 +12,12 @@ Diagnostics data is stored within the 'diagnostics' namespace of Edge Storage.  
 
 To egress diagnositcs related data, configure a periodic egress endpoint and specify ```diagnostics``` as the NamespaceId in the periodic egress endpoint configuration.
 
-## Diagnostics produced by Edge System
+## Diagnostics produced by Edge Data Store
 
-Edge System produces the following diagnostics streams:
+Edge Data Store produces the following diagnostics streams:
 
 The Diagnostics.System dynamic type includes these values which are logged in a stream with the id System.Diagnostics.
-This diagnostic stream contains system level information related to the host platform that the Edge System is running on.
+This diagnostic stream contains system level information related to the host platform that the Edge Data Store is running on.
 
 | Type         | Property |  Description     |
 |--------|--------------|-----------------------------------|
@@ -33,12 +33,12 @@ This diagnostic stream contains system level information related to the host pla
 | double | ManagedMemorySize (uom=MB)  | Number of bytes currently thought to be allocated in managed memory  |
 | double | PrivateMemorySize (uom=MB)  | Amount of paged memory, in bytes, allocated for the host process  |
 | double | PeakPagedMemorySize (uom=MB)  | Maximum amount of memory in the virtual memory paging file, in bytes, used by the host process.  |
-| double | StorageTotalSize (uom=MB)  | Total size of the storage medium in use by the Edge System  |
+| double | StorageTotalSize (uom=MB)  | Total size of the storage medium in use by the Edge Data Store  |
 | double | StorageFreeSpace (uom=MB)  | Free space available  |
 
 ## Edge Connectivity Adapters diagnostics
 
-Each Connectivity Adapter of the Edge System produces its own diagnostics streams.
+Each Connectivity Adapter of the Edge Data Store produces its own diagnostics streams.
 
 ### Stream count
 
@@ -69,7 +69,7 @@ The Diganostics.Adapter.ErrorRate dynamic type includes these values, and are lo
 
 ## Edge Storage diagnostics
 
-The Storage component of Edge System produces the following diagnostics streams.
+The Storage component of Edge Data Store produces the following diagnostics streams.
 
 ### Storage.default.default.Counts
 

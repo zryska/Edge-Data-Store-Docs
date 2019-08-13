@@ -2,13 +2,13 @@
 uid: edgeDocker
 ---
 
-# Using Edge System with Docker
+# Using Edge Data Store with Docker
 
-Docker is a set of tools that can be used on Linux to manage application deployments. It is beyond the scope of this document to explain concepts behind Docker containers, and it is assumed that if a reader wants to use Docker they are familiar with the underlying technology and have determined it is appropriate for their planned use of the Edge System.
+Docker is a set of tools that can be used on Linux to manage application deployments. It is beyond the scope of this document to explain concepts behind Docker containers, and it is assumed that if a reader wants to use Docker they are familiar with the underlying technology and have determined it is appropriate for their planned use of the Edge Data Store.
 
-The objective of this document is to provide examples of how to successfully create a Docker container with the Edge System, if it is decided Docker is desirable. Docker is not a requirement to use the Edge System.
+The objective of this document is to provide examples of how to successfully create a Docker container with the Edge Data Store, if it is decided Docker is desirable. Docker is not a requirement to use the Edge Data Store.
 
-## Creating a Docker container containing the Edge System
+## Creating a Docker container containing the Edge Data Store
 
 ### ARM32 Processor
 
@@ -48,7 +48,7 @@ Run the following command line (sudo may be necessary):
 docker build -t edgesystem .
 ```
 
-## Running Edge System Docker Containers
+## Running Edge Data Store Docker Containers
 
 ### REST access from the local machine from Docker
 
@@ -58,7 +58,7 @@ To run the container you can use the command line (sudo may be necessary):
 docker run -d --network host edgesystem
 ```
 
-Port 5590 will be accessible from the host and REST calls can be made to the Edge System from applications on the local host computer. With this configuration, all data stored by the Edge System is stored in the container itself, and when the container is deleted the data stored will also be deleted.
+Port 5590 will be accessible from the host and REST calls can be made to the Edge Data Store from applications on the local host computer. With this configuration, all data stored by the Edge Data Store is stored in the container itself, and when the container is deleted the data stored will also be deleted.
 
 ### Persistent storage on the local file system from Docker
 
@@ -68,11 +68,11 @@ To run the container you can use the command line (sudo may be necessary):
 docker run -d --network host -v /edgeds:/usr/share/OSIsoft/ edgesystem
 ```
 
-Port 5590 will be accessible from the host and REST calls can be made to the Edge System from applications on the local host computer. In addition, in this example, all data that would be written to the container is written instead to the host directory /edgeds. This directory can be anything the user wishes - this example just uses a simple directory on the local machine.
+Port 5590 will be accessible from the host and REST calls can be made to the Edge Data Store from applications on the local host computer. In addition, in this example, all data that would be written to the container is written instead to the host directory /edgeds. This directory can be anything the user wishes - this example just uses a simple directory on the local machine.
 
 ### Changing Port number from Docker
 
-If a port other than 5590 is desired, see the section regarding [Port configuration](#edgeSystemConfiguration) of the Edge System. Changing the configuration of the Edge System running in the container will change the port exposed to the local machine.
+If a port other than 5590 is desired, see the section regarding [Port configuration](#edgeSystemConfiguration) of the Edge Data Store. Changing the configuration of the Edge Data Store running in the container will change the port exposed to the local machine.
 
 ### Limiting local host access to Docker
 

@@ -4,7 +4,7 @@ uid: modbusQuickStart
 
 # Edge Modbus Quick Start
 
-This topic is a quick tour of setting up the Edge Modbus TCP component. Beta 2 comes with a single Modbus adapter installed. It is named Modbus1. If a second Modbus adapter is desired in Beta 2, please reference [Edge System Configuration](xref:edgeSystemConfiguration) on how to add a new component to Edge System. The examples below will change if a second adapter is being configured - please replace Modbus1 with the name of the component you have added.
+This topic is a quick tour of setting up the Edge Modbus TCP component. Beta 2 comes with a single Modbus adapter installed. It is named Modbus1. If a second Modbus adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:edgeSystemConfiguration) on how to add a new component to Edge Data Store. The examples below will change if a second adapter is being configured - please replace Modbus1 with the name of the component you have added.
 
 ## Configure a Modbus TCP data source
 
@@ -25,17 +25,17 @@ Create a file in JSON format describing the location of the Modbus data source. 
 1. Enter the correct IP address and port for your Modbus data source.
 2. Save the file with the name Modbus1DataSource.json. 
 3. Run the following curl script from the same directory where the file is located. 
-**Note:** You should run the script on the same computer where the Edge System is installed:
+**Note:** You should run the script on the same computer where the Edge Data Store is installed:
 
 ```bash
 curl -i -d "@Modbus1Datasource.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/Modbus1/Datasource
 ```
 
-When this command completes successfully (a 204 is returned by curl), your Modbus TCP data source has been created. If you get a 400 error, check your JSON file for errors. If you get a 404 or 500 error, check to make sure Edge System is running on your computer.
+When this command completes successfully (a 204 is returned by curl), your Modbus TCP data source has been created. If you get a 400 error, check your JSON file for errors. If you get a 404 or 500 error, check to make sure Edge Data Store is running on your computer.
 
 ## Configure Modbus data selection
 
-Select the Modbus TCP data you want to store in Edge System by configuring Modbus data selection. The following is a sample JSON for 5 Modbus values.
+Select the Modbus TCP data you want to store in Edge Data Store by configuring Modbus data selection. The following is a sample JSON for 5 Modbus values.
 
 1. Modify the values as appropriate for your Modbus environment.
 

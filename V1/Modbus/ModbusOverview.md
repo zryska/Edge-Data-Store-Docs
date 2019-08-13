@@ -6,21 +6,21 @@ uid: modbusOverview
 
 ## Overview
 
-Modbus is a commonly available communication protocol used for connecting and transmitting information between industrial electronic devices. The Modbus TCP Connectivity Adapter polls Modbus TCP slave devices, and transfers time series data from the data source devices into Edge System.  Polling is based on the measurement configuration provided, and models the register measurements in a Modbus data source.
+Modbus is a commonly available communication protocol used for connecting and transmitting information between industrial electronic devices. The Modbus TCP Connectivity Adapter polls Modbus TCP slave devices, and transfers time series data from the data source devices into Edge Data Store.  Polling is based on the measurement configuration provided, and models the register measurements in a Modbus data source.
 
-The Modbus TCP Connectivity Adapter communicates with any device conforming to the Modbus TCP/IP protocol through a gateway or router. The Modbus slave devices and routers do not need to be on the same subnet as Edge System.
+The Modbus TCP Connectivity Adapter communicates with any device conforming to the Modbus TCP/IP protocol through a gateway or router. The Modbus slave devices and routers do not need to be on the same subnet as Edge Data Store.
 
-Beta 2 comes with a single Modbus adapter installed. It is named Modbus1. If a second Modbus adapter is desired in Beta 2, please reference [Edge System Configuration](xref:edgeSystemConfiguration) on how to add a new component to Edge System. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for Modbus1.
+Beta 2 comes with a single Modbus adapter installed. It is named Modbus1. If a second Modbus adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:edgeSystemConfiguration) on how to add a new component to Edge Data Store. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for Modbus1.
 
 ## Configuration of Modbus data source
 
-To use the Modbus TCP Connectivity Adapter of Edge System, you must configure it for the Modbus data source from which it will be polling data.
+To use the Modbus TCP Connectivity Adapter of Edge Data Store, you must configure it for the Modbus data source from which it will be polling data.
 
 ### Procedure for configuring Modbus data source
 
 Complete the following to configure the Modbus data source:
 
-1. Using any text editor, create a file that contains a Modbus data source in JSON form. This file can be created or copied to any directory on a device with Edge System installed.
+1. Using any text editor, create a file that contains a Modbus data source in JSON form. This file can be created or copied to any directory on a device with Edge Data Store installed.
     - See Modbus Data Source Example section below for content structure
     - See Parameters for Modbus Data Source section below for a table of all available parameters
 2. Save the file as DataSource.config.json.
@@ -68,7 +68,7 @@ Once a data source is configured for a Modbus instance, which data is to be coll
 
 Complete the following to configure Modbus data selection:
 
-1. Using any text editor, create a file that contains a Modbus data selection in JSON form. This file can be created or copied to any directory on a device with Edge System installed.
+1. Using any text editor, create a file that contains a Modbus data selection in JSON form. This file can be created or copied to any directory on a device with Edge Data Store installed.
     - See Modbus Data Selection Example section below for content structure
     - See Parameters for Modbus Data Selection section below for a table of all available parameters
 2. Save the file as DataSelection.config.json.

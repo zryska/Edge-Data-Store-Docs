@@ -31,7 +31,7 @@ uid: edge_system_schema
     }
 ```
 
-# Edge System Configuration Schema
+# Edge Data Store Configuration Schema
 
 ## Properties
 
@@ -53,7 +53,7 @@ uid: edge_system_schema
 
 ## {ComponentName}
 - [EdgeSystemConfiguration Schema](#edgesystemconfiguration-schema)
-- [Edge System Configuration Schema](#edge-system-configuration-schema)
+- [Edge Data Store Configuration Schema](#edge-system-configuration-schema)
   - [Properties](#properties)
   - [Storage](#storage)
   - [System](#system)

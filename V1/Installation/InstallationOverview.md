@@ -2,11 +2,11 @@
 uid: installationOverview
 ---
 
-# Installation of Edge System
+# Installation of Edge Data Store
 
 ## Overview
 
-Edge System is supported on a variety of platforms and processors. OSIsoft provides ready to use install kits for the following platforms:
+Edge Data Store is supported on a variety of platforms and processors. OSIsoft provides ready to use install kits for the following platforms:
 
 * Windows 10 x64 - EdgeSystem.msi (Intel/AMD 64 bit processors)
 * Debian 9 or later x64/AMD64 - EdgeSystem_linux-x64.deb (Intel/AMD 64 bit processors)
@@ -14,7 +14,7 @@ Edge System is supported on a variety of platforms and processors. OSIsoft provi
 
 In addition to ready to use install kits, OSIsoft also provides examples of how to create [Docker containers](xref:edgeDocker), and tar.gz files are provided with binaries for customers who wish to build their own custom installers or containers for Linux.
 
-## Install Edge System on a device using an install kit
+## Install Edge Data Store on a device using an install kit
 
 To use any of the installers, copy the appropriate file to the file system of the device.
 
@@ -26,7 +26,7 @@ The installers allow the port assignment to be configured at install time. The d
 
 You must have administrative privileges to run the installer.
 
-Double click the EdgeSystem.msi file in Windows Explorer to launch the installer UI. You will be prompted for install location and port (with the default 5590 value pre-set). When the install finishes, Edge System will be installed and running on the port specified. 
+Double click the EdgeSystem.msi file in Windows Explorer to launch the installer UI. You will be prompted for install location and port (with the default 5590 value pre-set). When the install finishes, Edge Data Store will be installed and running on the port specified. 
 
 **Note** The UI based installer will prompt for a port value, and will not proceed if an invalid port is specified.
 
@@ -36,7 +36,7 @@ msiexec /i EdgeSystem.msi PORT=5590 INSTALLFOLDER="C:\otherdir"
 ```
 The PORT (shown above as the default value; must be in all caps) is optional, and can be changed to a valid value of the user's preference. If PORT=nnnn is omitted, the default will be used. The UI will launch with the port pre-set to the value specified; validity will be checked as mentioned above, with the install proceeding only when a valid port number is provided. If, however, the "quiet" or "no ui" flag for msiexec is specified, and the PORT value on the command line is not valid, the install will proceed with the default 5590 value.
 
-The INSTALLFOLDER (must be all caps) is also optional; you can specify an alternate location for Edge System's binary components. The default value is "C:\Program Files\OSISoft\EdgeSystem". OSIsoft recommends you use the default value.
+The INSTALLFOLDER (must be all caps) is also optional; you can specify an alternate location for Edge Data Store's binary components. The default value is "C:\Program Files\OSISoft\EdgeSystem". OSIsoft recommends you use the default value.
 
 #### Windows uninstallation
 
@@ -65,11 +65,11 @@ After the check for prerequisites succeeds, a prompt will appear asking if you w
 
 **Note** If an invalid value is specified for the port, the install will proceed with the default value of 5590 selected.
 
-The install will complete and Edge System will be running on your device.
+The install will complete and Edge Data Store will be running on your device.
 
 #### Linux uninstallation 
 
-To remove Edge System software from a Linux computer, open a terminal window and run the command:
+To remove Edge Data Store software from a Linux computer, open a terminal window and run the command:
 
 ```bash
 sudo apt remove osisoft.edgesystem
@@ -84,7 +84,7 @@ sudo rm -r /usr/share/EdgeSystem/
 
 
 ## After Installation (Windows and Linux)
-You can verify that Edge System is correctly installed by running the following script from the terminal window (depending upon the processor, memory, and storage, it may take the system a few seconds to start up):
+You can verify that Edge Data Store is correctly installed by running the following script from the terminal window (depending upon the processor, memory, and storage, it may take the system a few seconds to start up):
 
 ```bash
 
@@ -159,4 +159,4 @@ If the installation was successful, you will get back a JSON copy of the default
 }
 ```
 
-If you get back an error, wait a few seconds and try it again. On a device with limited processor, memory, and slow storage, it may take some time before the Edge System is fully initialized and running for the first time.
+If you get back an error, wait a few seconds and try it again. On a device with limited processor, memory, and slow storage, it may take some time before the Edge Data Store is fully initialized and running for the first time.

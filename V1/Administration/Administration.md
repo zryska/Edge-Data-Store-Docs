@@ -2,17 +2,17 @@
 uid: edgeSystemAdministration
 ---
 
-# Edge System administration
+# Edge Data Store administration
 
-The Edge System provides a number of administration level functions.
+The Edge Data Store provides a number of administration level functions.
 
-## Reset Edge System
+## Reset Edge Data Store
 
-Edge System provides a method of performing a complete reset of the product. When you perform a reset, all event data and Edge System configuration is deleted, and the product is restarted.
+Edge Data Store provides a method of performing a complete reset of the product. When you perform a reset, all event data and Edge Data Store configuration is deleted, and the product is restarted.
 
 **Note:** All configuration and stored data will be lost as a result of performing this action.
 
-To reset the Edge System, use any REST client and make a request using one of the following:
+To reset the Edge Data Store, use any REST client and make a request using one of the following:
 
 ```http
 Method: POST
@@ -30,7 +30,7 @@ An HTTP status 204 message indicates success.
 
 ## Reset the Edge Storage Component
 
-Edge System provides a method by which a user may delete and reset all event and configuration data related to the Edge Data Store component, after which the product will be restarted.
+Edge Data Store provides a method by which a user may delete and reset all event and configuration data related to the Edge Data Store component, after which the product will be restarted.
 
 To reset the Storage component, use any REST client and make a request using one of the following:
 
@@ -50,7 +50,7 @@ An HTTP status 204 message indicates success.
 
 ## Stop and Start an Edge Connectivity Adapter
 
-Edge System provides the ability to stop and start connectivity components. By default, when Edge System starts, all currently configured connectivity components are started and remain running until the product shuts down.
+Edge Data Store provides the ability to stop and start connectivity components. By default, when Edge Data Store starts, all currently configured connectivity components are started and remain running until the product shuts down.
 
 ### Stop a Connectivity Adapter
 

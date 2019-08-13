@@ -2,19 +2,19 @@
 uid: edgeSystemHealth
 ---
 
-# Edge System health
+# Edge Data Store health
 
-Having insight into the health of the Edge System and the components that make it up can be critical for ensuring that your needs for data collection are being met.  To that end, Edge System and its components produce health information to be sent to OSIsoft Health Omf Endpoints. When enabled, Edge System will transfer to configured Omf health endpoints the types and containers that represent available  health information.
+Having insight into the health of the Edge Data Store and the components that make it up can be critical for ensuring that your needs for data collection are being met.  To that end, Edge Data Store and its components produce health information to be sent to OSIsoft Health Omf Endpoints. When enabled, Edge Data Store will transfer to configured Omf health endpoints the types and containers that represent available  health information.
 
-## Configuring Edge System health endpoints
+## Configuring Edge Data Store health endpoints
 
-The Edge System has the ability to report system health to one or more OMF endpoints capable of receiving health messages. To enable this functionality, one or more health endpoints must be configured.
+The Edge Data Store has the ability to report system health to one or more OMF endpoints capable of receiving health messages. To enable this functionality, one or more health endpoints must be configured.
 
-Table 1. Configuration parameters for Edge System health endpoints
+Table 1. Configuration parameters for Edge Data Store health endpoints
 
 | Parameter         | Required | Description                      |
 |-------------------|----------------------------------|-------------|
-| Id | Optional    | The ID can be any alphanumeric string, for example Endpoint1. If you do not specify an ID, Edge System generates one automatically. |
+| Id | Optional    | The ID can be any alphanumeric string, for example Endpoint1. If you do not specify an ID, Edge Data Store generates one automatically. |
 | Endpoint | Required    | The URL of the ingress point which accepts OMF health messages. |
 | UserName | Required for PI Web API endpoints  | The user name used for authentication to PI Web API OMF endpoint.  |
 | Password | Required for PI Web API endpoints | The password used for authentication to PI Web API OMF endpoint.  |

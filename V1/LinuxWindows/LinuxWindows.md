@@ -4,7 +4,7 @@ uid: linuxWindows
 
 # Linux and Windows platform differences
 
-When developing applications to work with the Edge System, there is no difference in expected behavior between Linux and Windows installations. There are some differences in how Edge System is installed between Linux and Windows, to follow best practices on both platforms.
+When developing applications to work with the Edge Data Store, there is no difference in expected behavior between Linux and Windows installations. There are some differences in how Edge Data Store is installed between Linux and Windows, to follow best practices on both platforms.
 
 ## Windows file locations
 

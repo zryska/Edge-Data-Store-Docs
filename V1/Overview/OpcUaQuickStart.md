@@ -4,7 +4,7 @@ uid: opcUaQuickStart
 
 # Edge OPC UA quick start
 
-This topic is a quick tour of setting up the Edge OPC UA component. Beta 2 comes with a single OPC UA adapter installed. It is named OpcUa1. If a second OPC UA adapter is desired in Beta 2, please reference [Edge System Configuration](xref:edgeSystemConfiguration) on how to add a new component to Edge System. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for OpcUa1.
+This topic is a quick tour of setting up the Edge OPC UA component. Beta 2 comes with a single OPC UA adapter installed. It is named OpcUa1. If a second OPC UA adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:edgeSystemConfiguration) on how to add a new component to Edge Data Store. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for OpcUa1.
 
 ## Configure an OPC UA data source
 
@@ -24,17 +24,17 @@ This topic is a quick tour of setting up the Edge OPC UA component. Beta 2 comes
 
 1. Enter the correct IP address and port for your OPC UA data source.
 1. Save the file with the name OpcUa1Datasource.json.
-1. Run the following curl script from the same directory where the file is located. You should run the script on the same computer where the Edge System is installed:
+1. Run the following curl script from the same directory where the file is located. You should run the script on the same computer where the Edge Data Store is installed:
 
 ```bash
 curl -i -d "@OpcUa1Datasource.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/OpcUa1/Datasource
 ```
 
-When this command completes successfully (a 204 is returned by curl), your OPC UA data source has been created. If you get a 400 error, check your JSON file for errors. If you get a 404 or 500 error, check to make sure Edge System is running on your computer.
+When this command completes successfully (a 204 is returned by curl), your OPC UA data source has been created. If you get a 400 error, check your JSON file for errors. If you get a 404 or 500 error, check to make sure Edge Data Store is running on your computer.
 
 ## Configure OPC UA data selection
 
-Select the OPC UA data you want to store in Edge System by configuring OPC UA data selection. The following is a sample JSON for five OPC UA values.
+Select the OPC UA data you want to store in Edge Data Store by configuring OPC UA data selection. The following is a sample JSON for five OPC UA values.
 
 1. Modify the values as appropriate for your environment.
 

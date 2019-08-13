@@ -4,7 +4,7 @@ uid: sdsQuickStart
 
 # Edge Storage SDS quick start
 
-This topic is a quick tour of getting data into the Edge Storage component using the Sequential Data Store (SDS) REST API. This tour assumes that Edge System is installed, and that it is accessible through a REST API using the default installed port (5590). This tour will use curl, a commonly available tool on both Windows and Linux, and use command line commands. You can use the same operations with any programming language or tool that supports making REST calls. In addition, you can accomplish data retrieval steps (GET commands) using a browser if one is available on the device.
+This topic is a quick tour of getting data into the Edge Storage component using the Sequential Data Store (SDS) REST API. This tour assumes that Edge Data Store is installed, and that it is accessible through a REST API using the default installed port (5590). This tour will use curl, a commonly available tool on both Windows and Linux, and use command line commands. You can use the same operations with any programming language or tool that supports making REST calls. In addition, you can accomplish data retrieval steps (GET commands) using a browser if one is available on the device.
 
 ## Create an SDS type
 

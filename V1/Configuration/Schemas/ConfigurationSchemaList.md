@@ -4,11 +4,11 @@ uid: configurationSchemaList
 
 # Configuration schemas
 
-The Edge System is configured via a series of JSON files. The schemas for these files are provided in the installation directory and are documented below. 
+The Edge Data Store is configured via a series of JSON files. The schemas for these files are provided in the installation directory and are documented below. 
 
-## Edge System configuration schemas
+## Edge Data Store configuration schemas
 
-Use the following schemas to configure Edge System:
+Use the following schemas to configure Edge Data Store:
 
 - [EdgeLoggerConfiguration](.\System_Logging_schema.md)
 - [PortConfiguration](.\System_Port_schema.md)

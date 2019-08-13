@@ -2,7 +2,7 @@
 uid: system_Components_schema
 ---
 
-# Sample Edge System components configuration
+# Sample Edge Data Store components configuration
 
  ```json
 [
@@ -21,7 +21,7 @@ uid: system_Components_schema
 ]
  ```
 
-# Edge System components schema
+# Edge Data Store components schema
 
 | Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                                     |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------------- |

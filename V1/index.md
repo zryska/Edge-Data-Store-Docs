@@ -2,7 +2,7 @@
 uid: index
 ---
 
-# OSIsoft Edge System
+# OSIsoft Edge Data Store
 
 =======
 
@@ -44,7 +44,7 @@ uid: index
   - [Management Tools](xref:managementTools)
   - [Logging Configuration](xref:loggingConfiguration)
 - [Configuration Schemas](xref:configurationSchemaList)
-  - [Edge System Schema](xref:edge_system_schema)
+  - [Edge Data Store Schema](xref:edge_system_schema)
   - System
     - [System Schema](xref:system_schema)
     - [System Port Schema](xref:system_Port_schema)

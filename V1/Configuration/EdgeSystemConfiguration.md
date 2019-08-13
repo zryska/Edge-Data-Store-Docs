@@ -2,17 +2,17 @@
 uid: edgeSystemConfiguration
 ---
 
-# Edge System configuration
+# Edge Data Store configuration
 
-Edge System uses JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, it is recommended that you use REST for any changes you make to the files. As part of making Edge System as secure as possible, any passwords or secrets that are configured will be stored in encrypted form (with cryptographic key material stored separately in a secure location.) If the files are edited directly, the system may not work as expected. For Beta 2 it is recommended that REST be used as the primary way of configuring the Edge System. In the final release command line configuration will also be supported.
+Edge Data Store uses JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, it is recommended that you use REST for any changes you make to the files. As part of making Edge Data Store as secure as possible, any passwords or secrets that are configured will be stored in encrypted form (with cryptographic key material stored separately in a secure location.) If the files are edited directly, the system may not work as expected. For Beta 2 it is recommended that REST be used as the primary way of configuring the Edge Data Store. In the final release command line configuration will also be supported.
 
 **Note:** It is possible to edit any single component or facet of the system using REST, but it is also possible to configure the system as a whole with a single REST call.
 
-## Configuring the Edge System
+## Configuring the Edge Data Store
 
-The Edge System hosts other components. While the initial release of the Edge System includes Modbus, Opc Ua, and Storage components, they are only active if the system is configured to use them. The System itself has a relatively small configuration surface area - the list of components and the HTTP Port used for REST calls.
+The Edge Data Store hosts other components. While the initial release of the Edge Data Store includes Modbus, Opc Ua, and Storage components, they are only active if the system is configured to use them. The System itself has a relatively small configuration surface area - the list of components and the HTTP Port used for REST calls.
 
-### Configuring Edge System port
+### Configuring Edge Data Store port
 
 System_Port.json specifies the port on which the System is listening for REST API calls. The same port is used for configuration and for writing data to OMF and SDS. The default configuration port is 5590. The default System_Port.json file installed is:
 
@@ -22,17 +22,17 @@ System_Port.json specifies the port on which the System is listening for REST AP
 }
 ```
 
-Allowable ports are in the range of 1024-65535. Before you change the default, ensure that no other service or application on the computer running the EdgeSystem is using that port - only one application or service can use a port. The Edge System must be restarted if the port number changes through the REST API. To change the Edge System port you can save the JSON containing the new port number in the JSON fomrat above to a file named EdgePort.json and run the following script:
+Allowable ports are in the range of 1024-65535. Before you change the default, ensure that no other service or application on the computer running the EdgeSystem is using that port - only one application or service can use a port. The Edge Data Store must be restarted if the port number changes through the REST API. To change the Edge Data Store port you can save the JSON containing the new port number in the JSON fomrat above to a file named EdgePort.json and run the following script:
 
 ```bash
 curl -i -d "@EdgePort.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/system/port
 ```
 
-After the REST command completes, the Edge System will need to be restarted for the change to take effect.
+After the REST command completes, the Edge Data Store will need to be restarted for the change to take effect.
 
-### Configuring Edge System components
+### Configuring Edge Data Store components
 
-The minimum System_Components.json file for the System is below. The Storage component is required for this initial release for Edge System to run. With later releases of the Edge System, the storage component may not be required.
+The minimum System_Components.json file for the System is below. The Storage component is required for this initial release for Edge Data Store to run. With later releases of the Edge Data Store, the storage component may not be required.
 
 ```json
 [
@@ -79,13 +79,13 @@ The default System_Components.json for Beta 2 is given below. It includes three 
 curl -i -d "@AddComponent.json" -H "Content-Type: application/json" -X POST http://localhost:5590/api/v1/configuration/system/components
 ```
 
-After the curl command completes successfully, for Beta 2 the Edge System will need to be restarted before the new component can be configured or used. This behavior will change in the final relase, and components will be able to be added without an Edge System restart.
+After the curl command completes successfully, for Beta 2 the Edge Data Store will need to be restarted before the new component can be configured or used. This behavior will change in the final relase, and components will be able to be added without an Edge Data Store restart.
 
-## Configuring entire Edge System
+## Configuring entire Edge Data Store
 
-### Minimum Edge System Configuration
+### Minimum Edge Data Store Configuration
 
-The following JSON file represents minimal configuration of an Edge System. There are no Modbus or Opc Ua components, and the Storage component configurations are set to the default. If a system were configured with this JSON file, any existing Modbus or Opc Ua components would be disabled and removed. No storage data would be deleted or modified, and OMF and SDS data access would not be impacted.
+The following JSON file represents minimal configuration of an Edge Data Store. There are no Modbus or Opc Ua components, and the Storage component configurations are set to the default. If a system were configured with this JSON file, any existing Modbus or Opc Ua components would be disabled and removed. No storage data would be deleted or modified, and OMF and SDS data access would not be impacted.
 
 ```json
 {
@@ -122,7 +122,7 @@ The following JSON file represents minimal configuration of an Edge System. Ther
 }
 ```
 
-Saveor copy the JSON in a file named EdgeMinimumConfiguration.json in any directory on a device with Edge System installed. When the following curl command is run, this will be set as the configuration of a running Edge System (run the command from the directory where the file is located):
+Saveor copy the JSON in a file named EdgeMinimumConfiguration.json in any directory on a device with Edge Data Store installed. When the following curl command is run, this will be set as the configuration of a running Edge Data Store (run the command from the directory where the file is located):
 
 ```bash
 curl -i -d "@EdgeMinimumConfiguration.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration
@@ -130,11 +130,11 @@ curl -i -d "@EdgeMinimumConfiguration.json" -H "Content-Type: application/json" 
 
 The configuration takes effect immediately after the command completes.
 
-The above example will result in a minimal configuration of Edge System. It will only support [OMF](xref:omfQuickStart) and [SDS](xref:sdsQuickStart) operations using REST. No egress is configured, so no data will be forwarded to either [OCS](xref:ocsEgressQuickStart) or [PI Web API](xref:piEgressQuickStart).
+The above example will result in a minimal configuration of Edge Data Store. It will only support [OMF](xref:omfQuickStart) and [SDS](xref:sdsQuickStart) operations using REST. No egress is configured, so no data will be forwarded to either [OCS](xref:ocsEgressQuickStart) or [PI Web API](xref:piEgressQuickStart).
 
-### Maximum Edge System Configuration
+### Maximum Edge Data Store Configuration
 
-The following JSON file represents maximal configuration of an Edge System. There are Modbus and Opc Ua components, and egress is configured to send to both PI Web API and OCS. If a system were configured with this JSON file. In this example both operational data (namespace = default) and diagnostic data for the system and the adapters (namespace = diagnostics).
+The following JSON file represents maximal configuration of an Edge Data Store. There are Modbus and Opc Ua components, and egress is configured to send to both PI Web API and OCS. If a system were configured with this JSON file. In this example both operational data (namespace = default) and diagnostic data for the system and the adapters (namespace = diagnostics).
 
 ```json
 {
@@ -461,13 +461,13 @@ The following JSON file represents maximal configuration of an Edge System. Ther
 
 **Please be sure to fill in any credentials or IP addresses with with appropriate values for your environment**
 
-Save the edited version of the JSON above in a file named EdgeMaximumConfiguration.json in any directory. When the following curl command is run, this will be set as the configuration of a running Edge System (the command should be run from the same directory where the file is located):
+Save the edited version of the JSON above in a file named EdgeMaximumConfiguration.json in any directory. When the following curl command is run, this will be set as the configuration of a running Edge Data Store (the command should be run from the same directory where the file is located):
 
 ```bash
 curl -i -d "@EdgeMaximumConfiguration.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration
 ```
 
-The configuration takes effect immediately after the command completes unless Components were added. If Components were added in Beta 2, a restart of Edge System might be necessary before the changes take effect.
+The configuration takes effect immediately after the command completes unless Components were added. If Components were added in Beta 2, a restart of Edge Data Store might be necessary before the changes take effect.
 
 Full JSON definition of configuration parameters:
-[Edge System Configuration](xref:edge_system_schema)
+[Edge Data Store Configuration](xref:edge_system_schema)
