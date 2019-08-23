@@ -13,6 +13,8 @@ uid: index
   - [OCS Egress Quick Start](xref:ocsEgressQuickStart)
   - [PI Egress Quick Start](xref:piEgressQuickStart)
   - [SDS Read/Write Quick Start](xref:sdsQuickStart)
+  - [Visualization Quick Start](xref:visualizationQuickStart)
+  - [Analytics Quick Start](xref:analyticsQuickStart)
 - [Design](xref:scalePerformance)
 - [Installation](xref:installationOverview)
 - [Security](xref:security)

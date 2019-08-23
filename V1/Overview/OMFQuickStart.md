@@ -78,7 +78,7 @@ Now that the type and container have been created, we can write data using OMF:
 This example includes two data events that will be stored in the SDS Stream that was created in the previous steps. It is generally a best practice to batch OMF values when writing them for the best performance. In order to write the data in the Edge Storage, the JSON should be stored as a file with the name OmfCreateDataEvents.json and the following curl script run:
 
 ```bash
-curl -i -d "@SDSWriteData.json" -H "Content-Type: application/json"  -X POST http://localhost:5590/api/v1/tenants/default/namespaces/default/streams/Simple/Data
+curl -i -d "@SDSWriteData.json" -H "Content-Type: application/json"  -X POST http://localhost:5590/api/v1/tenants/default/namespaces/default/streams/MyCustomContainer/Data
 ```
 
 When this command completes successfully, two values will have been written to the SDS stream.
@@ -88,7 +88,7 @@ When this command completes successfully, two values will have been written to t
 In order to read the data back from the server that has been written, you can use the SDS REST API. Here is an example curl script that reads back the last value entered:
 
 ```bash
-curl http://localhost:5590/api/v1/tenants/default/namespaces/default/streams/Simple/Data/Last
+curl http://localhost:5590/api/v1/tenants/default/namespaces/default/streams/MyCustomContainer/Data/Last
 ```
 
 When run this GET command returns the last value written:
@@ -102,7 +102,7 @@ When run this GET command returns the last value written:
 In order to read the data back from the server that has been written, you can use the SDS REST API. Here is an example curl script that reads back a time range of values that have been written:
 
 ```bash
-curl "http://localhost:5590/api/v1/tenants/default/namespaces/default/streams/Simple/Data?startIndex=2017-07-08T13:00:00Z&count=100"
+curl "http://localhost:5590/api/v1/tenants/default/namespaces/default/streams/MyCustomContainer/Data?startIndex=2017-07-08T13:00:00Z&count=100"
 ```
 
 This command will return up to 100 values after the startIndex specified:
