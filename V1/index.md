@@ -15,6 +15,8 @@ uid: index
   - [SDS Read/Write Quick Start](xref:sdsQuickStart)
   - [Visualization Quick Start](xref:visualizationQuickStart)
   - [Analytics Quick Start](xref:analyticsQuickStart)
+  - [Command Line Quick Start - Linux](xref:commandLineLinuxQuickStart)
+  - [Command Line Quick Start - Windows](xref:commandLineWindowsQuickStart)
 - [Design](xref:scalePerformance)
 - [Installation](xref:installationOverview)
 - [Security](xref:security)
