@@ -13,7 +13,7 @@ Use the following schemas to configure Edge Data Store:
 - [EdgeLoggerConfiguration](.\System_Logging_schema.md)
 - [PortConfiguration](.\System_Port_schema.md)
 - [OmfHealthEndpointConfiguration](.\System_HealthEndpoints_schema.md)
-- [EdgeSystemConfig](.\System_Components_schema.md)
+- [EdgeDataStoreConfig](.\System_Components_schema.md)
   
 ## Connectivity Adapters configuration schemas
 

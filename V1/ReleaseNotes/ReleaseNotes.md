@@ -12,9 +12,9 @@ This is the second beta release of the combined Edge Data Store - including Stor
 
 Edge Data Store is supported on a variety of platforms and processors. OSIsoft provides ready to use install kits for the following platforms:
 
-* Windows 10 x64 - EdgeSystem.msi (Intel/AMD 64 bit processors)
-* Debian 9 or later x64/AMD64 - EdgeSystem_linux-x64.deb (Intel/AMD 64 bit processors)
-* Debian 9 or later ARM32 - EdgeSystem_linux-arm.deb (Raspberry PI 2,3,4, BeagleBone devices, other ARM v7 and ARM v8 32 bit processors)
+* Windows 10 x64 - EdgeDataStore.msi (Intel/AMD 64 bit processors)
+* Debian 9 or later x64/AMD64 - EdgeDataStore_linux-x64.deb (Intel/AMD 64 bit processors)
+* Debian 9 or later ARM32 - EdgeDataStore_linux-arm.deb (Raspberry PI 2,3,4, BeagleBone devices, other ARM v7 and ARM v8 32 bit processors)
 
 In addition to ready to use install kits, OSIsoft also provides examples of how to create Docker Containers in a separate file. tar.gz files are provided with binaries for customers who want to build their own custom installers or containers for Linux.
 
@@ -49,14 +49,14 @@ To use any of the installers, first copy the appropriate file to the file system
 
 ### Windows (Windows 10 x64)
 
-Double click the EdgeSystem.msi file in Windows Explorer or execute the file from a command prompt. You will be prompted for install location and default port, and when the install finishes the EdgeSystem will be installed and running on either the default port 5590 or the port you specified during the install.
+Double click the EdgeDataStore.msi file in Windows Explorer or execute the file from a command prompt. You will be prompted for install location and default port, and when the install finishes the EdgeDataStore will be installed and running on either the default port 5590 or the port you specified during the install.
 
 ### Debian 9 or later Linux (Ubuntu  Raspberry PI, BeagleBone, other Debian based Linux distros)
 
 Open a terminal window and type:
 
 ```bash
-sudo apt install ./EdgeSystem_linux_<either x64 or arm depending upon processor>.deb
+sudo apt install ./EdgeDataStore_linux_<either x64 or arm depending upon processor>.deb
 ```
 
 A check will be done for prerequisites. If the Linux OS is up to date, the install will succeed. If the install fails, run the following commands from the terminal window and try the install again:
@@ -68,7 +68,7 @@ sudo apt uggrade
 
 After the check for prerequisites succeeds, a prompt will display asking if you want to change the default port (5590). If you want to change the port type in another port in the acceptable range for the OS you are using, or if 5590 is acceptable, press enter.
 
-The install will complete and EdgeSystem will be running on your device. You can verify that EdgeSystem is correctly installed by running the following script from the terminal window. **Note:** Depending on the processor, memory, and storage, it may take the system a few seconds to start up
+The install will complete and EdgeDataStore will be running on your device. You can verify that EdgeDataStore is correctly installed by running the following script from the terminal window. **Note:** Depending on the processor, memory, and storage, it may take the system a few seconds to start up
 
 ```bash
 curl http://localhost:5590/api/v1/configuration

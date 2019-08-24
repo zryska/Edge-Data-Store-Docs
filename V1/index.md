@@ -6,7 +6,7 @@ uid: index
 
 =======
 
-- [Overview](xref:edgeSystemOverview)
+- [Overview](xref:EdgeDataStoreOverview)
   - [OMF Quick Start](xref:omfQuickStart)
   - [Modbus Quick Start](xref:modbusQuickStart)
   - [Opc Ua Quick Start](xref:opcUaQuickStart)
@@ -18,7 +18,7 @@ uid: index
 - [Design](xref:scalePerformance)
 - [Installation](xref:installationOverview)
 - [Security](xref:security)
-- [System Configuration](xref:edgeSystemConfiguration)
+- [System Configuration](xref:EdgeDataStoreConfiguration)
 - Connectivity Adapters
   - [OpcUa](xref:opcUaOverview)
     - [Linux Opc Ua Data Selection](xref:opcUaDataSelectionLinux)
@@ -42,7 +42,7 @@ uid: index
     - [Searching](xref:sdsSearching)
     - [Stream Tags and Metadata](xref:sdsStreamExtra)
   - [Egress](xref:egress)
-- [Administration](xref:edgeSystemAdministration)
+- [Administration](xref:EdgeDataStoreAdministration)
   - [Management Tools](xref:managementTools)
   - [Logging Configuration](xref:loggingConfiguration)
 - [Configuration Schemas](xref:configurationSchemaList)
@@ -64,8 +64,8 @@ uid: index
     - [Storage Periodic Egress Endpoints Schema](xref:storage_PeriodicEgressEndpoints_schema)
     - [Storage Runtime Schema](xref:storage_Runtime_schema)
     - [Storage OEM Schema](xref:storage_OEM_schema)
-- [Health](xref:edgeSystemHealth)
-- [Diagnostics](xref:edgeSystemDiagnostics)
+- [Health](xref:EdgeDataStoreHealth)
+- [Diagnostics](xref:EdgeDataStoreDiagnostics)
 - [Platforms](xref:linuxWindows)
 - [Docker](xref:edgeDocker)
 - [Command Line](xref:commandLine)

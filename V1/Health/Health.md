@@ -1,5 +1,5 @@
 ---
-uid: edgeSystemHealth
+uid: EdgeDataStoreHealth
 ---
 
 # Edge Data Store health

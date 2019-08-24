@@ -10,7 +10,7 @@ Modbus is a commonly available communication protocol used for connecting and tr
 
 The Modbus TCP Connectivity Adapter communicates with any device conforming to the Modbus TCP/IP protocol through a gateway or router. The Modbus slave devices and routers do not need to be on the same subnet as Edge Data Store.
 
-Beta 2 comes with a single Modbus adapter installed. It is named Modbus1. If a second Modbus adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:edgeSystemConfiguration) on how to add a new component to Edge Data Store. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for Modbus1.
+Beta 2 comes with a single Modbus adapter installed. It is named Modbus1. If a second Modbus adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:EdgeDataStoreConfiguration) on how to add a new component to Edge Data Store. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for Modbus1.
 
 ## Configuration of Modbus data source
 

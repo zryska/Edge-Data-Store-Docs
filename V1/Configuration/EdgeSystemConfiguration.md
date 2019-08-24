@@ -1,5 +1,5 @@
 ---
-uid: edgeSystemConfiguration
+uid: EdgeDataStoreConfiguration
 ---
 
 # Edge Data Store configuration
@@ -22,7 +22,7 @@ System_Port.json specifies the port on which the System is listening for REST AP
 }
 ```
 
-Allowable ports are in the range of 1024-65535. Before you change the default, ensure that no other service or application on the computer running the EdgeSystem is using that port - only one application or service can use a port. The Edge Data Store must be restarted if the port number changes through the REST API. To change the Edge Data Store port you can save the JSON containing the new port number in the JSON fomrat above to a file named EdgePort.json and run the following script:
+Allowable ports are in the range of 1024-65535. Before you change the default, ensure that no other service or application on the computer running the EdgeDataStore is using that port - only one application or service can use a port. The Edge Data Store must be restarted if the port number changes through the REST API. To change the Edge Data Store port you can save the JSON containing the new port number in the JSON fomrat above to a file named EdgePort.json and run the following script:
 
 ```bash
 curl -i -d "@EdgePort.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/system/port

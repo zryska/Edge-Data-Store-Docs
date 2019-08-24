@@ -53,7 +53,7 @@ curl -v -d "@Storage_PeriodicEgressEndspoints.config.json" -H "Content-Type: app
 | **TypePrefix**                  | Optional                  | string    | Prefix applied to any types that are egressed. A null string or a string containing only empty spaces will be ignored. The following restricted characters will not be allowed: / : ? # [ ] @ ! $ & ' ( ) \ * + , ; = % | < > { } ` " |
 | **DebugExpiration**             | Optional                  | string    | A property that enables persistence of detailed information, for each outbound HTTP request pertaining to this egress endpoint, to disk. The value of this property represents the date and time this detailed information should stop being persisted. See [Troubleshooting](../Troubleshooting/Troubleshooting.md) for more information. |
 | **NamespaceId**                 | Optional                  | string    | Represents the namespace that will be egressed. There are two available namespaces: default; diagnostics. Default namespace is “default”. |
-| **TokenEndpoint**               | Optional for OCS endpoint | string    | Used to retrieve an OCS token from an alternative endpoint. *Do not use*. |
+| **TokenEndpoint**               | Optional for OCS endpoint | string    | Used to retrieve an OCS token from an alternative endpoint. *This is not normally necessary with OCS. Only use if directed to do so by customer support*. |
 
 ### Examples
 
@@ -179,9 +179,9 @@ Find various examples below of valid egress configurations.
 
 After configuration for an egress endpoint is added, egress execution will periodically occur for that endpoint. Egress is handled individually per configured endpoint. On the first execution types and containers will be egressed; subsequently only new or changed types/containers will be egressed. **Only streams with a single, timeseries-based index can be egressed**. Type creation must be successful in order to perform container creation; likewise container creation must be successful in order to perform data egress.
 
-Type, container and data items are batched into one or more OMF messages when egressing. Per the requirements defined in OMF, a single message will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. In that case the Edge System will fall back to egressing each item individually, per type or stream (i.e. each type, each stream, all data for a single stream). Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed.
+Type, container and data items are batched into one or more OMF messages when egressing. Per the requirements defined in OMF, a single message will not exceed 192KB in size. Compression is automatically applied to outbound egress messages. On the destination, failure to add a single item will result in the message failing. In that case the Edge Data Store will fall back to egressing each item individually, per type or stream (i.e. each type, each stream, all data for a single stream). Types, containers, and data will continue to be egressed as long as the destination continues to respond to HTTP requests - retrying previous failures as needed.
 
-Certain HTTP failures during egress will result in a retry. The Edge System will retry an HTTP request a maximum of 5 times with exponentially increasing delays between each request. The total time waiting and retrying is currently set at 1 minute. During that time egress of other messages will be delayed. List of retryable occurrences:
+Certain HTTP failures during egress will result in a retry. The Edge Data Store will retry an HTTP request a maximum of 5 times with exponentially increasing delays between each request. The total time waiting and retrying is currently set at 1 minute. During that time egress of other messages will be delayed. List of retryable occurrences:
 
 - TimeoutException
 - HttpRequestException

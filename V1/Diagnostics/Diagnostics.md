@@ -1,5 +1,5 @@
 ---
-uid: edgeSystemDiagnostics
+uid: EdgeDataStoreDiagnostics
 ---
 
 # Edge Data Store diagnostics

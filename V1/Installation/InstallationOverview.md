@@ -8,9 +8,9 @@ uid: installationOverview
 
 Edge Data Store is supported on a variety of platforms and processors. OSIsoft provides ready to use install kits for the following platforms:
 
-* Windows 10 x64 - EdgeSystem.msi (Intel/AMD 64 bit processors)
-* Debian 9 or later x64/AMD64 - EdgeSystem_linux-x64.deb (Intel/AMD 64 bit processors)
-* Debian 9 or later ARM32 - EdgeSystem_linux-arm.deb (Raspberry PI 2,3,4, BeagleBone devices, other ARM v7 and ARM v8 32 bit processors)
+* Windows 10 x64 - EdgeDataStore.msi (Intel/AMD 64 bit processors)
+* Debian 9 or later x64/AMD64 - EdgeDataStore_linux-x64.deb (Intel/AMD 64 bit processors)
+* Debian 9 or later ARM32 - EdgeDataStore_linux-arm.deb (Raspberry PI 2,3,4, BeagleBone devices, other ARM v7 and ARM v8 32 bit processors)
 
 In addition to ready to use install kits, OSIsoft also provides examples of how to create [Docker containers](xref:edgeDocker), and tar.gz files are provided with binaries for customers who wish to build their own custom installers or containers for Linux.
 
@@ -20,29 +20,29 @@ To use any of the installers, copy the appropriate file to the file system of th
 
 The installers allow the port assignment to be configured at install time. The default port is 5590. The user can specify any numeric value in the range of 1024 to 65535; any other characters or values will be considered invalid. You should select a port not already in use by another program on the host; the installer will not check for this case.
 
-**Note**  The port assignment can be changed after installation - see the [configuration](xref:edgeSystemConfiguration) section of the documentation.
+**Note**  The port assignment can be changed after installation - see the [configuration](xref:EdgeDataStoreConfiguration) section of the documentation.
 
 ### Windows (Windows 10 x64)
 
 You must have administrative privileges to run the installer.
 
-Double click the EdgeSystem.msi file in Windows Explorer to launch the installer UI. You will be prompted for install location and port (with the default 5590 value pre-set). When the install finishes, Edge Data Store will be installed and running on the port specified. 
+Double click the EdgeDataStore.msi file in Windows Explorer to launch the installer UI. You will be prompted for install location and port (with the default 5590 value pre-set). When the install finishes, Edge Data Store will be installed and running on the port specified. 
 
 **Note** The UI based installer will prompt for a port value, and will not proceed if an invalid port is specified.
 
 The installer can be launched from the command line with the following command
 ```bash
-msiexec /i EdgeSystem.msi PORT=5590 INSTALLFOLDER="C:\otherdir" 
+msiexec /i EdgeDataStore.msi PORT=5590 INSTALLFOLDER="C:\otherdir" 
 ```
 The PORT (shown above as the default value; must be in all caps) is optional, and can be changed to a valid value of the user's preference. If PORT=nnnn is omitted, the default will be used. The UI will launch with the port pre-set to the value specified; validity will be checked as mentioned above, with the install proceeding only when a valid port number is provided. If, however, the "quiet" or "no ui" flag for msiexec is specified, and the PORT value on the command line is not valid, the install will proceed with the default 5590 value.
 
-The INSTALLFOLDER (must be all caps) is also optional; you can specify an alternate location for Edge Data Store's binary components. The default value is "C:\Program Files\OSISoft\EdgeSystem". OSIsoft recommends you use the default value.
+The INSTALLFOLDER (must be all caps) is also optional; you can specify an alternate location for Edge Data Store's binary components. The default value is "C:\Program Files\OSISoft\EdgeDataStore". OSIsoft recommends you use the default value.
 
 #### Windows uninstallation
 
-To remove the EdgeSystem program files from a computer, use the Windows Control Panel uninstall application process. The configuration, data, and log files will not be removed by the uninstallation process.
+To remove the EdgeDataStore program files from a computer, use the Windows Control Panel uninstall application process. The configuration, data, and log files will not be removed by the uninstallation process.
 
-To remove data, configuration and log files, remove the directory C:\ProgramData\OSIsoft\EdgeSystem\. This will result in deletion of all data stored in the Edge Storage component in addition to configuration and log files.
+To remove data, configuration and log files, remove the directory C:\ProgramData\OSIsoft\EdgeDataStore\. This will result in deletion of all data stored in the Edge Storage component in addition to configuration and log files.
 
 ### Debian 9 or Later Linux (Ubuntu  Raspberry PI, BeagleBone, other Debian based Linux distros)
 
@@ -51,7 +51,7 @@ You must have administrative privileges to install the software, e.g. root or su
 Open a terminal window and type:
 
 ```bash
-sudo apt install ./EdgeSystem_linux_<either x64 or arm depending upon processor>.deb
+sudo apt install ./EdgeDataStore_linux_<either x64 or arm depending upon processor>.deb
 ```
 
 A validation check will be done for prerequisites. If the Linux OS is up to date, the install will succeed. If the install fails, run the following commands from the terminal window and try the install again:
@@ -72,14 +72,14 @@ The install will complete and Edge Data Store will be running on your device.
 To remove Edge Data Store software from a Linux computer, open a terminal window and run the command:
 
 ```bash
-sudo apt remove osisoft.edgesystem
+sudo apt remove osisoft.EdgeDataStore
 ```
 Running this command will not delete the data, configuration, or log files.
 
-To remove data, configuration, and log files, remove the directory /usr/share/OSIsoft/EdgeSystem/. This will result in deletion of all data stored in the Edge Storage component, in addition to configuration and log files. This can be done with the following command:
+To remove data, configuration, and log files, remove the directory /usr/share/OSIsoft/EdgeDataStore/. This will result in deletion of all data stored in the Edge Storage component, in addition to configuration and log files. This can be done with the following command:
 
 ```bash
-sudo rm -r /usr/share/EdgeSystem/
+sudo rm -r /usr/share/EdgeDataStore/
 ```
 
 

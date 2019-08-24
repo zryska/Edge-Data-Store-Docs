@@ -4,7 +4,7 @@ uid: opcUaQuickStart
 
 # Edge OPC UA quick start
 
-This topic is a quick tour of setting up the Edge OPC UA component. Beta 2 comes with a single OPC UA adapter installed. It is named OpcUa1. If a second OPC UA adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:edgeSystemConfiguration) on how to add a new component to Edge Data Store. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for OpcUa1.
+This topic is a quick tour of setting up the Edge OPC UA component. Beta 2 comes with a single OPC UA adapter installed. It is named OpcUa1. If a second OPC UA adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:EdgeDataStoreConfiguration) on how to add a new component to Edge Data Store. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for OpcUa1.
 
 ## Configure an OPC UA data source
 

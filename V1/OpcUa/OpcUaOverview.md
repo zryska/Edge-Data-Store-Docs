@@ -8,7 +8,7 @@ uid: opcUaOverview
 
 The OPC UA connectivity transfers time-series data from OPC UA devices into Edge Data Store.
 
-Beta 2 comes with a single OPC UA adapter installed. It is named OpcUa1. If a second OPC UA adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:edgeSystemConfiguration) on how to add a new component to Edge Data Store. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for OpcUa1.
+Beta 2 comes with a single OPC UA adapter installed. It is named OpcUa1. If a second OPC UA adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:EdgeDataStoreConfiguration) on how to add a new component to Edge Data Store. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for OpcUa1.
 
 As with other Edge Data Store adapters, the OPC UA adapter is configured using data source and data selection JSON documents. The data source configuration are identical with other adapters, but OPC UA supports an option to generate a template data selection file that can be manually edited and used for subsequent configuration. This optional process for generating and editing the file is different for [Windows](xref:opcUaDataSelectionWindows) and [Linux](xref:opcUaDataSelectionLinux). Once the template file is created it can be reused on both Linux and Windows without changes.
 

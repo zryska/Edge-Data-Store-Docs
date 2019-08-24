@@ -27,7 +27,7 @@ uid: system_Components_schema
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [System_Components_schema.json](System_Components_schema.json) |
 
-# EdgeSystemConfig definitions
+# EdgeDataStoreConfig definitions
 
 | Property                        | Type     | Group                               |
 | ------------------------------- | -------- | ----------------------------------- |
@@ -58,11 +58,11 @@ uid: system_Components_schema
 
 `string`, nullable
 
-# EdgeSystemConfig properties
+# EdgeDataStoreConfig properties
 
 | Property                                            | Type      | Required | Nullable | Defined by                     |
 | --------------------------------------------------- | --------- | -------- | -------- | ------------------------------ |
-| [ComponentConfigurations](#componentconfigurations) | reference | Optional | Yes      | EdgeSystemConfig (this schema) |
+| [ComponentConfigurations](#componentconfigurations) | reference | Optional | Yes      | EdgeDataStoreConfig (this schema) |
 
 ## ComponentConfigurations
 

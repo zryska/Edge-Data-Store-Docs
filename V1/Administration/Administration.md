@@ -1,5 +1,5 @@
 ---
-uid: edgeSystemAdministration
+uid: EdgeDataStoreAdministration
 ---
 
 # Edge Data Store administration

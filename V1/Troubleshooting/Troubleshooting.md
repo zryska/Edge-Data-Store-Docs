@@ -46,9 +46,9 @@ Examples of valid strings representing date and time:
 
 The content length of each request/response and the overall number of requests/responses, can be quite large. As a result, debug information is stored to disk in a separate location than the typical log messages. Debug folders/files will be created under the Edge Data Store data folder. The debug folder/file structure is:
 
-    Windows: %programdata%\OSIsoft\EdgeSystem\Storage\egressdump\{tenantId}\{namespaceId}\{egressId}\{omfType}\{Ticks}-{Guid}-{Req/Res}.txt
+    Windows: %programdata%\OSIsoft\EdgeDataStore\Storage\egressdump\{tenantId}\{namespaceId}\{egressId}\{omfType}\{Ticks}-{Guid}-{Req/Res}.txt
 
-    Linux: /usr/share/OSIsoft/EdgeSystem/Storage/egressdump/{tenantId}/{namespaceId}/{egressId}/{omfType}/{Ticks}-{Guid}-{Req/Res}.txt
+    Linux: /usr/share/OSIsoft/EdgeDataStore/Storage/egressdump/{tenantId}/{namespaceId}/{egressId}/{omfType}/{Ticks}-{Guid}-{Req/Res}.txt
 
 *omfType* represents Type/Container/Data;
 *Ticks* represents the tick count for the Utc DateTime when it was decided that the message would be written to disk;

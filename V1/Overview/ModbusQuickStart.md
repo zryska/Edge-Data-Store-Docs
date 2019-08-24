@@ -4,7 +4,7 @@ uid: modbusQuickStart
 
 # Edge Modbus Quick Start
 
-This topic is a quick tour of setting up the Edge Modbus TCP component. Beta 2 comes with a single Modbus adapter installed. It is named Modbus1. If a second Modbus adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:edgeSystemConfiguration) on how to add a new component to Edge Data Store. The examples below will change if a second adapter is being configured - please replace Modbus1 with the name of the component you have added.
+This topic is a quick tour of setting up the Edge Modbus TCP component. Beta 2 comes with a single Modbus adapter installed. It is named Modbus1. If a second Modbus adapter is desired in Beta 2, please reference [Edge Data Store Configuration](xref:EdgeDataStoreConfiguration) on how to add a new component to Edge Data Store. The examples below will change if a second adapter is being configured - please replace Modbus1 with the name of the component you have added.
 
 ## Configure a Modbus TCP data source
 

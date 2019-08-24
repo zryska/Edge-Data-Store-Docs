@@ -18,15 +18,15 @@ Create the following Dockerfile in the directory where you wish to create and/or
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 ARG source
 WORKDIR /
-ADD ./EdgeSystem_linux-arm.tar .
-ENTRYPOINT ["./EdgeSystem_linux-arm/OSIsoft.Data.System.Host"]
+ADD ./EdgeDataStore_linux-arm.tar .
+ENTRYPOINT ["./EdgeDataStore_linux-arm/OSIsoft.Data.System.Host"]
 ```
 
-Copy the EdgeSystem_linux-arm.tar file to the same directory as the Dockerfile.
+Copy the EdgeDataStore_linux-arm.tar file to the same directory as the Dockerfile.
 Run the following command line (sudo may be necessary):
 
 ```bash
-docker build -t edgesystem .
+docker build -t EdgeDataStore .
 ```
 
 ### AMD64 (x64) Processor
@@ -37,15 +37,15 @@ Create the following Dockerfile in the directory where you wish to create and/or
 FROM mcr.microsoft.com/dotnet/core/sdk:2.2
 ARG source
 WORKDIR /
-ADD ./EdgeSystem_linux-x64.tar .
-ENTRYPOINT ["./EdgeSystem_linux-x64/OSIsoft.Data.System.Host"]
+ADD ./EdgeDataStore_linux-x64.tar .
+ENTRYPOINT ["./EdgeDataStore_linux-x64/OSIsoft.Data.System.Host"]
 ```
 
-Copy the EdgeSystem_linux-x64.tar file to the same directory as the Dockerfile.
+Copy the EdgeDataStore_linux-x64.tar file to the same directory as the Dockerfile.
 Run the following command line (sudo may be necessary):
 
 ```bash
-docker build -t edgesystem .
+docker build -t EdgeDataStore .
 ```
 
 ## Running Edge Data Store Docker Containers
@@ -55,7 +55,7 @@ docker build -t edgesystem .
 To run the container you can use the command line (sudo may be necessary):
 
 ```bash
-docker run -d --network host edgesystem
+docker run -d --network host EdgeDataStore
 ```
 
 Port 5590 will be accessible from the host and REST calls can be made to the Edge Data Store from applications on the local host computer. With this configuration, all data stored by the Edge Data Store is stored in the container itself, and when the container is deleted the data stored will also be deleted.
@@ -65,15 +65,15 @@ Port 5590 will be accessible from the host and REST calls can be made to the Edg
 To run the container you can use the command line (sudo may be necessary):
 
 ```bash
-docker run -d --network host -v /edgeds:/usr/share/OSIsoft/ edgesystem
+docker run -d --network host -v /edgeds:/usr/share/OSIsoft/ EdgeDataStore
 ```
 
 Port 5590 will be accessible from the host and REST calls can be made to the Edge Data Store from applications on the local host computer. In addition, in this example, all data that would be written to the container is written instead to the host directory /edgeds. This directory can be anything the user wishes - this example just uses a simple directory on the local machine.
 
 ### Changing Port number from Docker
 
-If a port other than 5590 is desired, see the section regarding [Port configuration](#edgeSystemConfiguration) of the Edge Data Store. Changing the configuration of the Edge Data Store running in the container will change the port exposed to the local machine.
+If a port other than 5590 is desired, see the section regarding [Port configuration](#EdgeDataStoreConfiguration) of the Edge Data Store. Changing the configuration of the Edge Data Store running in the container will change the port exposed to the local machine.
 
 ### Limiting local host access to Docker
 
-If the `--network host` option is removed from the docker run command no REST access is possible from outside the container. This may be of value where a user wishes to host an application in the same container as the EdgeSystem, and does not wish to have external REST access enabled.
+If the `--network host` option is removed from the docker run command no REST access is possible from outside the container. This may be of value where a user wishes to host an application in the same container as the EdgeDataStore, and does not wish to have external REST access enabled.

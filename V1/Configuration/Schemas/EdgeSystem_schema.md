@@ -2,7 +2,7 @@
 uid: edge_system_schema
 ---
 
-# EdgeSystemConfiguration schema
+# EdgeDataStoreConfiguration schema
 
 ```json
    "System": {
@@ -52,7 +52,7 @@ uid: edge_system_schema
 - type: [`SystemConfiguration`](xref:system_schema)
 
 ## {ComponentName}
-- [EdgeSystemConfiguration Schema](#edgesystemconfiguration-schema)
+- [EdgeDataStoreConfiguration Schema](#EdgeDataStoreconfiguration-schema)
 - [Edge Data Store Configuration Schema](#edge-system-configuration-schema)
   - [Properties](#properties)
   - [Storage](#storage)
