@@ -6,7 +6,7 @@ uid: managementTools
 
 ## Command Line Configuration
 
-In Beta 2 it is recommended that REST be used to configure the Edge Data Store. In the final release there will also be command line configuration tools available.
+The [edgecmd](xref:commandLine) utility on both Linux and Windows can be used to configure and manage Edge Data Store.
 
 ## REST tools
 

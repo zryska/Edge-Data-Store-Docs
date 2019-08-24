@@ -32,7 +32,7 @@ After the REST command completes, the Edge Data Store will need to be restarted 
 
 ### Configuring Edge Data Store components
 
-The minimum System_Components.json file for the System is below. The Storage component is required for this initial release for Edge Data Store to run. With later releases of the Edge Data Store, the storage component may not be required.
+The default System_Components.json file for the System component is below. The Storage component is required for this initial release for Edge Data Store to run. With later releases of the Edge Data Store, the storage component may not be required.
 
 ```json
 [
@@ -43,32 +43,13 @@ The minimum System_Components.json file for the System is below. The Storage com
 ]
 ```
 
-The default System_Components.json for Beta 2 is given below. It includes three components - Storage, a single Modbus adapter (Modbus1), a single Opc Ua Adapter (OpcUa1), and a Storage component (EDS.Component).
+ Additional Modbus and Opc Ua components can be added if desired, but only a single Storage component is supported. 
+
+ To add a new component, in this example a Modbus connectivity component, create the following JSON. Please note a unique ComponentId is necessary for each component in the system. For this example we will use the ComponentId Modbus1 since it is the first Modbus adapter:
 
  ```json
-[
-  {
-    "ComponentId": "OpcUa1",
-    "ComponentType": "OpcUa"
-  },
   {
     "ComponentId": "Modbus1",
-    "ComponentType": "Modbus"
-  },
-  {
-    "ComponentId": "Storage",
-    "ComponentType": "EDS.Component"
-  }
-]
- ```
-
- Additional Modbus and Opc Ua components can be added if desired, but only a single Storage component is supported. In Beta 2 the system must be restarted if a component is added or deleted using the REST API or the command line.
-
- To add a new component, in this example a second Modbus adapter, create the following JSON. Please note a unique ComponentId is necessary for each component in the system. For this example we will use the ComponentId Modbus2 since it is the second Modbus adapter:
-
- ```json
-  {
-    "ComponentId": "Modbus2",
     "ComponentType": "Modbus"
   }
  ```
@@ -88,41 +69,44 @@ After the curl command completes successfully, for Beta 2 the Edge Data Store wi
 The following JSON file represents minimal configuration of an Edge Data Store. There are no Modbus or Opc Ua components, and the Storage component configurations are set to the default. If a system were configured with this JSON file, any existing Modbus or Opc Ua components would be disabled and removed. No storage data would be deleted or modified, and OMF and SDS data access would not be impacted.
 
 ```json
-{
-    "Storage": {
-        "Runtime": {
-            "streamStorageLimitMb": 2,
-            "streamStorageTargetMb": 1,
-            "ingressDebugExpiration": "0001-01-01T00:00:00"
-        },
-        "Logging": {
-            "logLevel": "Information",
-            "logFileSizeLimitBytes": 34636833,
-            "logFileCountLimit": 31
-        },
-        "PeriodicEgressEndpoints": []
+{{
+  "Storage": {
+    "PeriodicEgressEndpoints": [],
+    "Runtime": {
+      "streamStorageLimitMb": 2,
+      "streamStorageTargetMb": 1,
+      "ingressDebugExpiration": "0001-01-01T00:00:00",
+      "checkpointRateInSec": 30,
+      "transactionLogLimitMB": 250,
+      "enableTransactionLog": true
     },
-    "System": {
-        "Logging": {
-            "logLevel": "Information",
-            "logFileSizeLimitBytes": 34636833,
-            "logFileCountLimit": 31
-        },
-        "Components": [
-             {
-                "componentId": "Storage",
-                "componentType": "EDS.Component"
-            }
-        ],
-        "HealthEndpoints": [],
-        "Port": {
-            "port": 5590
-        }
+    "Logging": {
+      "logLevel": "Information",
+      "logFileSizeLimitBytes": 34636833,
+      "logFileCountLimit": 31
     }
+  },
+  "System": {
+    "Logging": {
+      "logLevel": "Information",
+      "logFileSizeLimitBytes": 34636833,
+      "logFileCountLimit": 31
+    },
+    "HealthEndpoints": [],
+    "Port": {
+      "port": 5590
+    },
+    "Components": [
+      {
+        "componentId": "Storage",
+        "componentType": "EDS.Component"
+      }
+    ]
+  }
 }
 ```
 
-Saveor copy the JSON in a file named EdgeMinimumConfiguration.json in any directory on a device with Edge Data Store installed. When the following curl command is run, this will be set as the configuration of a running Edge Data Store (run the command from the directory where the file is located):
+Save or copy the JSON in a file named EdgeMinimumConfiguration.json in any directory on a device with Edge Data Store installed. When the following curl command is run, this will be set as the configuration of a running Edge Data Store (run the command from the directory where the file is located):
 
 ```bash
 curl -i -d "@EdgeMinimumConfiguration.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration

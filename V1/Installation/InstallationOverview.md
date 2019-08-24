@@ -26,14 +26,22 @@ The installers allow the port assignment to be configured at install time. The d
 
 You must have administrative privileges to run the installer.
 
-Double click the EdgeDataStore.msi file in Windows Explorer to launch the installer UI. You will be prompted for install location and port (with the default 5590 value pre-set). When the install finishes, Edge Data Store will be installed and running on the port specified. 
+Double click the EdgeDataStore.msi file in Windows Explorer to launch the installer UI. You will be prompted for install location and port (with the default 5590 value pre-set). When the install finishes, Edge Data Store will be installed and running on the port specified. There are also checkboxes to allow a Modbus or OPC UA connectivity component to be installed along with the default Storage component.
+
+![alt text](/images/WindowsInstall1.jpg "Windows Installation 1")
+![alt text](/images/WindowsInstall2.jpg "Windows Installation 2")
+![alt text](/images/WindowsInstall3.jpg "Windows Installation 3")
+![alt text](/images/WindowsInstall4.jpg "Windows Installation 4")
+![alt text](/images/WindowsInstall5.jpg "Windows Installation 5")
 
 **Note** The UI based installer will prompt for a port value, and will not proceed if an invalid port is specified.
 
 The installer can be launched from the command line with the following command
+
 ```bash
-msiexec /i EdgeDataStore.msi PORT=5590 INSTALLFOLDER="C:\otherdir" 
+msiexec /i EdgeDataStore.msi PORT=5590 INSTALLFOLDER="C:\otherdir"
 ```
+
 The PORT (shown above as the default value; must be in all caps) is optional, and can be changed to a valid value of the user's preference. If PORT=nnnn is omitted, the default will be used. The UI will launch with the port pre-set to the value specified; validity will be checked as mentioned above, with the install proceeding only when a valid port number is provided. If, however, the "quiet" or "no ui" flag for msiexec is specified, and the PORT value on the command line is not valid, the install will proceed with the default 5590 value.
 
 The INSTALLFOLDER (must be all caps) is also optional; you can specify an alternate location for Edge Data Store's binary components. The default value is "C:\Program Files\OSISoft\EdgeDataStore". OSIsoft recommends you use the default value.
@@ -54,6 +62,8 @@ Open a terminal window and type:
 sudo apt install ./EdgeDataStore_linux_<either x64 or arm depending upon processor>.deb
 ```
 
+![alt text](/images/LinuxInstall.jpg "Linux Installation")
+
 A validation check will be done for prerequisites. If the Linux OS is up to date, the install will succeed. If the install fails, run the following commands from the terminal window and try the install again:
 
 ```bash
@@ -61,7 +71,7 @@ sudo apt update
 sudo apt upgrade
 ```
 
-After the check for prerequisites succeeds, a prompt will appear asking if you want to change the default port (5590). If you wish to change the port type to another value in the acceptable range, type the port value you want and press Enter; if 5590 is acceptable, simply press Enter.
+After the check for prerequisites succeeds, a prompt will appear asking if you want to change the default port (5590). If you wish to change the port type to another value in the acceptable range, type the port value you want and press Enter; if 5590 is acceptable, simply press Enter. You wil then be prompted if you want to install a Modbus or OPC UA connectivity component in addition to the default Storage component. The default is not to install them, so you can press enter to proceed if neither is desired. They can be added after the installation is complete if desired.
 
 **Note** If an invalid value is specified for the port, the install will proceed with the default value of 5590 selected.
 
@@ -82,80 +92,51 @@ To remove data, configuration, and log files, remove the directory /usr/share/OS
 sudo rm -r /usr/share/EdgeDataStore/
 ```
 
-
 ## After Installation (Windows and Linux)
+
 You can verify that Edge Data Store is correctly installed by running the following script from the terminal window (depending upon the processor, memory, and storage, it may take the system a few seconds to start up):
 
 ```bash
-
 curl http://localhost:5590/api/v1/configuration
-
 ```
 
 If the installation was successful, you will get back a JSON copy of the default system configuration:
 
 ```json
 {
-    "Storage": {
-        "Runtime": {
-            "streamStorageLimitMb": 2,
-            "streamStorageTargetMb": 1,
-            "ingressDebugExpiration": "0001-01-01T00:00:00"
-        },
-        "Logging": {
-            "logLevel": "Information",
-            "logFileSizeLimitBytes": 34636833,
-            "logFileCountLimit": 31
-        },
-        "OEM": {
-            "checkpointRateInSec": 30,
-            "transactionLogLimitMB": 250,
-            "enableTransactionLog": true
-        },
-        "PeriodicEgressEndpoints": []
+  "Storage": {
+    "PeriodicEgressEndpoints": [],
+    "Runtime": {
+      "streamStorageLimitMb": 2,
+      "streamStorageTargetMb": 1,
+      "ingressDebugExpiration": "0001-01-01T00:00:00",
+      "checkpointRateInSec": 30,
+      "transactionLogLimitMB": 250,
+      "enableTransactionLog": true
     },
-    "System": {
-        "Logging": {
-            "logLevel": "Information",
-            "logFileSizeLimitBytes": 34636833,
-            "logFileCountLimit": 31
-        },
-        "Components": [{
-                "componentId": "OpcUa1",
-                "componentType": "OpcUa"
-            },
-            {
-                "componentId": "Modbus1",
-                "componentType": "Modbus"
-            },
-            {
-                "componentId": "Storage",
-                "componentType": "EDS.Component"
-            }
-        ],
-        "HealthEndpoints": [],
-        "Port": {
-            "port": 5590
-        }
-    },
-    "Modbus1": {
-        "Logging": {
-            "logLevel": "Information",
-            "logFileSizeLimitBytes": 34636833,
-            "logFileCountLimit": 31
-        },
-        "DataSource": {},
-        "DataSelection": []
-    },
-    "OpcUa1": {
-        "Logging": {
-            "logLevel": "Information",
-            "logFileSizeLimitBytes": 34636833,
-            "logFileCountLimit": 31
-        },
-        "DataSource": {},
-        "DataSelection": []
+    "Logging": {
+      "logLevel": "Information",
+      "logFileSizeLimitBytes": 34636833,
+      "logFileCountLimit": 31
     }
+  },
+  "System": {
+    "Logging": {
+      "logLevel": "Information",
+      "logFileSizeLimitBytes": 34636833,
+      "logFileCountLimit": 31
+    },
+    "HealthEndpoints": [],
+    "Port": {
+      "port": 5590
+    },
+    "Components": [
+      {
+        "componentId": "Storage",
+        "componentType": "EDS.Component"
+      }
+    ]
+  }
 }
 ```
 
