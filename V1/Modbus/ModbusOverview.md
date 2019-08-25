@@ -8,7 +8,7 @@ uid: modbusOverview
 
 Modbus is a commonly available communication protocol used for connecting and transmitting information between industrial electronic devices. The Modbus TCP Connectivity Adapter polls Modbus TCP slave devices, and transfers time series data from the data source devices into Edge Data Store.  Polling is based on the measurement configuration provided, and models the register measurements in a Modbus data source.
 
-The Modbus TCP Connectivity Adapter communicates with any device conforming to the Modbus TCP/IP protocol through a gateway or router. The Modbus slave devices and routers do not need to be on the same subnet as Edge Data Store.
+The Modbus TCP Connectivity Component communicates with any device conforming to the Modbus TCP/IP protocol through a gateway or router. The Modbus slave devices and routers do not need to be on the same subnet as Edge Data Store.
 
 To install a Modbus connectivity component, please reference [Edge Data Store Configuration](xref:EdgeDataStoreConfiguration) on how to add a new component to Edge Data Store. The example below covers configuring a connectivity component named Modbus1. If another connectivity component has been installed, please substitute the name of the installed adapter in the below example for Modbus1.
 
@@ -24,7 +24,7 @@ Complete the following to configure the Modbus data source:
     - See Modbus Data Source Example section below for content structure
     - See Parameters for Modbus Data Source section below for a table of all available parameters
 2. Save the file as DataSource.config.json.
-3. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`. In Beta 2 the default Modbus adapter has the connectivityId of Modbus1, which is used in the example below.
+3. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<connectivityId>/DataSource/`. In a Modbus connectivity component is added during installation it will have a connectivityId of Modbus1, which is used in the example below.
 
 - Example using cURL (run this command from the same directory where the file is located):
 

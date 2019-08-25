@@ -24,7 +24,7 @@ Table 1. Configuration parameters for Edge Data Store health endpoints
 | MaxBufferSizeMB | Optional    | The limit on the maximum megabytes of data to buffer for messages to this endpoint if an integer is >0. This parameter is useful if you want to limit memory or disk usage growth in the event of disconnection to the endpoint. If the buffer is full, old messages will be discarded for new messages. The default is 0. |
 | ValidateEndpointCertificate | Optional | Edge connectivity validates the endpoint certificate if set to true (recommended). If set to false, Edge connectivity accepts any endpoint certificate. OSIsoft strongly recommends using disabled endpoint certificate validation for testing purposes only.|
 
-## Connectivity Adapters health
+## Connectivity Component health
 
 The following health types and streams are created to reflect the health of connectivity adapters.
 
@@ -35,7 +35,7 @@ The Connectors static type includes these properties and servers as a root AF el
 | string | Id | Connectors - root AF element |
 | string | Description | Collection of Connector assets |
 
-### Connectivity Adapters health
+### Connectivity Component health
 
 The Connector Health static type includes the following properties, which are logged in a stream with the id {machinename}.{componentid}. The stream is linked to root AF element (Connectors).
 

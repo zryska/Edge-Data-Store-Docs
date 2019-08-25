@@ -14,9 +14,9 @@ The Edge Data Store can be installed on both Linux and Windows: [Edge Data Store
 
 The Edge Data Store can store (ingress) data in a number of ways. There are two built-in adapters - [Modbus](xref:modbusQuickStart) and [OPC UA](xref:opcUaQuickStart). In addition data can be ingressed using OSIsoft Message Format [(OMF)](xref:omfQuickStart) and the Sequential Data Store [SDS](xref:sdsWritingData) REST APIs.
 
-The Modbus and OPC UA adapters require additional configuration of data source and data selection before they will collect data in the Edge Data Store. For OMF data ingress, once the Edge Data Store is installed OMF ingress can be started with no further configuration steps.
+During installation of the Edge Data Store, options are presented to install either a Modbus TCP connectivity component, or an OPC UA connectivity component, or both. The Modbus and OPC UA adapters require additional configuration of data source and data selection before they will collect data in the Edge Data Store. For OMF data ingress, once the Edge Data Store is installed OMF ingress can be started with no further configuration steps.
 
-The Edge Data Store is composed of components and is designed to allow the addition at a later date of additional adapters. Edge Data Store Beta 2 comes pre-configured with one Modbus and one OPC UA adapter. This behavior will change in the final release.
+The Edge Data Store is composed of components and is designed to allow the addition at a later date of additional connectivity components if desired. 
 
 ## Local Data Read and Write Access
 

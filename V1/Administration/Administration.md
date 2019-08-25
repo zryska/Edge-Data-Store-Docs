@@ -48,11 +48,11 @@ curl -v -d "" -X POST http://localhost:5590/api/v1/Administration/Storage/Reset
 
 An HTTP status 204 message indicates success.
 
-## Stop and Start an Edge Connectivity Adapter
+## Stop and Start an Edge Data Store Connectivity Component
 
 Edge Data Store provides the ability to stop and start connectivity components. By default, when Edge Data Store starts, all currently configured connectivity components are started and remain running until the product shuts down.
 
-### Stop a Connectivity Adapter
+### Stop a Connectivity Component
 
 To stop an individual connectivity component, use any REST client and make a request using one of the following:
 

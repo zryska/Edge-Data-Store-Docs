@@ -36,9 +36,9 @@ This diagnostic stream contains system level information related to the host pla
 | double | StorageTotalSize (uom=MB)  | Total size of the storage medium in use by the Edge Data Store  |
 | double | StorageFreeSpace (uom=MB)  | Free space available  |
 
-## Edge Connectivity Adapters diagnostics
+## Edge Connectivity Component diagnostics
 
-Each Connectivity Adapter of the Edge Data Store produces its own diagnostics streams.
+Each Connectivity Component of the Edge Data Store produces its own diagnostics streams.
 
 ### Stream count
 
@@ -60,7 +60,7 @@ The Diagnostics.Adapter.IORate dynamic type includes these values, which are log
 
 ### Error rate
 
-The Diganostics.Adapter.ErrorRate dynamic type includes these values, and are logged in a stream with the id {componentid}.ErrorRate.
+The Diagnostics.Adapter.ErrorRate dynamic type includes these values, and are logged in a stream with the id {componentid}.ErrorRate.
 
 | Type         | Property |  Description     |
 |--------|--------------|-----------------------------------|

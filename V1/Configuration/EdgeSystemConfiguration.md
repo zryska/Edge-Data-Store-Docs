@@ -45,7 +45,7 @@ The default System_Components.json file for the System component is below. The S
 
  Additional Modbus and Opc Ua components can be added if desired, but only a single Storage component is supported. 
 
- To add a new component, in this example a Modbus connectivity component, create the following JSON. Please note a unique ComponentId is necessary for each component in the system. For this example we will use the ComponentId Modbus1 since it is the first Modbus adapter:
+ To add a new component, in this example a Modbus connectivity component, create the following JSON. Please note a unique ComponentId is necessary for each component in the system. For this example we will use the ComponentId Modbus1 since it is the first Modbus connectivity component:
 
  ```json
   {
@@ -106,7 +106,7 @@ The following JSON file represents minimal configuration of an Edge Data Store. 
 }
 ```
 
-Save or copy the JSON in a file named EdgeMinimumConfiguration.json in any directory on a device with Edge Data Store installed. When the following curl command is run, this will be set as the configuration of a running Edge Data Store (run the command from the directory where the file is located):
+Save or copy the JSON in a file named EdgeMinimumConfiguration.json in any directory on a device with Edge Data Store installed. When the following curl command is run from the directory where the file exists, this will be set as the configuration of a running Edge Data Store (run the command from the directory where the file is located):
 
 ```bash
 curl -i -d "@EdgeMinimumConfiguration.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration
