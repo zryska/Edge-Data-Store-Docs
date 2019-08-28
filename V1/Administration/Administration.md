@@ -48,46 +48,46 @@ curl -v -d "" -X POST http://localhost:5590/api/v1/Administration/Storage/Reset
 
 An HTTP status 204 message indicates success.
 
-## Stop and Start an Edge Data Store Connectivity Component
+## Stop and Start an Edge Data Store EDS adapter
 
-Edge Data Store provides the ability to stop and start connectivity components. By default, when Edge Data Store starts, all currently configured connectivity components are started and remain running until the product shuts down.
+Edge Data Store provides the ability to stop and start EDS adapters. By default, when Edge Data Store starts, all currently configured EDS adapters are started and remain running until the product shuts down.
 
-### Stop a Connectivity Component
+### Stop a EDS adapter
 
-To stop an individual connectivity component, use any REST client and make a request using one of the following:
+To stop an individual EDS adapter, use any REST client and make a request using one of the following:
 
 ```http
 Method: POST
-Endpoint: http://localhost:5590/api/v1/administration/ConnectivityId/Stop
+Endpoint: http://localhost:5590/api/v1/administration/EDS adapterId/Stop
 Header: Content-Type application/json
 ```
 
 Example using cURL:
 
 ```bash
-curl -v -d "" -X POST http://localhost:5590/api/v1/Administration/ConnectivityId/Stop
+curl -v -d "" -X POST http://localhost:5590/api/v1/Administration/EDS adapterId/Stop
 ```
 
-**Note:** Replace **ConnectivityId** with the id of the connectivity component you wish to stop.
+**Note:** Replace **EDS adapterId** with the id of the EDS adapter you wish to stop.
 
 An HTTP status 204 message indicates success.
 
-### Start a Connectivity Adapter
+### Start a EDS adapter Adapter
 
-To start an individual connectivity component, use any REST client and make a request using the following:
+To start an individual EDS adapter, use any REST client and make a request using the following:
 
 ```http
 Method: POST
-Endpoint: http://localhost:5590/api/v1/administration/ConnectivityId/Start
+Endpoint: http://localhost:5590/api/v1/administration/EDS adapterId/Start
 Header: Content-Type application/json
 ```
 
 Example using cURL:
 
 ```bash
-curl -v -d "" -X POST http://localhost:5590/api/v1/Administration/ConnectivityId/Start
+curl -v -d "" -X POST http://localhost:5590/api/v1/Administration/EDS adapterId/Start
 ```
 
-**Note:** Replace **ConnectivityId** with the id of the connectivity component you wish to start.
+**Note:** Replace **EDS adapterId** with the id of the EDS adapter you wish to start.
 
 An HTTP status 204 message indicates success. 

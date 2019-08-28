@@ -36,9 +36,9 @@ This diagnostic stream contains system level information related to the host pla
 | double | StorageTotalSize (uom=MB)  | Total size of the storage medium in use by the Edge Data Store  |
 | double | StorageFreeSpace (uom=MB)  | Free space available  |
 
-## Edge Connectivity Component diagnostics
+## Edge EDS adapter diagnostics
 
-Each Connectivity Component of the Edge Data Store produces its own diagnostics streams.
+Each EDS adapter of the Edge Data Store produces its own diagnostics streams.
 
 ### Stream count
 

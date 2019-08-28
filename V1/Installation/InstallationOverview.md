@@ -26,7 +26,7 @@ The installers allow the port assignment to be configured at install time. The d
 
 You must have administrative privileges to run the installer.
 
-Double click the EdgeDataStore.msi file in Windows Explorer to launch the installer UI. You will be prompted for install location and port (with the default 5590 value pre-set). When the install finishes, Edge Data Store will be installed and running on the port specified. There are also checkboxes to allow a Modbus or OPC UA connectivity component to be installed along with the default Storage component.
+Double click the EdgeDataStore.msi file in Windows Explorer to launch the installer UI. You will be prompted for install location and port (with the default 5590 value pre-set). When the install finishes, Edge Data Store will be installed and running on the port specified. There are also checkboxes to allow a Modbus or OPC UA EDS adapter to be installed along with the default Storage component.
 
 ![alt text](https://osisoft.github.io/Edge-System-Docs/V1/images/WindowsInstall1.jpg "Windows Installation 1")
 ![alt text](https://osisoft.github.io/Edge-System-Docs/V1/images/WindowsInstall2.jpg "Windows Installation 2")
@@ -71,7 +71,7 @@ sudo apt update
 sudo apt upgrade
 ```
 
-After the check for prerequisites succeeds, a prompt will appear asking if you want to change the default port (5590). If you wish to change the port type to another value in the acceptable range, type the port value you want and press Enter; if 5590 is acceptable, simply press Enter. You wil then be prompted if you want to install a Modbus or OPC UA connectivity component in addition to the default Storage component. The default is not to install them, so you can press enter to proceed if neither is desired. They can be added after the installation is complete if desired.
+After the check for prerequisites succeeds, a prompt will appear asking if you want to change the default port (5590). If you wish to change the port type to another value in the acceptable range, type the port value you want and press Enter; if 5590 is acceptable, simply press Enter. You wil then be prompted if you want to install a Modbus or OPC UA EDS adapter in addition to the default Storage component. The default is not to install them, so you can press enter to proceed if neither is desired. They can be added after the installation is complete if desired.
 
 **Note** If an invalid value is specified for the port, the install will proceed with the default value of 5590 selected.
 

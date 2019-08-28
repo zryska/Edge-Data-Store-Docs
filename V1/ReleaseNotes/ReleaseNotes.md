@@ -6,7 +6,7 @@ uid: releaseNotes
 
 Edge Data Store Beta 2 contains all the features expected to be present in the first release of Edge Data Store. Since this is a Beta release, some features may change slightly in the final release, but most of the engineering work will focus on bug fixes and performance improvements after this Beta.
 
-This is the second beta release of the combined Edge Data Store - including Storage (SDS and OMF) along with Modbus and Opc Ua connectivity. Upon installation, storage functions will be immediately available - Modbus TCP and OPC UA will require additional configuration steps. Additional steps for configuring connectivity will be available, along with other documentation at <https://edge-docs.osisoft.com/> shortly after Beta 2 is available.
+This is the second beta release of the combined Edge Data Store - including Storage (SDS and OMF) along with Modbus and Opc Ua EDS adapter. Upon installation, storage functions will be immediately available - Modbus TCP and OPC UA will require additional configuration steps. Additional steps for configuring EDS adapter will be available, along with other documentation at <https://edge-docs.osisoft.com/> shortly after Beta 2 is available.
 
 ## Overview
 
@@ -38,7 +38,7 @@ In addition to ready to use install kits, OSIsoft also provides examples of how 
 * Significant improvements have been made in the reliability of egressing data to PI Web Api or OSIsoft Cloud Services.
 * Edge Data Store now supports a REST method for performing a full reset of the product, which will include removal of all existing configuration and stored event data.
 * A new REST method has been added for purging all stored event data and configuration related to the Storage component.
-* Individual connectivity components may be started and stopped through newly added REST methods.
+* Individual EDS adapters may be started and stopped through newly added REST methods.
 * Startup of Edge Data Store has been made more resilient so that the product will start and may be configured even in circumstances where it's improperly configured.
 * Library libicu63 is now added as a dependency on Linux so Edge Data Store may properly install on Raspberry PI 4 devices.
 * The optional Type and Stream prefix strings for PeriodicEgressTargets were relaxed. Previously they had to be alphanumeric with an optional underscore. They can now be any string, including special characters, but there are a list of restriced characters that are not allowed. See documentation for list of restricted characters.

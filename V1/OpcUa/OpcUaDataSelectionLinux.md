@@ -3,7 +3,7 @@ uid: opcUaDataSelectionLinux
 ---
 # Generating a template OPC UA data selection configuration file on Windows
 
-On startup, the OPC UA connectivity browses the entire OPC UA server address space and exports the available OPC UA variables into a .json file for data selection. Data is collected automatically based upon user demands.  OPC UA data from OPC UA variables is read through subscriptions (unsolicited reads).
+On startup, the OPC UA EDS adapter browses the entire OPC UA server address space and exports the available OPC UA variables into a .json file for data selection. Data is collected automatically based upon user demands.  OPC UA data from OPC UA variables is read through subscriptions (unsolicited reads).
 
 A default OPC UA data source template file will be created if there is no OPC UA data selection configuration, but a valid OPC UA data source exists.
 

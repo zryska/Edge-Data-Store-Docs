@@ -45,7 +45,7 @@ The default System_Components.json file for the System component is below. The S
 
  Additional Modbus and Opc Ua components can be added if desired, but only a single Storage component is supported. 
 
- To add a new component, in this example a Modbus connectivity component, create the following JSON. Please note a unique ComponentId is necessary for each component in the system. For this example we will use the ComponentId Modbus1 since it is the first Modbus connectivity component:
+ To add a new component, in this example a Modbus EDS adapter, create the following JSON. Please note a unique ComponentId is necessary for each component in the system. For this example we will use the ComponentId Modbus1 since it is the first Modbus EDS adapter:
 
  ```json
   {

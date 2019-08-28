@@ -15,9 +15,9 @@ Use the following schemas to configure Edge Data Store:
 - [OmfHealthEndpointConfiguration](.\System_HealthEndpoints_schema.md)
 - [EdgeDataStoreConfig](.\System_Components_schema.md)
   
-## Connectivity Adapters configuration schemas
+## EDS adapter Adapters configuration schemas
 
-Use the following schemas to configure Connectivity Adapters:
+Use the following schemas to configure EDS adapter Adapters:
 
 ### OPC UA
 

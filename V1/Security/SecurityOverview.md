@@ -3,7 +3,7 @@ uid: security
 ---
 # Edge Data Store security overview
 
-## Connectivity
+## EDS adapter
 ### REST APIs
 Edge Data Store supports REST APIs for configuration, data reading (through SDS), and data writing (through OMF and SDS). 
 
