@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Edge Data Store overview </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Edge Data Store overview ">
+    <meta name="generator" content="docfx 2.43.2.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../../toc.html">
+    
+    <meta property="docfx:rel" content="../../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../../Beta2/index.html" width="46">
+                <img id="logo" src="../../Beta2/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="EdgeDataStoreOverview">
+<h1 id="edge-data-store-overview">Edge Data Store overview</h1>
+
+<p>Edge Data Store is a cross-platform component based application framework that is designed to host EDS adapters (adapters such as Modbus TCP and OPC UA), and other components such as Storage. In the future the same framework will be used to host other adapters.</p>
+<h2 id="installation-of-the-edge-data-store">Installation of the Edge Data Store</h2>
+<p>The Edge Data Store can be installed on both Linux and Windows: <a class="xref" href="../Installation/InstallationOverview.html">Edge Data Store Installation Overview</a>.</p>
+<h2 id="data-ingress-to-the-edge-data-store">Data Ingress to the Edge Data Store</h2>
+<p>The Edge Data Store can store (ingress) data in a number of ways. There are two built-in adapters - <a class="xref" href="ModbusQuickStart.html">Modbus</a> and <a class="xref" href="../../Beta2/Overview/OpcUaQuickStart.html">OPC UA</a>. In addition data can be ingressed using OSIsoft Message Format <a class="xref" href="OMFQuickStart.html">(OMF)</a> and the Sequential Data Store <a class="xref" href="../../Beta2/SDS/Writing_Data.html">SDS</a> REST APIs.</p>
+<p>During installation of the Edge Data Store, options are presented to install either a Modbus TCP EDS adapter, or an OPC UA EDS adapter, or both. The Modbus and OPC UA adapters require additional configuration of data source and data selection before they will collect data in the Edge Data Store. For OMF data ingress, once the Edge Data Store is installed OMF ingress can be started with no further configuration steps.</p>
+<p>The Edge Data Store is composed of components and is designed to allow the addition at a later date of additional EDS adapters if desired. </p>
+<h2 id="local-data-read-and-write-access">Local Data Read and Write Access</h2>
+<p>All data in the Edge Data Store storage can be accessed using the Sequential Data Store <a class="xref" href="../../Beta2/Overview/SDSQuickStart.html">SDS</a> REST API.</p>
+<h2 id="data-egress-from-the-edge-data-store">Data Egress from the Edge Data Store</h2>
+<p>The Edge Data Store can send data on to both the PI Data Archive (using <a class="xref" href="PIEgressQuickStart.html">PI Web API</a>) and OSIsoft Cloud Services (<a class="xref" href="OCSEgressQuickStart.html">OCS</a>).</p>
+<p>Additional configuration is necessary to send data to both OCS and PI Web API after the Edge Data Store is installed.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/osisoft/Edge-Data-Store-Docs/blob/master/V1/Overview/EdgeSystemOverview.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+            <span id='copyright-text'>© 2019 - OSIsoft, LLC.<span>
+        </span></span></div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
