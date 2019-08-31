@@ -75,7 +75,7 @@
 <p>SDS attempts to determine how to map Properties from the source to the destination. When the mapping is straightforward, such as when the properties are in the same position and of the same data type, or when the properties have the same name, SDS will map the properties automatically.</p>
 <p>When SDS is unable to determine how to map a source property, the property is removed. If SDS encounters a target property that it cannot map to, the property is added and configured with a default value.</p>
 <p>To map a property that is beyond the ability of SDS to map on its own, you should define an SdsStreamViewProperty and add it to the SdsStreamView’s Properties collection.</p>
-<p>The following table shows the required and optional SdsStreamView fields. Fields that are not included are reserved for internal SDS use. For more information on search limitations, see <a class="xref" href="../../V1/SDS/Searching.html">Searching</a>.</p>
+<p>The following table shows the required and optional SdsStreamView fields. Fields that are not included are reserved for internal SDS use. For more information on search limitations, see <a class="xref" href="Searching.html">Searching</a>.</p>
 <table>
 <thead>
 <tr>
@@ -397,11 +397,11 @@ Content-Type: application/json
 <p>Returns a list of stream views within a given namespace.</p>
 <p>If specifying the optional search query parameter, the list of stream views returned will match
 the search criteria. If the search query parameter is not specified, the list will include
-all stream views in the Namespace. See <a class="xref" href="../../V1/SDS/Searching.html">Searching</a> for information about specifying those respective parameters.</p>
+all stream views in the Namespace. See <a class="xref" href="Searching.html">Searching</a> for information about specifying those respective parameters.</p>
 <p><strong>Request</strong></p>
 <pre><code class="lang-text">GET api/v1/Tenants/default/Namespaces/{namespaceId}/StreamViews?query={query}&amp;skip={skip}&amp;count={count}&amp;orderby={orderby}
 </code></pre><p><strong>Parameters</strong><br><code>string namespaceId</code><br>default or diagnostics</p>
-<p><code>string query</code><br>An optional parameter representing a string search. For information about specifying the search parameter, see <a class="xref" href="../../V1/SDS/Searching.html">Searching</a>.</p>
+<p><code>string query</code><br>An optional parameter representing a string search. For information about specifying the search parameter, see <a class="xref" href="Searching.html">Searching</a>.</p>
 <p><code>int skip</code><br>An optional parameter representing the zero-based offset of the first SdsStreamView to retrieve. If not specified, a default value of 0 is used.</p>
 <p><code>int count</code><br>An optional parameter representing the maximum number of SdsStreamViews to retrieve. If not specified, a default value of 100 is used.</p>
 <p><code>string orderby</code><br>An optional parameter representing sorted order which SdsStreamViews will be returned. A field name is required. The sorting is based   on the stored values for the given field (of type string). For example, <code>orderby=name</code> would sort the returned results by the <code>name</code> values (ascending by default). Additionally, a value can be provided along with the field name to identify whether to sort ascending or descending, by using values <code>asc</code> or <code>desc</code>, respectively. For example, <code>orderby=name desc</code> would sort the returned results by the <code>name</code> values, descending. If no value is specified, there is no sorting of results.</p>

@@ -116,11 +116,11 @@
 <td>No</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../V1/SDS/SdsStreamExtra.html">Tags</a>*</td>
+<td><a class="xref" href="SdsStreamExtra.html">Tags</a>*</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td><a class="xref" href="../../V1/SDS/SdsStreamExtra.html">Metadata</a>*</td>
+<td><a class="xref" href="SdsStreamExtra.html">Metadata</a>*</td>
 <td>Yes</td>
 </tr>
 </tbody>
@@ -172,7 +172,7 @@
 <pre><code class="lang-text">GET api/v1/Tenants/default/Namespaces/{namespaceId}/Types?query={query}&amp;skip={skip}&amp;count={count}
 </code></pre><p>The Type fields valid for search are identified in the fields table located on the <a class="xref" href="SDS_Types.html">Types</a> page. The Properties field is identified as being searchable but with limitations: Each SdsTypeProperty of a given SdsType has its Name and Id included in the Properties field. This includes nested SdsTypes of the given SdsType. Therefore, the searching of Properties will distinguish SdsTypes by their respective lists of relevant SdsTypeProperty Ids and Names.</p>
 <h1 id="searching-for-stream-views">Searching for Stream Views</h1>
-<p>Similarly, the search functionality for stream views is also exposed through REST API. The query syntax and the request parameters are the same. The only difference is the resource you are searching on. You can match on different properties for stream views than for streams and types. The searchable properties are below. For more information, see <a class="xref" href="../../V1/SDS/SDS_Views.html">Stream Views</a>.</p>
+<p>Similarly, the search functionality for stream views is also exposed through REST API. The query syntax and the request parameters are the same. The only difference is the resource you are searching on. You can match on different properties for stream views than for streams and types. The searchable properties are below. For more information, see <a class="xref" href="SDS_Views.html">Stream Views</a>.</p>
 <table>
 <thead>
 <tr>
@@ -209,7 +209,7 @@
 </table>
 <p>As previously mentioned, searching for stream views is also possible using the REST API and specifying the optional <code>query</code> parameter, as shown here:</p>
 <pre><code class="lang-text">GET api/v1/Tenants/default/Namespaces/{namespaceId}/StreamViews?query={query}&amp;skip={skip}&amp;count={count}
-</code></pre><p>The Stream View fields valid for search are identified in the fields table located on the <a class="xref" href="../../V1/SDS/SDS_Views.html">Stream Views</a> page. The Properties field is identified as being searchable with limitations because SdsStreamViewProperty objects are not searchable. Only the SdsStreamViewProperty&#39;s SdsStreamView is searchable by its Id, SourceTypeId, and TargetTypeId, which are used to return the top level SdsStreamView object when searching. This includes nested SdsStreamViewProperties.</p>
+</code></pre><p>The Stream View fields valid for search are identified in the fields table located on the <a class="xref" href="SDS_Views.html">Stream Views</a> page. The Properties field is identified as being searchable with limitations because SdsStreamViewProperty objects are not searchable. Only the SdsStreamViewProperty&#39;s SdsStreamView is searchable by its Id, SourceTypeId, and TargetTypeId, which are used to return the top level SdsStreamView object when searching. This includes nested SdsStreamViewProperties.</p>
 <h1 id="how-searching-works">How Searching Works</h1>
 <p>The query parameter will be applied across all searchable fields of objects that are searched on by default.</p>
 <p>For example, you can assume that a namespace contains the following Streams:</p>
@@ -406,7 +406,7 @@ GET api/v1/Tenants/default/Namespaces/{namespaceId}/Streams?query=name:pump name
 </tbody>
 </table>
 <h2 id="a-namestreammetadatasearchtopichow-searching-works-stream-metadataa"><a name="Stream_Metadata_search_topic">How Searching Works: Stream Metadata</a></h2>
-<p><a class="xref" href="../../V1/SDS/SdsStreamExtra.html">Stream Metadata</a> modifies the aforementioned search syntax rules and each operator&#39;s behavior is described below. For example, assume that a namespace contains the following Streams and the respective Metadata Key-Value pair(s) for each stream.</p>
+<p><a class="xref" href="SdsStreamExtra.html">Stream Metadata</a> modifies the aforementioned search syntax rules and each operator&#39;s behavior is described below. For example, assume that a namespace contains the following Streams and the respective Metadata Key-Value pair(s) for each stream.</p>
 <table>
 <thead>
 <tr>

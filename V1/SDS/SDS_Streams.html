@@ -143,14 +143,14 @@
 <td>Used to define unit of measure and interpolation mode overrides for a stream.</td>
 </tr>
 <tr>
-<td><a class="xref" href="SdsStreamExtra.html">Tags</a>*</td>
+<td><a class="xref" href="../../Beta2/SDS/SdsStreamExtra.html">Tags</a>*</td>
 <td>IList&lt;String></td>
 <td>Optional</td>
 <td>Yes</td>
 <td>A list of tags denoting special attributes or categories.</td>
 </tr>
 <tr>
-<td><a class="xref" href="SdsStreamExtra.html">Metadata</a>*</td>
+<td><a class="xref" href="../../Beta2/SDS/SdsStreamExtra.html">Metadata</a>*</td>
 <td>IDictionary&lt;String, String></td>
 <td>Optional</td>
 <td>Yes</td>
@@ -169,7 +169,7 @@
 <h2 id="indexes">Indexes</h2>
 <p>The Key or Primary Index is defined at the SdsType. Secondary Indexes are defined at the SdsStream.</p>
 <p>Secondary Indexes are applied to a single property; there are no compound secondary indexes. Only SdsTypeCodes that can be ordered are supported for use in a secondary index.</p>
-<p>Indexes are discussed in greater detail here: <a class="xref" href="indexes.html">Indexes</a></p>
+<p>Indexes are discussed in greater detail here: <a class="xref" href="../../Beta2/SDS/indexes.html">Indexes</a></p>
 <h2 id="interpolation-and-extrapolation">Interpolation and Extrapolation</h2>
 <p>The InterpolationMode, ExtrapolationMode, and <a href="#propertyoverrides">PropertyOverrides</a> can be used to determine how a specific stream reads data. These read characteristics are inherited from the type if they are not defined at the stream level. For more information about type read characteristics and how these characteristics dictate how events are read see <a class="xref" href="../../Beta2/SDS/SDS_Types.html">Types</a>.</p>
 <h2 id="propertyoverrides">PropertyOverrides</h2>
@@ -230,11 +230,11 @@ Content-Type: application/json
 </code></pre><hr>
 <h2 id="get-streams"><code>Get Streams</code></h2>
 <p>Returns a list of streams.</p>
-<p>If the optional search query parameter is specified, the list of streams returned will match the search criteria. If the search query parameter is not specified, the list will include all streams in the namespace. See <a class="xref" href="Searching.html">Searching</a> for information about specifying those respective parameters.</p>
+<p>If the optional search query parameter is specified, the list of streams returned will match the search criteria. If the search query parameter is not specified, the list will include all streams in the namespace. See <a class="xref" href="../../Beta2/SDS/Searching.html">Searching</a> for information about specifying those respective parameters.</p>
 <p><strong>Request</strong></p>
 <pre><code class="lang-text">GET api/v1/Tenants/default/Namespaces/{namespaceId}/Streams?query={query}&amp;skip={skip}&amp;count={count}&amp;orderby={orderby}
 </code></pre><p><strong>Parameters</strong><br><code>string namespaceId</code><br>default or diagnostics</p>
-<p><code>string query</code><br>An optional parameter representing a string search. For information about specifying the search parameter, see <a class="xref" href="Searching.html">Searching</a>.</p>
+<p><code>string query</code><br>An optional parameter representing a string search. For information about specifying the search parameter, see <a class="xref" href="../../Beta2/SDS/Searching.html">Searching</a>.</p>
 <p><code>int skip</code><br>An optional parameter representing the zero-based offset of the first SdsStream to retrieve. If not specified, a default value of 0 is used.</p>
 <p><code>int count</code><br>An optional parameter representing the maximum number of SdsStreams to retrieve. If not specified, a default value of 100 is used.</p>
 <p><code>string orderby</code><br>An optional parameter representing sorted order which SdsStreams will be returned. A field name is required. The sorting is based on the stored values for the given field (of type string). For example, <code>orderby=name</code> would sort the returned results by the <code>name</code> values (ascending by default). Additionally, a value can be provided along with the field name to identify whether to sort ascending or descending, by using values <code>asc</code> or <code>desc</code>, respectively. For example, <code>orderby=name desc</code> would sort the returned results by the <code>name</code> values, descending. If no value is specified, there is no sorting of results.</p>

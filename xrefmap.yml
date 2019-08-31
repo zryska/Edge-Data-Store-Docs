@@ -14,8 +14,8 @@ references:
   name: Configuration schemas
   href: Beta2/Configuration/Schemas/ConfigurationSchemaList.html
 - uid: edge_system_schema
-  name: EdgeDataStoreConfiguration schema
-  href: V1/Configuration/Schemas/EdgeSystem_schema.html
+  name: EdgeSystemConfiguration Schema
+  href: Beta2/Configuration/Schemas/EdgeSystem_schema.html
 - uid: EdgeDataStoreAdministration
   name: Edge Data Store administration
   href: V1/Administration/Administration.html
@@ -32,8 +32,8 @@ references:
   name: Edge Data Store overview
   href: V1/Overview/EdgeSystemOverview.html
 - uid: edgeDocker
-  name: Using Edge System with Docker
-  href: Beta2/Docker/EdgeDocker.html
+  name: Using Edge Data Store with Docker
+  href: V1/Docker/EdgeDocker.html
 - uid: edgeSystemAdministration
   name: Edge System administration
   href: Beta2/Administration/Administration.html
@@ -72,40 +72,40 @@ references:
   href: Beta2/Configuration/Schemas/Modbus_DataSelection_schema.html
 - uid: modbus_DataSource_schema
   name: Sample Modbus data source configuration
-  href: V1/Configuration/Schemas/Modbus_DataSource_schema.html
+  href: Beta2/Configuration/Schemas/Modbus_DataSource_schema.html
 - uid: modbus_Logging_schema
   name: ModbusLoggerConfiguration Schema
   href: V1/Configuration/Schemas/Modbus_Logging_schema.html
 - uid: modbus_schema
   name: ModbusConfiguration Schema
-  href: V1/Configuration/Schemas/Modbus_schema.html
+  href: Beta2/Configuration/Schemas/Modbus_schema.html
 - uid: modbusOverview
   name: Modbus connectivity
   href: Beta2/Modbus/ModbusOverview.html
 - uid: modbusQuickStart
   name: Edge Modbus Quick Start
-  href: V1/Overview/ModbusQuickStart.html
+  href: Beta2/Overview/ModbusQuickStart.html
 - uid: ocsEgressQuickStart
   name: OSIsoft Cloud Services (OCS) egress Quick Start
-  href: V1/Overview/OCSEgressQuickStart.html
+  href: Beta2/Overview/OCSEgressQuickStart.html
 - uid: omfOverview
   name: OSIsoft Message Format (OMF) ingress with Edge Storage
   href: Beta2/OMF/OMFOverview.html
 - uid: omfQuickStart
   name: Edge Storage OMF Quick Start
-  href: V1/Overview/OMFQuickStart.html
+  href: Beta2/Overview/OMFQuickStart.html
 - uid: opcUa_DataSelection_schema
   name: Sample Opc Ua data selection configuration
   href: Beta2/Configuration/Schemas/OpcUa_DataSelection_schema.html
 - uid: opcUa_DataSource_Schema
   name: Sample Opc Ua data source configuration
-  href: V1/Configuration/Schemas/OpcUa_DataSource_schema.html
+  href: Beta2/Configuration/Schemas/OpcUa_DataSource_schema.html
 - uid: opcUa_Logging_schema
   name: OPC UA logger configuration schema
   href: Beta2/Configuration/Schemas/OpcUa_Logging_schema.html
 - uid: opcua_schema
   name: OpcUaConfiguration Schema
-  href: Beta2/Configuration/Schemas/OpcUa_schema.html
+  href: V1/Configuration/Schemas/OpcUa_schema.html
 - uid: opcUaDataSelectionLinux
   name: Generating a template OPC UA data selection configuration file on Windows
   href: Beta2/OpcUa/OpcUaDataSelectionLinux.html
@@ -125,44 +125,44 @@ references:
   name: Edge System Beta 2 Release Notes
   href: Beta2/ReleaseNotes/ReleaseNotes.html
 - uid: scalePerformance
-  name: Edge Data Store design considerations
-  href: V1/Design/ScalePerformance.html
+  name: Edge System design considerations
+  href: Beta2/Design/ScalePerformance.html
 - uid: sdsCompression
   name: Compression
   href: Beta2/SDS/Compression.html
 - uid: sdsFilterExpressions
   name: 'Filter Expressions: Values'
-  href: V1/SDS/Filter_Expressions.html
+  href: Beta2/SDS/Filter_Expressions.html
 - uid: sdsIndexes
   name: Indexes
-  href: V1/SDS/indexes.html
+  href: Beta2/SDS/indexes.html
 - uid: sdsOverview
   name: OSIsoft Sequential Data Store (SDS)
-  href: V1/SDS/SequentialDataStore.html
+  href: Beta2/SDS/SequentialDataStore.html
 - uid: sdsQuickStart
   name: Edge Storage SDS quick start
   href: Beta2/Overview/SDSQuickStart.html
 - uid: sdsReadingData
   name: Reading data
-  href: V1/SDS/Reading_Data.html
+  href: Beta2/SDS/Reading_Data.html
 - uid: sdsReadingDataApi
   name: API calls for reading data
-  href: V1/SDS/Reading_Data_API.html
+  href: Beta2/SDS/Reading_Data_API.html
 - uid: sdsSearching
   name: Searching
-  href: V1/SDS/Searching.html
+  href: Beta2/SDS/Searching.html
 - uid: sdsStreamExtra
-  name: Stream Metadata and Tags
-  href: V1/SDS/SdsStreamExtra.html
+  name: Stream metadata and tags
+  href: Beta2/SDS/SdsStreamExtra.html
 - uid: sdsStreams
   name: Streams
   href: Beta2/SDS/SDS_Streams.html
 - uid: sdsStreamViews
   name: Stream Views
-  href: V1/SDS/SDS_Views.html
+  href: Beta2/SDS/SDS_Views.html
 - uid: sdsTableFormat
   name: Table format
-  href: V1/SDS/table_format.html
+  href: Beta2/SDS/table_format.html
 - uid: sdsTypes
   name: Types
   href: Beta2/SDS/SDS_Types.html
@@ -177,34 +177,34 @@ references:
   href: Beta2/Security/SecurityOverview.html
 - uid: Storage_Logging_schema
   name: Storage logging schema
-  href: V1/Configuration/Schemas/Storage_Logging_schema.html
+  href: Beta2/Configuration/Schemas/Storage_Logging_schema.html
 - uid: storage_OEM_schema
   name: Storage OEM configuration schema
-  href: Beta2/Configuration/Schemas/Storage_OEM_schema.html
+  href: V1/Configuration/Schemas/Storage_OEM_schema.html
 - uid: storage_PeriodicEgressEndpoints_schema
   name: Periodic egress configuration schema
-  href: V1/Configuration/Schemas/Storage_PeriodicEgressEndpoints_schema.html
+  href: Beta2/Configuration/Schemas/Storage_PeriodicEgressEndpoints_schema.html
 - uid: storage_Runtime_schema
   name: Sample storage runtime configuration
-  href: Beta2/Configuration/Schemas/Storage_Runtime_schema.html
+  href: V1/Configuration/Schemas/Storage_Runtime_schema.html
 - uid: storage_schema
   name: StorageConfiguration schema
-  href: V1/Configuration/Schemas/Storage_schema.html
+  href: Beta2/Configuration/Schemas/Storage_schema.html
 - uid: system_Components_schema
-  name: Sample Edge Data Store components configuration
-  href: V1/Configuration/Schemas/System_Components_schema.html
+  name: Sample Edge System components configuration
+  href: Beta2/Configuration/Schemas/System_Components_schema.html
 - uid: system_HealthEndpoints_schema
   name: OMF health endpoint configuration schema
   href: Beta2/Configuration/Schemas/System_HealthEndpoints_schema.html
 - uid: system_Logging_schema
   name: System logging schema
-  href: V1/Configuration/Schemas/System_Logging_schema.html
+  href: Beta2/Configuration/Schemas/System_Logging_schema.html
 - uid: system_Port_schema
   name: Sample system port configuration file
   href: V1/Configuration/Schemas/System_Port_schema.html
 - uid: system_schema
   name: SystemConfiguration schema
-  href: V1/Configuration/Schemas/System_schema.html
+  href: Beta2/Configuration/Schemas/System_schema.html
 - uid: troubleShooting
   name: Edge System troubleshooting
   href: Beta2/Troubleshooting/Troubleshooting.html

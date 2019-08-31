@@ -77,7 +77,7 @@
 <h2 id="installation-of-edge-data-store">Installation of Edge Data Store</h2>
 <p>You can install Edge Data Store on both Linux and Windows. For more information, see <a class="xref" href="../../V1/Installation/InstallationOverview.html">Edge Data Store Installation Overview</a>.</p>
 <h2 id="data-ingress-to-edge-data-store">Data ingress to Edge Data Store</h2>
-<p>Edge Data Store can store (ingress) data in a number of ways. There are two built-in EDS connectivities - <a class="xref" href="../../V1/Overview/ModbusQuickStart.html">Modbus TCP</a> and <a class="xref" href="OpcUaQuickStart.html">OPC UA</a>. In addition, data can be ingressed using OSIsoft Message Format <a class="xref" href="../../V1/Overview/OMFQuickStart.html">(OMF)</a> and the Sequential Data Store <a class="xref" href="../SDS/Writing_Data.html">SDS</a> REST APIs.</p>
+<p>Edge Data Store can store (ingress) data in a number of ways. There are two built-in EDS connectivities - <a class="xref" href="ModbusQuickStart.html">Modbus TCP</a> and <a class="xref" href="OpcUaQuickStart.html">OPC UA</a>. In addition, data can be ingressed using OSIsoft Message Format <a class="xref" href="OMFQuickStart.html">(OMF)</a> and the Sequential Data Store <a class="xref" href="../SDS/Writing_Data.html">SDS</a> REST APIs.</p>
 <p>The Modbus TCP and OPC UA connectivities require additional configuration of data source and data selection before they will collect data in Edge Data Store. For OMF data ingress, once Edge Data Store is installed, you can start OMF ingress with no further configuration steps.</p>
 <p>The allowed port numbers are in the range of 1024-65535. Before you change the default, ensure that no other service or application on the computer running Edge Data Store is using that port - only one application or service can use a port. You must restart Edge Data Store if you change the port number through the REST API or the command line.</p>
 <p>Edge Data Store is composed of components and is designed to allow the addition at a later date of additional EDS connectivities. Edge Data Store Beta 2 comes pre-configured with one Modbus TCP and one OPC UA connectivity. This behavior will change in the final release.</p>
@@ -101,7 +101,7 @@
  }
 ]
 </code></pre><p>You can add additional Modbus TCP and OPC UA components if you want, but only a single SDS component is supported. In Beta 2, you must restart the system if you add or delete a component using the REST API or the command line.</p>
-<p>Edge Data Store can send data on to both PI Data Archive (using <a class="xref" href="../../V1/Overview/PIEgressQuickStart.html">PI Web API</a>) and OSIsoft Cloud Services (<a class="xref" href="../../V1/Overview/OCSEgressQuickStart.html">OCS</a>).</p>
+<p>Edge Data Store can send data on to both PI Data Archive (using <a class="xref" href="../../V1/Overview/PIEgressQuickStart.html">PI Web API</a>) and OSIsoft Cloud Services (<a class="xref" href="OCSEgressQuickStart.html">OCS</a>).</p>
 <p>Additional configuration is necessary to send data to both OCS and PI Web API after Edge Data Store is installed.</p>
 </article>
           </div>

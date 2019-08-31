@@ -153,7 +153,7 @@
 </code></pre><p>Saveor copy the JSON in a file named EdgeMinimumConfiguration.json in any directory on a device with Edge System installed. When the following curl command is run, this will be set as the configuration of a running Edge System (run the command from the directory where the file is located):</p>
 <pre><code class="lang-bash">curl -i -d &quot;@EdgeMinimumConfiguration.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT http://localhost:5590/api/v1/configuration
 </code></pre><p>The configuration takes effect immediately after the command completes.</p>
-<p>The above example will result in a minimal configuration of Edge System. It will only support <a class="xref" href="../../V1/Overview/OMFQuickStart.html">OMF</a> and <a class="xref" href="../Overview/SDSQuickStart.html">SDS</a> operations using REST. No egress is configured, so no data will be forwarded to either <a class="xref" href="../../V1/Overview/OCSEgressQuickStart.html">OCS</a> or <a class="xref" href="../../V1/Overview/PIEgressQuickStart.html">PI Web API</a>.</p>
+<p>The above example will result in a minimal configuration of Edge System. It will only support <a class="xref" href="../Overview/OMFQuickStart.html">OMF</a> and <a class="xref" href="../Overview/SDSQuickStart.html">SDS</a> operations using REST. No egress is configured, so no data will be forwarded to either <a class="xref" href="../Overview/OCSEgressQuickStart.html">OCS</a> or <a class="xref" href="../../V1/Overview/PIEgressQuickStart.html">PI Web API</a>.</p>
 <h3 id="maximum-edge-system-configuration">Maximum Edge System Configuration</h3>
 <p>The following JSON file represents maximal configuration of an Edge System. There are Modbus and Opc Ua components, and egress is configured to send to both PI Web API and OCS. If a system were configured with this JSON file. In this example both operational data (namespace = default) and diagnostic data for the system and the adapters (namespace = diagnostics).</p>
 <pre><code class="lang-json">{
@@ -481,7 +481,7 @@
 <pre><code class="lang-bash">curl -i -d &quot;@EdgeMaximumConfiguration.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT http://localhost:5590/api/v1/configuration
 </code></pre><p>The configuration takes effect immediately after the command completes unless Components were added. If Components were added in Beta 2, a restart of Edge System might be necessary before the changes take effect.</p>
 <p>Full JSON definition of configuration parameters:
-<a class="xref" href="../../V1/Configuration/Schemas/EdgeSystem_schema.html">Edge System Configuration</a></p>
+<a class="xref" href="Schemas/EdgeSystem_schema.html">Edge System Configuration</a></p>
 </article>
           </div>
           

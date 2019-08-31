@@ -73,7 +73,7 @@
 
 <p>The Sequential Data Store (SDS) stores streams of events and provides convenient ways to find and associate events. Events are stored in streams, called SdsStreams. An SdsType defines the shape or structure of the event and how to associate events within the SdsStream.</p>
 <p>SdsTypes can define simple atomic types, such as integers, floats, strings, arrays, and dictionaries. They can also define complex types using SdsTypes. You can define complex, nested types using the Properties collection of an SdsType.</p>
-<p>An SdsType used to define an SdsStream must have a Key. A Key is a property, or a combination of properties that constitute an ordered, unique identity. The Key is ordered, so it functions as an index. It is known as the Primary Index. While a timestamp (DateTime) is a very common type of Key, any type that can be ordered is permitted. Other indexes (secondary indexes), are defined in the SdsStream. For more details on indexes, see <a class="xref" href="../../V1/SDS/indexes.html">Indexes</a>.</p>
+<p>An SdsType used to define an SdsStream must have a Key. A Key is a property, or a combination of properties that constitute an ordered, unique identity. The Key is ordered, so it functions as an index. It is known as the Primary Index. While a timestamp (DateTime) is a very common type of Key, any type that can be ordered is permitted. Other indexes (secondary indexes), are defined in the SdsStream. For more details on indexes, see <a class="xref" href="indexes.html">Indexes</a>.</p>
 <p>When you define a type, consider how the events will be represented in a stream. The SdsType defines each event in the stream. An event is a single unit whose properties have values that relate to the index; that is, each property of an SdsType event is related to the event’s index. Each event is a single unit.</p>
 <p>An SdsType is referenced by its identifier or Id field. SdsType identifiers must be unique within a Namespace.</p>
 <p>An SdsType can also refer other SdsTypes by using their identifiers. This enables type re-usability. Nested types and base types are automatically created as separate types. For further information, see <a href="#type-reusability">Type Reusability</a></p>
@@ -81,7 +81,7 @@
 <p>SdsTypes are immutable. After you create an SdsType, you cannot change its definition. If the definition of an SdsType is incorrect, you must delete and recreate it. In addition, the SdsType may be deleted only if no streams, stream views, or types reference it.</p>
 <p>Only SdsTypes used to define SdsStreams or SdsStreamViews are required to be added to the Sequential data store. SdsTypes that define properties or base types are contained within the parent SdsType and are not required to be added to the Data Store independently.</p>
 <p>The following table shows the required and optional SdsType fields. Fields that are not included are reserved for internal SDS use.</p>
-<p>For search limitations, see the <a class="xref" href="../../V1/SDS/Searching.html">Searching</a>.</p>
+<p>For search limitations, see the <a class="xref" href="Searching.html">Searching</a>.</p>
 <table>
 <thead>
 <tr>
@@ -783,7 +783,7 @@ Decimal.MaxValue) the call might result in a BadRequest exception.</p>
 </tbody>
 </table>
 <p>If the ExtrapolationMode is not assigned, the events are extrapolated in the default manner, unless the extrapolation mode is overridden on the SdsStream. For more information on overriding the extrapolation mode on a specific stream, see <a class="xref" href="SDS_Streams.html">Sds Streams</a>.</p>
-<p>For additional information about the effect of read characteristics, see the documentation on the <a class="xref" href="../../V1/SDS/Reading_Data_API.html">read method</a> you are using.</p>
+<p>For additional information about the effect of read characteristics, see the documentation on the <a class="xref" href="Reading_Data_API.html">read method</a> you are using.</p>
 <h2 id="sdstypeproperty">SdsTypeProperty</h2>
 <p>The Properties collection define the fields in an SdsType.</p>
 <p>The following table shows the required and optional SdsTypeProperty fields. Fields that are not included are reserved for internal SDS use.</p>
@@ -1245,7 +1245,7 @@ var derivedType = new SdsObjects.SdsType({
     ]
 }
 </code></pre><p>If the full definition is sent, the referenced types (base type &quot;Simple&quot; in the above example) should match the actual type initially created. If the full definition is sent and the referenced types do not exist, they will be created automatically by SDS. Further type creations can reference them as demonstrated above. <strong>Note:</strong> When trying to get types back from SDS, the results will also include types that were automatically created by SDS.</p>
-<p>Base types and properties of type Object, Enum, user-defined collections, such as, Array, List and Dictionary will be treated as referenced types. Note that streams cannot be created using these referenced types. If a stream of particular type is to be created, the type should contain at least one property with a valid index type as described in this section, <a class="xref" href="../../V1/SDS/indexes.html">Indexes</a>. The index property may also be in the base type as shown in the example above.</p>
+<p>Base types and properties of type Object, Enum, user-defined collections, such as, Array, List and Dictionary will be treated as referenced types. Note that streams cannot be created using these referenced types. If a stream of particular type is to be created, the type should contain at least one property with a valid index type as described in this section, <a class="xref" href="indexes.html">Indexes</a>. The index property may also be in the base type as shown in the example above.</p>
 <h1 id="sdstype-api">SdsType API</h1>
 <p>The REST APIs provide programmatic access to read and write SDS data. The APIs in this section
 interact with SdsTypes. See <a href="#types">Types</a> for general SdsType information.</p>
@@ -1313,7 +1313,7 @@ Content-Type: application/json
 }
 </code></pre><hr>
 <h2 id="get-type-reference-count"><code>Get Type Reference Count</code></h2>
-<p>Returns a dictionary mapping the object name to the number of references held by streams, stream views and parent types for the specified type. For more information on the use of types to define streams and stream views, see <a href="xref:sdsstreams">Streams</a> and <a class="xref" href="../../V1/SDS/SDS_Views.html">Steam Views</a>. For further details about type referencing, see: <a href="#type-reusability">Type Reusability</a>.</p>
+<p>Returns a dictionary mapping the object name to the number of references held by streams, stream views and parent types for the specified type. For more information on the use of types to define streams and stream views, see <a href="xref:sdsstreams">Streams</a> and <a class="xref" href="SDS_Views.html">Steam Views</a>. For further details about type referencing, see: <a href="#type-reusability">Type Reusability</a>.</p>
 <p><strong>Request</strong></p>
 <pre><code class="lang-text">GET api/v1/Tenants/default/Namespaces/{namespaceId}/Types/{typeId}/ReferenceCount
 </code></pre><p><strong>Parameters</strong><br><code>string namespaceId</code><br>default or diagnostics</p>
@@ -1329,12 +1329,12 @@ Content-Type: application/json
 </code></pre><hr>
 <h2 id="get-types"><code>Get Types</code></h2>
 <p>Returns a list of types within a given namespace.</p>
-<p>If specifying the optional search query parameter, the list of types returned will match the search criteria. If the search query parameter is not specified, the list will include all types in the namespace. For information about specifying those respective parameters, see <a class="xref" href="../../V1/SDS/Searching.html">Searching</a>.</p>
+<p>If specifying the optional search query parameter, the list of types returned will match the search criteria. If the search query parameter is not specified, the list will include all types in the namespace. For information about specifying those respective parameters, see <a class="xref" href="Searching.html">Searching</a>.</p>
 <p><strong>Note:</strong> The results will also include types that were automatically created by SDS as a result of type referencing. For further details about type referencing, see: <a href="#type-reusability">Type Reusability</a>.</p>
 <p><strong>Request</strong></p>
 <pre><code class="lang-text">GET api/v1/Tenants/default/Namespaces/{namespaceId}/Types?query={query}&amp;skip={skip}&amp;count={count}&amp;orderby={orderby}
 </code></pre><p><strong>Parameters</strong><br><code>string namespaceId</code><br>default or diagnostics</p>
-<p><code>string query</code><br>An optional query string to match which SdsTypes will be returned. For information about specifying the query parameter, see the <a class="xref" href="../../V1/SDS/Searching.html">Searching</a> topic.</p>
+<p><code>string query</code><br>An optional query string to match which SdsTypes will be returned. For information about specifying the query parameter, see the <a class="xref" href="Searching.html">Searching</a> topic.</p>
 <p><code>int skip</code><br>An optional value representing the zero-based offset of the first SdsType to retrieve. If not specified, a default value of 0 is used.</p>
 <p><code>int count</code><br>An optional value representing the maximum number of SdsTypes to retrieve. If not specified, a default value of 100 is used.</p>
 <p><code>string orderby</code><br>An optional parameter representing sorted order which SdsTypes will be returned. A field name is required. The sorting is based on the stored values for the given field (of type string). For example, <code>orderby=name</code> would sort the returned results by the <code>name</code> values (ascending by default). Additionally, a value can be provided along with the field name to identify whether to sort ascending or descending, by using values <code>asc</code> or <code>desc</code>, respectively. For example, <code>orderby=name desc</code> would sort the returned results by the <code>name</code> values, descending. If no value is specified, there is no sorting of results.</p>
