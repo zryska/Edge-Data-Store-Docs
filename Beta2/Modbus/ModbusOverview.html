@@ -86,7 +86,7 @@
 </ul>
 </li>
 <li>Save the file as DataSource.config.json.</li>
-<li>Use any <a class="xref" href="../../V1/Administration/ManagementTools.html">tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;connectivityId&gt;/DataSource/</code>. In Beta 2 the default Modbus adapter has the connectivityId of Modbus1, which is used in the example below.</li>
+<li>Use any <a class="xref" href="../Administration/ManagementTools.html">tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;connectivityId&gt;/DataSource/</code>. In Beta 2 the default Modbus adapter has the connectivityId of Modbus1, which is used in the example below.</li>
 </ol>
 <ul>
 <li><p>Example using cURL (run this command from the same directory where the file is located):</p>
@@ -174,7 +174,7 @@
 </ul>
 </li>
 <li>Save the file as DataSelection.config.json.</li>
-<li>Use any <a class="xref" href="../../V1/Administration/ManagementTools.html">tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;connectivityId&gt;/DataSelection/</code>.
+<li>Use any <a class="xref" href="../Administration/ManagementTools.html">tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;connectivityId&gt;/DataSelection/</code>.
 Example using cURL (run this command from the same directory where the file is located):</li>
 </ol>
 <pre><code class="lang-bash">curl -v -d &quot;@DataSelection.config.json&quot; -H &quot;Content-Type: application/json&quot; -X POST &quot;http://localhost:5590/api/v1/configuration/&lt;connectivityId&gt;/DataSelection&quot;

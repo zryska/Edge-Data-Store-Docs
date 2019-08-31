@@ -74,7 +74,7 @@
 <h2 id="overview">Overview</h2>
 <p>The OPC UA connectivity transfers time-series data from OPC UA devices into Edge System.</p>
 <p>Beta 2 comes with a single OPC UA adapter installed. It is named OpcUa1. If a second OPC UA adapter is desired in Beta 2, please reference <a class="xref" href="../Configuration/EdgeSystemConfiguration.html">Edge System Configuration</a> on how to add a new component to Edge System. The example below covers configuring the default adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for OpcUa1.</p>
-<p>As with other Edge System adapters, the OPC UA adapter is configured using data source and data selection JSON documents. The data source configuration are identical with other adapters, but OPC UA supports an option to generate a template data selection file that can be manually edited and used for subsequent configuration. This optional process for generating and editing the file is different for <a class="xref" href="OpcUaDataSelectionWindows.html">Windows</a> and <a class="xref" href="OpcUaDataSelectionLinux.html">Linux</a>. Once the template file is created it can be reused on both Linux and Windows without changes.</p>
+<p>As with other Edge System adapters, the OPC UA adapter is configured using data source and data selection JSON documents. The data source configuration are identical with other adapters, but OPC UA supports an option to generate a template data selection file that can be manually edited and used for subsequent configuration. This optional process for generating and editing the file is different for <a class="xref" href="../../V1/OpcUa/OpcUaDataSelectionWindows.html">Windows</a> and <a class="xref" href="OpcUaDataSelectionLinux.html">Linux</a>. Once the template file is created it can be reused on both Linux and Windows without changes.</p>
 <p>OPC UA is a standard, which ensures open connectivity, interoperability, security, and reliability of industrial automation devices and systems. OPC UA is recognized as one of the key communication and data modeling technologies of Industry 4.0, due to the fact that it works with many software platforms and that it is completely scalable and flexible.</p>
 <h2 id="configuration-of-opc-ua-data-source">Configuration of OPC UA data source</h2>
 <p>To use the OPC UA connectivity component of Edge System, you must configure from which OPC UA data source it will be receiving data.</p>
@@ -88,7 +88,7 @@
 </ul>
 </li>
 <li>Save the file as DataSource.config.json.</li>
-<li><p>Use any <a class="xref" href="../../V1/Administration/ManagementTools.html">tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;connectivityId&gt;/DataSource/</code>. In Beta 2 the default OPC UA connectivityId is OpcUa1, which is used in the example below.</p>
+<li><p>Use any <a class="xref" href="../Administration/ManagementTools.html">tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;connectivityId&gt;/DataSource/</code>. In Beta 2 the default OPC UA connectivityId is OpcUa1, which is used in the example below.</p>
 <ul>
 <li>Example using cURL:</li>
 </ul>
@@ -174,7 +174,7 @@
 </ul>
 </li>
 <li>Save the file as DataSelection.config.json.</li>
-<li>Use any <a class="xref" href="../../V1/Administration/ManagementTools.html">tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;connectivityId&gt;/DataSelection/</code><ul>
+<li>Use any <a class="xref" href="../Administration/ManagementTools.html">tool</a> capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: <code>http://localhost:5590/api/v1/configuration/&lt;connectivityId&gt;/DataSelection/</code><ul>
 <li>Example using cURL:</li>
 </ul>
 </li>
