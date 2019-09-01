@@ -4,7 +4,7 @@ uid: EdgeDataStoreConfiguration
 
 # Edge Data Store configuration
 
-Edge Data Store uses JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, it is recommended that you use REST for any changes you make to the files. As part of making Edge Data Store as secure as possible, any passwords or secrets that are configured will be stored in encrypted form (with cryptographic key material stored separately in a secure location.) If the files are edited directly, the system may not work as expected. For Beta 2 it is recommended that REST be used as the primary way of configuring the Edge Data Store. In the final release command line configuration will also be supported.
+Edge Data Store uses JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, it is recommended that you use REST or the edgecmd command line tool for any changes you make to the files. As part of making Edge Data Store as secure as possible, any passwords or secrets that are configured will be stored in encrypted form (with cryptographic key material stored separately in a secure location.) If the files are edited directly, the system may not work as expected.
 
 **Note:** It is possible to edit any single component or facet of the system using REST, but it is also possible to configure the system as a whole with a single REST call.
 
@@ -60,7 +60,7 @@ The default System_Components.json file for the System component is below. The S
 curl -i -d "@AddComponent.json" -H "Content-Type: application/json" -X POST http://localhost:5590/api/v1/configuration/system/components
 ```
 
-After the curl command completes successfully, for Beta 2 the Edge Data Store will need to be restarted before the new component can be configured or used. This behavior will change in the final relase, and components will be able to be added without an Edge Data Store restart.
+After the curl command completes successfully the new component can be configured or used.
 
 ## Configuring entire Edge Data Store
 
@@ -451,7 +451,7 @@ Save the edited version of the JSON above in a file named EdgeMaximumConfigurati
 curl -i -d "@EdgeMaximumConfiguration.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration
 ```
 
-The configuration takes effect immediately after the command completes unless Components were added. If Components were added in Beta 2, a restart of Edge Data Store might be necessary before the changes take effect.
+The configuration takes effect immediately after the command completes.
 
 Full JSON definition of configuration parameters:
 [Edge Data Store Configuration](xref:edge_system_schema)

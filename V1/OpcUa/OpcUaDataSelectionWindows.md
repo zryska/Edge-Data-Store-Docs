@@ -10,7 +10,7 @@ A default OPC UA data source template file will be created if there is no OPC UA
 
 There are two necessary prerequisites for this template data selection to be generated:
 
-1. Add an [OPC UA component](xref:EdgeDataStoreConfiguration) with a unique ComponentId. In Beta 2 the system is installed with a single OPC UA component, so unless a second one is desired, this step can be skipped, otherwise restart the Edge Data Store if you are using Beta 2 before proceeding to the next step.
+1. Add an [OPC UA EDS adapter](xref:EdgeDataStoreConfiguration) with a unique ComponentId. This can also be done during installation of the Edge Data Store by choosing an OPC UA EDS adapter.
 2. Configure a valid [OPC UA Data Source](xref:opcUaOverview)
 
 Once these steps are taken a template OPC UA data selection will be generated in the following directory. For the purpose of this example it is assumed the ComponentId of the OPC UA component is the default OpcUa1:

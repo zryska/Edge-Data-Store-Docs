@@ -2,11 +2,7 @@
 uid: releaseNotes
 ---
 
-# Edge Data Store Beta 2 Release Notes
-
-Edge Data Store Beta 2 contains all the features expected to be present in the first release of Edge Data Store. Since this is a Beta release, some features may change slightly in the final release, but most of the engineering work will focus on bug fixes and performance improvements after this Beta.
-
-This is the second beta release of the combined Edge Data Store - including Storage (SDS and OMF) along with Modbus and Opc Ua EDS adapter. Upon installation, storage functions will be immediately available - Modbus TCP and OPC UA will require additional configuration steps. Additional steps for configuring EDS adapter will be available, along with other documentation at <https://edge-docs.osisoft.com/> shortly after Beta 2 is available.
+# Edge Data Store Release Notes
 
 ## Overview
 
