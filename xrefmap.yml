@@ -34,6 +34,9 @@ references:
 - uid: edgeDocker
   name: Using Edge Data Store with Docker
   href: V1/Docker/EdgeDocker.html
+- uid: EDSDataIngress
+  name: EDS Data Ingress
+  href: V1/DataIngress/EDSDataIngress.html
 - uid: egress
   name: Egress from Edge Data Store
   href: V1/Egress/Egress.html
