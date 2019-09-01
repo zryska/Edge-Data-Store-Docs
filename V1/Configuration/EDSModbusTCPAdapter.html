@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Command line configuration of Edge Data Store </title>
+    <title>Edge Data Store Modbus TCP adapter </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Command line configuration of Edge Data Store ">
+    <meta name="title" content="Edge Data Store Modbus TCP adapter ">
     <meta name="generator" content="docfx 2.43.2.0">
     
     <link rel="shortcut icon" href="../../favicon.ico">
@@ -68,44 +68,14 @@
       <div role="main" class="container body-content hide-when-search">
         <div class="article row grid">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="commandLine">
-<h1 id="command-line-configuration-of-edge-data-store">Command line configuration of Edge Data Store</h1>
+            <article class="content wrap" id="_content" data-uid="edsmodbustcpadapter">
+<h1 id="edge-data-store-modbus-tcp-adapter">Edge Data Store Modbus TCP adapter</h1>
 
-<p>Configuration and administration of the Edge Data Store on Linux and Windows can also be accomplished using the edgecmd command line tool. On Windows it is located in the directory:</p>
-<pre><code class="lang-cmd">C:\Program Files\OSIsoft\EdgeDataStore\edgecmd.exe
-</code></pre><p>You should specify the full path when using it on Windows.</p>
-<p>On Linux the utility is installed in:</p>
-<pre><code class="lang-bash"> /opt/OSIsoft/EdgeDataStore/edgecmd
-</code></pre><p>On Linux it can be accessed without using the full path. For the sake of simplicity the utility for the rest of this topic will be referred to as edgecmd, even though it is named edgecmd.exe on Windows and edgecmd on Linux.</p>
-<p>Most configurations options that can be done using REST can also be done using the edgecmd utility and command line arguments. Generally the configuration and administrative REST interfaces are exposed via the command line. Access to reading and writing data to the Edge Data Store Storage Component - OMF Ingress and SDS Read/Write capabilities are only available using the REST API.</p>
-<p>A simple example of viewing system configuration using edgecmd:</p>
-<pre><code class="lang-cmd">C:\msdn\MayflowerBeta2&gt;&quot;c:\program files\OSIsoft\EdgeDataStore\edgecmd.exe&quot; configuration system
-{
-  &quot;Logging&quot;: {
-    &quot;logLevel&quot;: &quot;Information&quot;,
-    &quot;logFileSizeLimitBytes&quot;: 34636833,
-    &quot;logFileCountLimit&quot;: 31
-  },
-  &quot;HealthEndpoints&quot;: [],
-  &quot;Port&quot;: {
-    &quot;port&quot;: 5590
-  },
-  &quot;Components&quot;: [
-    {
-      &quot;componentId&quot;: &quot;OpcUa1&quot;,
-      &quot;componentType&quot;: &quot;OpcUa&quot;
-    },
-    {
-      &quot;componentId&quot;: &quot;Modbus1&quot;,
-      &quot;componentType&quot;: &quot;Modbus&quot;
-    },
-    {
-      &quot;componentId&quot;: &quot;Storage&quot;,
-      &quot;componentType&quot;: &quot;EDS.Component&quot;
-    }
-  ]
-}
-</code></pre></article>
+<p>The EDS Modbus TCP adapter has three configurable facets:</p>
+<p><a class="xref" href="Schemas/Modbus_DataSource_schema.html">Data Source</a></p>
+<p><a class="xref" href="Schemas/Modbus_DataSelection_schema.html">Data Selection</a></p>
+<p><a class="xref" href="Schemas/Modbus_Logging_schema.html">Logging</a></p>
+</article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
@@ -113,7 +83,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/osisoft/Edge-Data-Store-Docs/blob/master/V1/CommandLine/CommandLine.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/osisoft/Edge-Data-Store-Docs/blob/master/V1/Configuration/EDSModbusTCPAdapter.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

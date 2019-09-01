@@ -37,6 +37,12 @@ references:
 - uid: EDSDataIngress
   name: EDS Data Ingress
   href: V1/DataIngress/EDSDataIngress.html
+- uid: edsmodbustcpadapter
+  name: Edge Data Store Modbus TCP adapter
+  href: V1/Configuration/EDSModbusTCPAdapter.html
+- uid: edsopcuaadapter
+  name: Edge Data Store OPC UA adapter
+  href: V1/Configuration/EDSOPCUAAdapter.html
 - uid: egress
   name: Egress from Edge Data Store
   href: V1/Egress/Egress.html
@@ -163,12 +169,12 @@ references:
 - uid: security
   name: Edge Data Store security overview
   href: V1/Security/SecurityOverview.html
+- uid: storage
+  name: Edge Data Store storage component
+  href: V1/Configuration/Storage.html
 - uid: Storage_Logging_schema
   name: Storage logging schema
   href: V1/Configuration/Schemas/Storage_Logging_schema.html
-- uid: storage_OEM_schema
-  name: Storage OEM configuration schema
-  href: V1/Configuration/Schemas/Storage_OEM_schema.html
 - uid: storage_PeriodicEgressEndpoints_schema
   name: Periodic egress configuration schema
   href: V1/Configuration/Schemas/Storage_PeriodicEgressEndpoints_schema.html
@@ -178,6 +184,9 @@ references:
 - uid: storage_schema
   name: StorageConfiguration schema
   href: V1/Configuration/Schemas/Storage_schema.html
+- uid: system
+  name: Edge Data Store system component
+  href: V1/Configuration/System.html
 - uid: system_Components_schema
   name: Sample Edge Data Store components configuration
   href: V1/Configuration/Schemas/System_Components_schema.html
