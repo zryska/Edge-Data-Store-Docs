@@ -562,7 +562,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Overview/EdgeSystemOverview.html",
-          "hash": "0sf35isbw1bkfXD5jt/V8w=="
+          "hash": "bf89r5WNfqJJAFvClEUudA=="
         }
       },
       "is_incremental": false,
@@ -887,6 +887,17 @@
     },
     {
       "type": "Resource",
+      "source_relative_path": "V1/images/EDSOverview1.jpg",
+      "output": {
+        "resource": {
+          "relative_path": "V1/images/EDSOverview1.jpg"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
       "source_relative_path": "V1/images/LinuxInstall1.jpg",
       "output": {
         "resource": {
@@ -1052,9 +1063,9 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "TocDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
@@ -1065,9 +1076,9 @@
           "total_file_count": 71,
           "skipped_file_count": 0
         },
-        "ResourceDocumentProcessor": {
+        "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
