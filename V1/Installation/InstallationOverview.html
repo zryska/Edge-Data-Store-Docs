@@ -78,7 +78,7 @@
 <li>Debian 9 or later x64/AMD64 - EdgeDataStore_linux-x64.deb (Intel/AMD 64 bit processors)</li>
 <li>Debian 9 or later ARM32 - EdgeDataStore_linux-arm.deb (Raspberry PI 2,3,4, BeagleBone devices, other ARM v7 and ARM v8 32 bit processors)</li>
 </ul>
-<p>In addition to ready to use install kits, OSIsoft also provides examples of how to create <a class="xref" href="../../Beta2/Docker/EdgeDocker.html">Docker containers</a>, and tar.gz files are provided with binaries for customers who wish to build their own custom installers or containers for Linux.</p>
+<p>In addition to ready to use install kits, OSIsoft also provides examples of how to create <a class="xref" href="../Docker/EdgeDocker.html">Docker containers</a>, and tar.gz files are provided with binaries for customers who wish to build their own custom installers or containers for Linux.</p>
 <h2 id="install-edge-data-store-on-a-device-using-an-install-kit">Install Edge Data Store on a device using an install kit</h2>
 <p>To use any of the installers, copy the appropriate file to the file system of the device.</p>
 <p>The installers allow the port assignment to be configured at install time. The default port is 5590. The user can specify any numeric value in the range of 1024 to 65535; any other characters or values will be considered invalid. You should select a port not already in use by another program on the host; the installer will not check for this case.</p>
@@ -86,11 +86,11 @@
 <h3 id="windows-windows-10-x64">Windows (Windows 10 x64)</h3>
 <p>You must have administrative privileges to run the installer.</p>
 <p>Double click the EdgeDataStore.msi file in Windows Explorer to launch the installer UI. You will be prompted for install location and port (with the default 5590 value pre-set). When the install finishes, Edge Data Store will be installed and running on the port specified. There are also checkboxes to allow a Modbus or OPC UA EDS adapter to be installed along with the default Storage component.</p>
-<p><img src="https://osisoft.github.io/Edge-System-Docs/V1/images/WindowsInstall1.jpg" alt="alt text" title="Windows Installation 1">
-<img src="https://osisoft.github.io/Edge-System-Docs/V1/images/WindowsInstall2.jpg" alt="alt text" title="Windows Installation 2">
-<img src="https://osisoft.github.io/Edge-System-Docs/V1/images/WindowsInstall3.jpg" alt="alt text" title="Windows Installation 3">
-<img src="https://osisoft.github.io/Edge-System-Docs/V1/images/WindowsInstall4.jpg" alt="alt text" title="Windows Installation 4">
-<img src="https://osisoft.github.io/Edge-System-Docs/V1/images/WindowsInstall5.jpg" alt="alt text" title="Windows Installation 5"></p>
+<p><img src="https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/WindowsInstall1.jpg" alt="alt text" title="Windows Installation 1">
+<img src="https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/WindowsInstall2.jpg" alt="alt text" title="Windows Installation 2">
+<img src="https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/WindowsInstall3.jpg" alt="alt text" title="Windows Installation 3">
+<img src="https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/WindowsInstall4.jpg" alt="alt text" title="Windows Installation 4">
+<img src="https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/WindowsInstall5.jpg" alt="alt text" title="Windows Installation 5"></p>
 <p><strong>Note</strong> The UI based installer will prompt for a port value, and will not proceed if an invalid port is specified.</p>
 <p>The installer can be launched from the command line with the following command</p>
 <pre><code class="lang-bash">msiexec /i EdgeDataStore.msi PORT=5590 INSTALLFOLDER=&quot;C:\otherdir&quot;

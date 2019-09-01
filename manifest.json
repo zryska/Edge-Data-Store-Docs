@@ -14,867 +14,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "Beta2/Administration/Administration.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Administration/Administration.html",
-          "hash": "tPhCQSqZ3/X31HDAlG5DXw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Administration/LoggingConfiguration.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Administration/LoggingConfiguration.html",
-          "hash": "vS6/9+2o8uFxNfsE0UCxzQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Administration/ManagementTools.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Administration/ManagementTools.html",
-          "hash": "p1d4meMHUnk5abRPOvup8g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/CommandLine/CommandLine.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/CommandLine/CommandLine.html",
-          "hash": "8aN+OEF5s8RcPxq6OvPYrQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/EdgeSystemConfiguration.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/EdgeSystemConfiguration.html",
-          "hash": "he3T5ASt3KdnzyfO2gyu3Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/ConfigurationSchemaList.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/ConfigurationSchemaList.html",
-          "hash": "jY4H0VMat3zq1m5uiFkiyg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/EdgeSystem_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/EdgeSystem_schema.html",
-          "hash": "IMS6fIWROIeLd1gl5zueZA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids",
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/Modbus_DataSelection_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/Modbus_DataSelection_schema.html",
-          "hash": "qy5dATuvp0b/X14Y4/dkaA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids",
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/Modbus_DataSource_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/Modbus_DataSource_schema.html",
-          "hash": "g4kn5tTRzK9NBdgAYBNMCw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/Modbus_Logging_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/Modbus_Logging_schema.html",
-          "hash": "cqyFL8qYzzObPvRub340pQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/Modbus_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/Modbus_schema.html",
-          "hash": "S4BA2FYcPB8VlVPYbFCKgQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/OpcUa_DataSelection_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/OpcUa_DataSelection_schema.html",
-          "hash": "/62XCLcPjatR9u3WqjjA1g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/OpcUa_DataSource_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/OpcUa_DataSource_schema.html",
-          "hash": "WC8FhgWNubaGgUDjE0fAmg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids",
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/OpcUa_Logging_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/OpcUa_Logging_schema.html",
-          "hash": "orSBAMAwDC8v5lFIMSvJ2A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/OpcUa_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/OpcUa_schema.html",
-          "hash": "kz7fxFWAlr9PunfZVtrC6A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/Storage_Logging_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/Storage_Logging_schema.html",
-          "hash": "PPby/jyp2V8ah0aPZ6kaKw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids",
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/Storage_OEM_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/Storage_OEM_schema.html",
-          "hash": "km1Lxg9TYyg7fL96CKYKHA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids",
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/Storage_PeriodicEgressEndpoints_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/Storage_PeriodicEgressEndpoints_schema.html",
-          "hash": "uSm4MJsYUBnCO+GY1TvxzQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/Storage_Runtime_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/Storage_Runtime_schema.html",
-          "hash": "eGwoGScOGBd5qjal4NhYew=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/Storage_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/Storage_schema.html",
-          "hash": "v0jyHnb94Wu4XE2KsARp1g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/System_Components_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/System_Components_schema.html",
-          "hash": "8PWPwcyD9I35YdOF2grsgw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/System_HealthEndpoints_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/System_HealthEndpoints_schema.html",
-          "hash": "EuiUZCWFpjrGHV2xSg0QDw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/System_Logging_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/System_Logging_schema.html",
-          "hash": "VvIUA7QGF4gWMEh0imT3uQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/System_Port_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/System_Port_schema.html",
-          "hash": "j05hpqHD2rTaBFuFL2btNA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids",
-        "InvalidFileLink",
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Configuration/Schemas/System_schema.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Configuration/Schemas/System_schema.html",
-          "hash": "KuFpddGPqsbPRe4aoGdAsg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Design/ScalePerformance.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Design/ScalePerformance.html",
-          "hash": "8TkElGqdIYh9b0WbXtv+dw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Diagnostics/Diagnostics.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Diagnostics/Diagnostics.html",
-          "hash": "WXH3m3LA91uAOiBNKWL39A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Docker/EdgeDocker.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Docker/EdgeDocker.html",
-          "hash": "GBXVhzVkAl6gM44nTEAKeQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Egress/Egress.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Egress/Egress.html",
-          "hash": "crh4P+dgzdllwiuiHqsEEw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Health/Health.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Health/Health.html",
-          "hash": "2IK02x0j8+kfHRl9IE+eKQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Installation/InstallationOverview.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Installation/InstallationOverview.html",
-          "hash": "+EcBEqZ/4gJVOTfJ5h0aJw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/LinuxWindows/LinuxWindows.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/LinuxWindows/LinuxWindows.html",
-          "hash": "ERkTzi1A4tqZDhT1/VvVNw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Modbus/ModbusOverview.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Modbus/ModbusOverview.html",
-          "hash": "OFbNfJgDJUl8vk25bHFKrQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/OMF/OMFOverview.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/OMF/OMFOverview.html",
-          "hash": "in9os4tar6wtY5n4BmxgXQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/OpcUa/OpcUaDataSelectionLinux.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/OpcUa/OpcUaDataSelectionLinux.html",
-          "hash": "Cjtgy0TsDD6hl/F+nOO3pg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/OpcUa/OpcUaDataSelectionWindows.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/OpcUa/OpcUaDataSelectionWindows.html",
-          "hash": "W6rZdfF2j2UrD4a4h/ex2Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/OpcUa/OpcUaOverview.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/OpcUa/OpcUaOverview.html",
-          "hash": "Ev19AZO37ixhcSp+FJMn3A=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Overview/EdgeSystemOverview.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Overview/EdgeSystemOverview.html",
-          "hash": "EvMH1zb9mlgU7aZ3sqiq5g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Overview/ModbusQuickStart.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Overview/ModbusQuickStart.html",
-          "hash": "ezjKESHSyoO1nCEyYnueIw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Overview/OCSEgressQuickStart.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Overview/OCSEgressQuickStart.html",
-          "hash": "fohIfHLm9xhoHpvi5CiCrw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Overview/OMFQuickStart.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Overview/OMFQuickStart.html",
-          "hash": "LvqINM+pxJexK67AI4ZC9Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Overview/OpcUaQuickStart.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Overview/OpcUaQuickStart.html",
-          "hash": "5YpdIL4xMt3yn2qfSreJTw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Overview/PIEgressQuickStart.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Overview/PIEgressQuickStart.html",
-          "hash": "xScm+n9C82Tpo1ZWwCyAuw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Overview/SDSQuickStart.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Overview/SDSQuickStart.html",
-          "hash": "8KiDQ7rJg4qkmk/cZD5jkA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/ReleaseNotes/ReleaseNotes.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/ReleaseNotes/ReleaseNotes.html",
-          "hash": "plcNnDOX9hGVlJngIsCVvA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/Compression.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/Compression.html",
-          "hash": "13/aAHOoTPglRmj7Fehl7w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/Filter_Expressions.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/Filter_Expressions.html",
-          "hash": "azhO+fT4nMZ4m357ZwDrCg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/Reading_Data.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/Reading_Data.html",
-          "hash": "99OJv1Yv6bHcCfN/7GltAg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/Reading_Data_API.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/Reading_Data_API.html",
-          "hash": "VRi3YG8AteE9+srVGAQraA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/SDS_Streams.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/SDS_Streams.html",
-          "hash": "LHXSR9GHL4V512/ez7D+lA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids",
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/SDS_Types.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/SDS_Types.html",
-          "hash": "1cPoYoABZvufNhjXXAOrmw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids",
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/SDS_Views.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/SDS_Views.html",
-          "hash": "7VFR+hRaXf6BFoxykIApxw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/SdsStreamExtra.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/SdsStreamExtra.html",
-          "hash": "iLHHfS5s3szkzGoRdSuAiQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/Searching.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/Searching.html",
-          "hash": "+fRTE8ZDfys/xh7RERp/Eg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/SequentialDataStore.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/SequentialDataStore.html",
-          "hash": "1uyYrZk4Qs8Jec2S/FBhrA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/Units_of_Measure.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/Units_of_Measure.html",
-          "hash": "iouEe+//7B2noCzmlu5PvA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/Writing_Data.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/Writing_Data.html",
-          "hash": "Dlun87JUWDbTk0qA2e+WLg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/Writing_Data_API.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/Writing_Data_API.html",
-          "hash": "D7ECe6llPSR+EVcyQkBiCw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/indexes.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/indexes.html",
-          "hash": "SdJUkrSVplih6ScGEOPjVg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/SDS/table_format.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/SDS/table_format.html",
-          "hash": "iXH5evIVLvUEK5gJS9iTpQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Security/SecurityOverview.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Security/SecurityOverview.html",
-          "hash": "+9wYdWUn3cVeBHHO0Oe2Wg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/Troubleshooting/Troubleshooting.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/Troubleshooting/Troubleshooting.html",
-          "hash": "7gBs8z51jqbyY3QxkyADbA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "log_codes": [
-        "DuplicateUids",
-        "UidNotFound"
-      ],
-      "type": "Conceptual",
-      "source_relative_path": "Beta2/index.md",
-      "output": {
-        ".html": {
-          "relative_path": "Beta2/index.html",
-          "hash": "MzbRu9NqQwJBKDJFNK5Nvg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
       "source_relative_path": "README.md",
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "kdDtpGzwJyOALiHImz//cw=="
+          "hash": "Y1KXj5iqWKHlFO8UXjBaUg=="
         }
       },
       "is_incremental": false,
@@ -893,9 +37,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Administration/LoggingConfiguration.md",
       "output": {
@@ -908,24 +49,18 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Administration/ManagementTools.md",
       "output": {
         ".html": {
           "relative_path": "V1/Administration/ManagementTools.html",
-          "hash": "2ZpV7JpfiZfOjOUpb7K3bA=="
+          "hash": "rjkBrcjc8jpG5M8jGnxt8w=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/CommandLine/CommandLine.md",
       "output": {
@@ -943,7 +78,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/EdgeSystemConfiguration.html",
-          "hash": "iMtBnEdb8kxouDiGkTR5bw=="
+          "hash": "sqSCngxthD+4qtWDcLpt+w=="
         }
       },
       "is_incremental": false,
@@ -967,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Schemas/EdgeSystem_schema.html",
-          "hash": "+S2Uopr1a5V7rRzzvtt4vg=="
+          "hash": "gcCDTluZRQRcemnJ2xi2XA=="
         }
       },
       "is_incremental": false,
@@ -1005,7 +140,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1021,7 +155,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1029,16 +162,13 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Schemas/Modbus_schema.html",
-          "hash": "Vsd7yfLNYnJhYniC2K0f0Q=="
+          "hash": "JdAXnhglXWv385OrfcNS5Q=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Configuration/Schemas/OpcUa_DataSelection_schema.md",
       "output": {
@@ -1052,7 +182,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1083,7 +212,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1091,16 +219,13 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Schemas/OpcUa_schema.html",
-          "hash": "//hpbqW8GsoNN1Vql0DcYA=="
+          "hash": "84UpNt9KCfpdl4n+Bdlo4A=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Configuration/Schemas/Storage_Logging_schema.md",
       "output": {
@@ -1144,7 +269,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1160,7 +284,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1168,7 +291,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Schemas/Storage_schema.html",
-          "hash": "rx6cokfdvJ/4Sb8GFxCakg=="
+          "hash": "tT4qECDI9/l/jTtiVDsbjA=="
         }
       },
       "is_incremental": false,
@@ -1176,7 +299,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1192,7 +314,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1208,7 +329,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1224,7 +344,6 @@
     },
     {
       "log_codes": [
-        "DuplicateUids",
         "InvalidFileLink"
       ],
       "type": "Conceptual",
@@ -1248,7 +367,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Configuration/Schemas/System_schema.html",
-          "hash": "sgm2Qi+HLVuBGxh1Cm7wnQ=="
+          "hash": "RnozPv9OWgw9qimchjO3kQ=="
         }
       },
       "is_incremental": false,
@@ -1272,16 +391,13 @@
       "output": {
         ".html": {
           "relative_path": "V1/Diagnostics/Diagnostics.html",
-          "hash": "ZStogyccJ+LXP7D2G02p6w=="
+          "hash": "vYi0W88iydjXG2CMA+7GHw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Docker/EdgeDocker.md",
       "output": {
@@ -1294,9 +410,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Egress/Egress.md",
       "output": {
@@ -1321,24 +434,18 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Installation/InstallationOverview.md",
       "output": {
         ".html": {
           "relative_path": "V1/Installation/InstallationOverview.html",
-          "hash": "WWnL7Tjf6oOtyuJe/OmmaQ=="
+          "hash": "YArq7kRgLL+Hm6amDEOpHw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/LinuxWindows/LinuxWindows.md",
       "output": {
@@ -1351,15 +458,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Modbus/ModbusOverview.md",
       "output": {
         ".html": {
           "relative_path": "V1/Modbus/ModbusOverview.html",
-          "hash": "wIu9yeWdHn+19s1EakEx+w=="
+          "hash": "lhOI+YELdAT/T+uAhjYWIg=="
         }
       },
       "is_incremental": false,
@@ -1378,15 +482,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/OpcUa/OpcUaDataSelectionLinux.md",
       "output": {
         ".html": {
           "relative_path": "V1/OpcUa/OpcUaDataSelectionLinux.html",
-          "hash": "ZzXBMlhu74an24q3/a6i/g=="
+          "hash": "P6GQns4R/BLGdX84Q01EnQ=="
         }
       },
       "is_incremental": false,
@@ -1398,22 +499,19 @@
       "output": {
         ".html": {
           "relative_path": "V1/OpcUa/OpcUaDataSelectionWindows.html",
-          "hash": "tMWY2xVjMTT+zdHrIGBF3w=="
+          "hash": "eBQpeADLuvhJtqouLmx9IQ=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/OpcUa/OpcUaOverview.md",
       "output": {
         ".html": {
           "relative_path": "V1/OpcUa/OpcUaOverview.html",
-          "hash": "6x1YcHUwrLjPbg7vru155A=="
+          "hash": "9mSWXr+mSL80xyUa4aUjLg=="
         }
       },
       "is_incremental": false,
@@ -1464,16 +562,13 @@
       "output": {
         ".html": {
           "relative_path": "V1/Overview/EdgeSystemOverview.html",
-          "hash": "ob2mBlL0wjJAVkVgb4jpZw=="
+          "hash": "43xtggxMrRsoCPZ38iwvnQ=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Overview/ModbusQuickStart.md",
       "output": {
@@ -1486,9 +581,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Overview/OCSEgressQuickStart.md",
       "output": {
@@ -1501,9 +593,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Overview/OMFQuickStart.md",
       "output": {
@@ -1516,9 +605,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Overview/OpcUaQuickStart.md",
       "output": {
@@ -1531,9 +617,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Overview/PIEgressQuickStart.md",
       "output": {
@@ -1551,7 +634,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/Overview/SDSQuickStart.html",
-          "hash": "NElkvtp/vCi0QCpD+sSvBA=="
+          "hash": "8o0A5hgXvnaJwI+zBforBg=="
         }
       },
       "is_incremental": false,
@@ -1570,9 +653,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/ReleaseNotes/ReleaseNotes.md",
       "output": {
@@ -1585,15 +665,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/SDS/Compression.md",
       "output": {
         ".html": {
           "relative_path": "V1/SDS/Compression.html",
-          "hash": "iIFRTH1Vsw8pO2RDwjC0UQ=="
+          "hash": "ZRjMLdefvQFhItJRTy0/xw=="
         }
       },
       "is_incremental": false,
@@ -1612,30 +689,24 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/SDS/Reading_Data.md",
       "output": {
         ".html": {
           "relative_path": "V1/SDS/Reading_Data.html",
-          "hash": "q8b31k59FivcMa9ZCHk6TQ=="
+          "hash": "abdU6JppVqCJ2jYabZ6XQA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/SDS/Reading_Data_API.md",
       "output": {
         ".html": {
           "relative_path": "V1/SDS/Reading_Data_API.html",
-          "hash": "3tlVnq/QGndI7D78sdzjxw=="
+          "hash": "UxEN+BOCLtNrEkRqzkW2tQ=="
         }
       },
       "is_incremental": false,
@@ -1647,7 +718,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/SDS/SDS_Streams.html",
-          "hash": "qqkgsnlXwI/VChODRvnFDA=="
+          "hash": "7pUFKj6ZIAc30X+oSqx0vA=="
         }
       },
       "is_incremental": false,
@@ -1662,7 +733,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/SDS/SDS_Types.html",
-          "hash": "16sTFDkf1i1Z0HsR5VpjdQ=="
+          "hash": "7ZPu6CYwqZAgE8F/pads6A=="
         }
       },
       "is_incremental": false,
@@ -1708,15 +779,12 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/SDS/SequentialDataStore.md",
       "output": {
         ".html": {
           "relative_path": "V1/SDS/SequentialDataStore.html",
-          "hash": "HcSLR6R8D/agIOMp2cQo4w=="
+          "hash": "xF6u9CH5tnsm+BJbJwXBLA=="
         }
       },
       "is_incremental": false,
@@ -1728,31 +796,25 @@
       "output": {
         ".html": {
           "relative_path": "V1/SDS/Units_of_Measure.html",
-          "hash": "fp1AkIQ7jT5MyeOljfF8xg=="
+          "hash": "CzVyi5qNubS02EoVHGMOBw=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/SDS/Writing_Data.md",
       "output": {
         ".html": {
           "relative_path": "V1/SDS/Writing_Data.html",
-          "hash": "pB1wAIK/qVChF18WhvILXA=="
+          "hash": "I3zu7zThvtVuIW1ss/VQbQ=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/SDS/Writing_Data_API.md",
       "output": {
@@ -1765,24 +827,18 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/SDS/indexes.md",
       "output": {
         ".html": {
           "relative_path": "V1/SDS/indexes.html",
-          "hash": "aHjJRRDZ3ayk+juOkapLeg=="
+          "hash": "Z7nJr6+HzAZByS7HMC9hVA=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/SDS/table_format.md",
       "output": {
@@ -1795,24 +851,18 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Security/SecurityOverview.md",
       "output": {
         ".html": {
           "relative_path": "V1/Security/SecurityOverview.html",
-          "hash": "vhX2YbmXQ8v6ax11oMtVuA=="
+          "hash": "e0hqibwp/jooM9kmLkjlng=="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Troubleshooting/Troubleshooting.md",
       "output": {
@@ -1921,7 +971,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "spbmux5niEv/hqOX8EC3+A=="
+          "hash": "0LzRNt0NRHLzxmy8703uUQ=="
         }
       },
       "is_incremental": false,
@@ -2009,17 +1059,17 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 134,
-          "skipped_file_count": 0
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 71,
           "skipped_file_count": 0
         }
       }
