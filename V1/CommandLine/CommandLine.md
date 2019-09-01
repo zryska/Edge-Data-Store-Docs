@@ -25,8 +25,7 @@ Most configurations options that can be done using REST can also be done using t
 A simple example of viewing system configuration using edgecmd:
 
 ```cmd
-C:\msdn\MayflowerBeta2>"c:\program files\OSIsoft\EdgeDataStore\edgecmd.exe" conf
-iguration system
+C:\msdn\MayflowerBeta2>"c:\program files\OSIsoft\EdgeDataStore\edgecmd.exe" configuration system
 {
   "Logging": {
     "logLevel": "Information",

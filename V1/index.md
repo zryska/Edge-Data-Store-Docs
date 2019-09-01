@@ -49,18 +49,18 @@ uid: index
   - [Logging Configuration](xref:loggingConfiguration)
 - [Configuration Schemas](xref:configurationSchemaList)
   - [Edge Data Store Schema](xref:edge_system_schema)
-  - System
+  - [System](xref:system)
     - [System Schema](xref:system_schema)
     - [System Port Schema](xref:system_Port_schema)
-  - Modbus
+  - [EDS Modbus TCP adapter](xref:edsmodbustcpadapter)
     - [Modbus Data Source Schema](xref:modbus_DataSource_schema)
     - [Modbus Data Selection Schema](xref:modbus_DataSelection_schema)
     - [Modbus Logging Schema](xref:modbus_Logging_schema)
-  - OPC UA
+  - [EDS OPC UA adapter](xref:edsopcuaadapter)
     - [OPC UA Data Source Schema](xref:opcUa_DataSource_Schema)
     - [OPC UA Data Selection Schema](xref:opcUa_DataSelection_schema)
     - [OPC UA Logging Schema](xref:opcUa_Logging_schema)
-  - Storage
+  - [Storage](xref:storage)
     - [Storage Schema](xref:storage_schema)
     - [Storage Logging Schema](xref:Storage_Logging_schema)
     - [Storage Periodic Egress Endpoints Schema](xref:storage_PeriodicEgressEndpoints_schema)
