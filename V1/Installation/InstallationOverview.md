@@ -62,7 +62,7 @@ Open a terminal window and type:
 sudo apt install ./EdgeDataStore_linux_<either x64 or arm depending upon processor>.deb
 ```
 
-![alt text](https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/LinuxInstall.jpg "Linux Installation")
+![alt text](https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/LinuxInstall1.jpg "Linux Installation")
 
 A validation check will be done for prerequisites. If the Linux OS is up to date, the install will succeed. If the install fails, run the following commands from the terminal window and try the install again:
 
