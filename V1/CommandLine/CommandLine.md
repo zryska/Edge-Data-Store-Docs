@@ -22,3 +22,34 @@ On Linux it can be accessed without using the full path. For the sake of simplic
 
 Most configurations options that can be done using REST can also be done using the edgecmd utility and command line arguments. Generally the configuration and administrative REST interfaces are exposed via the command line. Access to reading and writing data to the Edge Data Store Storage Component - OMF Ingress and SDS Read/Write capabilities are only available using the REST API.
 
+A simple example of viewing system configuration using edgecmd:
+
+```cmd
+C:\msdn\MayflowerBeta2>"c:\program files\OSIsoft\EdgeDataStore\edgecmd.exe" conf
+iguration system
+{
+  "Logging": {
+    "logLevel": "Information",
+    "logFileSizeLimitBytes": 34636833,
+    "logFileCountLimit": 31
+  },
+  "HealthEndpoints": [],
+  "Port": {
+    "port": 5590
+  },
+  "Components": [
+    {
+      "componentId": "OpcUa1",
+      "componentType": "OpcUa"
+    },
+    {
+      "componentId": "Modbus1",
+      "componentType": "Modbus"
+    },
+    {
+      "componentId": "Storage",
+      "componentType": "EDS.Component"
+    }
+  ]
+}
+```

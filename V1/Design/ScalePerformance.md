@@ -6,9 +6,9 @@ uid: scalePerformance
 
 ## Edge Storage role
 
-The Edge Storage component that ships with the Edge Data Store is a new component in the OSIsoft software ecosystem. It is not designed to replace any existing storage technology produced by OSIsoft. It differs from the PI Data Archive and OSIsoft Cloud Services in that it is not intended as a permanent repository for customer data. The Edge Storage component is intended as a store that is resilient and reliable, but limited in duration and scope, as appropriate for an Edge software component. The Edge storage component is designed to roll off data in a FIFO (first in first out) process - as new data comes and the size of streams exceeds the configured limits, older data is purged.
+The Edge Storage component that ships with the Edge Data Store is a new component in the OSIsoft software ecosystem. It is not designed to replace any existing storage technology produced by OSIsoft. The Edge Storage component is intended as a store that is resilient and reliable, but is usually limited in duration and scope, as appropriate for an Edge software component. The Edge storage component is configured by default to roll off data in a FIFO (first in first out) process - as new data comes and the size of streams exceeds the configured limits, older data is purged.
 
-If data exists in the Edge Storage component that needs to be permanently retained, it should be egressed to either the PI Data Archive (using PI Web API OMF end point) or to OSIsoft Cloud Services, using the OCS OMF ingress end point.
+If data exists in the Edge Storage component that needs to be permanently retained, it should be egressed to either the PI Data Archive (using the PI Web API OMF end point) or to OSIsoft Cloud Services, using the OCS OMF ingress end point.
 
 ## Edge Storage scale
 
