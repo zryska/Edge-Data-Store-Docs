@@ -40,7 +40,7 @@ All data in the Edge Data Store storage can be accessed using the Sequential Dat
 
 ### Example EDS analytics application
 
-![EDS Analytics](https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/EDSOMFIngress.jpg "EDS Analytics")
+![EDS Analytics](https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/EDSAnalytics.jpg "EDS Analytics")
 
 ## Data Egress from the Edge Data Store
 
