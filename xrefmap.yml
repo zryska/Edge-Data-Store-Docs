@@ -107,7 +107,7 @@ references:
   name: PI System (PI Web API) egress quick start
   href: V1/Overview/PIEgressQuickStart.html
 - uid: releaseNotes
-  name: Edge Data Store Beta 2 Release Notes
+  name: Edge Data Store Release Notes
   href: V1/ReleaseNotes/ReleaseNotes.html
 - uid: scalePerformance
   name: Edge Data Store design considerations

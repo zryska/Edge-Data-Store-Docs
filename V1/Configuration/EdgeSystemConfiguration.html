@@ -33,8 +33,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="../../Beta2/index.html" width="46">
-                <img id="logo" src="../../Beta2/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
+              <a class="navbar-brand" href="../../V1/index.html" width="46">
+                <img id="logo" src="../../V1/images/atlas_icon.png" height="46" width="46" alt="OSIsoft Edge System"> 
               </a>
             </div>
             <div class="collapse navbar-collapse" id="navbar">
@@ -71,7 +71,7 @@
             <article class="content wrap" id="_content" data-uid="EdgeDataStoreConfiguration">
 <h1 id="edge-data-store-configuration">Edge Data Store configuration</h1>
 
-<p>Edge Data Store uses JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, it is recommended that you use REST for any changes you make to the files. As part of making Edge Data Store as secure as possible, any passwords or secrets that are configured will be stored in encrypted form (with cryptographic key material stored separately in a secure location.) If the files are edited directly, the system may not work as expected. For Beta 2 it is recommended that REST be used as the primary way of configuring the Edge Data Store. In the final release command line configuration will also be supported.</p>
+<p>Edge Data Store uses JSON configuration files in a protected directory on Windows and Linux to store configuration that is read on startup. While the files are accessible to view, it is recommended that you use REST or the edgecmd command line tool for any changes you make to the files. As part of making Edge Data Store as secure as possible, any passwords or secrets that are configured will be stored in encrypted form (with cryptographic key material stored separately in a secure location.) If the files are edited directly, the system may not work as expected.</p>
 <p><strong>Note:</strong> It is possible to edit any single component or facet of the system using REST, but it is also possible to configure the system as a whole with a single REST call.</p>
 <h2 id="configuring-the-edge-data-store">Configuring the Edge Data Store</h2>
 <p>The Edge Data Store hosts other components. While the initial release of the Edge Data Store includes Modbus, Opc Ua, and Storage components, they are only active if the system is configured to use them. The System itself has a relatively small configuration surface area - the list of components and the HTTP Port used for REST calls.</p>
@@ -99,7 +99,7 @@
  }
 </code></pre><p> Save the JSON in a file named AddComponent.json. From the same directory where the file exists run the following curl script:</p>
 <pre><code class="lang-bash">curl -i -d &quot;@AddComponent.json&quot; -H &quot;Content-Type: application/json&quot; -X POST http://localhost:5590/api/v1/configuration/system/components
-</code></pre><p>After the curl command completes successfully, for Beta 2 the Edge Data Store will need to be restarted before the new component can be configured or used. This behavior will change in the final relase, and components will be able to be added without an Edge Data Store restart.</p>
+</code></pre><p>After the curl command completes successfully the new component can be configured or used.</p>
 <h2 id="configuring-entire-edge-data-store">Configuring entire Edge Data Store</h2>
 <h3 id="minimum-edge-data-store-configuration">Minimum Edge Data Store Configuration</h3>
 <p>The following JSON file represents minimal configuration of an Edge Data Store. There are no Modbus or Opc Ua components, and the Storage component configurations are set to the default. If a system were configured with this JSON file, any existing Modbus or Opc Ua components would be disabled and removed. No storage data would be deleted or modified, and OMF and SDS data access would not be impacted.</p>
@@ -467,7 +467,7 @@
 </code></pre><p><strong>Please be sure to fill in any credentials or IP addresses with with appropriate values for your environment</strong></p>
 <p>Save the edited version of the JSON above in a file named EdgeMaximumConfiguration.json in any directory. When the following curl command is run, this will be set as the configuration of a running Edge Data Store (the command should be run from the same directory where the file is located):</p>
 <pre><code class="lang-bash">curl -i -d &quot;@EdgeMaximumConfiguration.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT http://localhost:5590/api/v1/configuration
-</code></pre><p>The configuration takes effect immediately after the command completes unless Components were added. If Components were added in Beta 2, a restart of Edge Data Store might be necessary before the changes take effect.</p>
+</code></pre><p>The configuration takes effect immediately after the command completes.</p>
 <p>Full JSON definition of configuration parameters:
 <a class="xref" href="Schemas/EdgeSystem_schema.html">Edge Data Store Configuration</a></p>
 </article>
