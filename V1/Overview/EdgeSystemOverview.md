@@ -32,7 +32,15 @@ The Edge Data Store is composed of components and is designed to allow the addit
 
 ## Local Data Read and Write Access
 
-All data in the Edge Data Store storage can be accessed using the Sequential Data Store [SDS](xref:sdsQuickStart) REST API.
+All data in the Edge Data Store storage can be accessed using the Sequential Data Store [SDS](xref:sdsQuickStart) REST API. This data can be used for local applications that perform analytics or visualization. 
+
+### Example EDS visualization application
+
+![EDS Visualization](https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/EDSVisualization.jpg "EDS Visualization")
+
+### Example EDS analytics application
+
+![EDS Analytics](https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/EDSOMFIngress.jpg "EDS Analytics")
 
 ## Data Egress from the Edge Data Store
 
