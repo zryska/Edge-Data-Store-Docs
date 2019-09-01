@@ -6,7 +6,7 @@ uid: EdgeDataStoreOverview
 
 The Edge Data Store is an embedded data server that runs on Linux and Windows. It is designed for small devices and can be installed and run on 64-bit Intel/AMD compatible and 32-bit ARM v7/v8 compatible chips. It offers REST programming, configuration, and administrative interfaces, and a command line tool that can be used for configuring and administering EDS.
 
-EDS is not a replacement for any existing OSIsoft technology, but is rather a supplement to existing products. In this release EDS does not offer any built-in visualization or analytic support, but by using the REST programming capabilities built into EDS it is possible to write analytics or visualization programs on either Linux, Windows, or both in a variety of programming languages. 
+EDS is not a replacement for any existing OSIsoft technology, but is rather a supplement to existing products. In this release EDS does not offer any built-in visualization or analytic support, but by using the REST programming capabilities built into EDS it is possible to write analytics or visualization programs on either Linux, Windows, or both in a variety of programming languages.
 
 ![EDS Overview](https://osisoft.github.io/Edge-Data-Store-Docs/V1/images/EDSOverview1.jpg "EDS Overview")
 
