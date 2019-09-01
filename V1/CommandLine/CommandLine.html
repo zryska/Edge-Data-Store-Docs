@@ -78,7 +78,35 @@
 <pre><code class="lang-bash"> /opt/OSIsoft/EdgeDataStore/edgecmd
 </code></pre><p>On Linux it can be accessed without using the full path. For the sake of simplicity the utility for the rest of this topic will be referred to as edgecmd, even though it is named edgecmd.exe on Windows and edgecmd on Linux.</p>
 <p>Most configurations options that can be done using REST can also be done using the edgecmd utility and command line arguments. Generally the configuration and administrative REST interfaces are exposed via the command line. Access to reading and writing data to the Edge Data Store Storage Component - OMF Ingress and SDS Read/Write capabilities are only available using the REST API.</p>
-</article>
+<p>A simple example of viewing system configuration using edgecmd:</p>
+<pre><code class="lang-cmd">C:\msdn\MayflowerBeta2&gt;&quot;c:\program files\OSIsoft\EdgeDataStore\edgecmd.exe&quot; conf
+iguration system
+{
+  &quot;Logging&quot;: {
+    &quot;logLevel&quot;: &quot;Information&quot;,
+    &quot;logFileSizeLimitBytes&quot;: 34636833,
+    &quot;logFileCountLimit&quot;: 31
+  },
+  &quot;HealthEndpoints&quot;: [],
+  &quot;Port&quot;: {
+    &quot;port&quot;: 5590
+  },
+  &quot;Components&quot;: [
+    {
+      &quot;componentId&quot;: &quot;OpcUa1&quot;,
+      &quot;componentType&quot;: &quot;OpcUa&quot;
+    },
+    {
+      &quot;componentId&quot;: &quot;Modbus1&quot;,
+      &quot;componentType&quot;: &quot;Modbus&quot;
+    },
+    {
+      &quot;componentId&quot;: &quot;Storage&quot;,
+      &quot;componentType&quot;: &quot;EDS.Component&quot;
+    }
+  ]
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">
