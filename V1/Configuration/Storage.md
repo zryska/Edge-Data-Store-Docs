@@ -4,6 +4,8 @@ uid: storage
 
 # Edge Data Store storage component
 
+[Storage Configuration Overview](xref:storage_schema)
+
 The EDS storage component has three configurable facets:
 
 [Storage Runtime](xref:storage_Runtime_schema)
