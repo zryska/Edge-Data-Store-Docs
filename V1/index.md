@@ -21,7 +21,7 @@ uid: index
 - [Installation](xref:installationOverview)
 - [Security](xref:security)
 - [System Configuration](xref:EdgeDataStoreConfiguration)
-- EDS adapters
+- [EDS data ingress](xref:EDSDataIngress)
   - [OpcUa](xref:opcUaOverview)
     - [Linux Opc Ua Data Selection](xref:opcUaDataSelectionLinux)
     - [Windows Opc Ua Data Selection](xref:opcUaDataSelectionWindows)
