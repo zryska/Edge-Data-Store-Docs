@@ -65,7 +65,7 @@ uid: index
     - [Storage Logging Schema](xref:Storage_Logging_schema)
     - [Storage Periodic Egress Endpoints Schema](xref:storage_PeriodicEgressEndpoints_schema)
     - [Storage Runtime Schema](xref:storage_Runtime_schema)
- - [Health](xref:EdgeDataStoreHealth)
+- [Health](xref:EdgeDataStoreHealth)
 - [Diagnostics](xref:EdgeDataStoreDiagnostics)
 - [Platforms](xref:linuxWindows)
 - [Docker](xref:edgeDocker)

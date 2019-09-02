@@ -8,6 +8,8 @@ The Edge Data Store includes the Sequential Data Store (SDS) REST APIs for [read
 
 All data from all sources on the Edge Data Store (Modbus, OPC UA, OMF, SDS) can be read using the SDS REST APIs locally on the device in the default tenant and the default namespace. In addition the default tenant has a diagnostics namespace where diagnostic data are written by the Edge Data Store and installed components that can be read to monitor the health of a running system using the SDS REST APIs.
 
+The SDS instance running in EDS is an advanced storage engine that is also used in OCS. While it works very well for storing OMF compatible data in EDS, it is also possible to be used for advanced scenarios where data stored in SDS cannot be converted to OMF. All data egress from EDS to both OCS and the PI System uses OMF in this release of EDS, so for streams that will be egressed to the PI System or OCS it is recommended that they only have a single time based index. Multiple values are supported in a single stream, but for successful egress there is a limitation of only a single time based index in this release.
+
 [SDS Reading Data APIs](xref:sdsReadingDataApi)
 
 [SDS Reading Data](xref:sdsReadingData)
