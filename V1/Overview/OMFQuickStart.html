@@ -117,7 +117,7 @@
     ]
 }]
 </code></pre><p>This example includes two data events that will be stored in the SDS Stream that was created in the previous steps. It is generally a best practice to batch OMF values when writing them for the best performance. In order to write the data in the Edge Storage, the JSON should be stored as a file with the name OmfCreateDataEvents.json and the following curl script run:</p>
-<pre><code class="lang-bash">curl -i -d &quot;@SDSWriteData.json&quot; -H &quot;Content-Type: application/json&quot;  -X POST http://localhost:5590/api/v1/tenants/default/namespaces/default/streams/MyCustomContainer/Data
+<pre><code class="lang-bash">curl -i -d &quot;@OmfCreateDataEvents.json&quot; -H &quot;Content-Type: application/json&quot; -H &quot;producertoken: x &quot; -H &quot;omfversion: 1.1&quot; -H &quot;action: create&quot; -H &quot;messageformat: json&quot; -H &quot;messagetype: data&quot; -X POST http://localhost:5590/api/v1/tenants/default/namespaces/default/omf/
 </code></pre><p>When this command completes successfully, two values will have been written to the SDS stream.</p>
 <h2 id="read-last-data-written-using-sds">Read Last Data written using SDS</h2>
 <p>In order to read the data back from the server that has been written, you can use the SDS REST API. Here is an example curl script that reads back the last value entered:</p>
