@@ -90,16 +90,15 @@
     &quot;ClientSecret&quot;: &quot;&lt;your OCS ClientSecret&gt;&quot;,
     &quot;UserName&quot;: null,
     &quot;Password&quot;: null,
-    &quot;DebugExpiration&quot;: null
+    &quot;DebugExpiration&quot;: null,
+    &quot;ValidateEndpointCertificate&quot;: true,
+    &quot;TokenEndpoint&quot;: null
 }]
 </code></pre><ol>
 <li>Edit the JSON above to add the URL of your OCS OMF endpoint.</li>
-<li>Add a ClientId and ClientSecret that can write data to your OCS tenant and namespace.
-The StreamPrefix and TypePrefix can be used to ensure uniqueness on the destination system, if required. If a StreamPrefix is specified it will be used to create a unique stream id on OCS.</li>
-<li>Run the following curl script to configure the Edge Storage to send data to OCS.
-This configuration is set up to send all stream data to OCS.</li>
+<li>Add a ClientId and ClientSecret that can write data to your OCS tenant and namespace. The StreamPrefix and TypePrefix can be used to ensure uniqueness on the destination system, if required. If a StreamPrefix is specified it will be used to create a unique stream id on OCS. This configuration is set up to send all stream data to OCS. If you wish to only send specific streams, edit the EgressFilter value. Examples of more advanced scenarios are in the Egress section of this documentation.</li>
 <li>Save the JSON with the file name PeriodicEgressEndpoints.json.</li>
-<li>Run the following curl script in the same directory where the file exists on the device where the Edge Data Store is installed. The file and curl script can be run from any directory on the device as long as the file and the curl script are run from the same directory:</li>
+<li>Run the following curl script to configure the Edge Storage to send data to OCS. It should be run from the same directory where the file exists on the device where the Edge Data Store is installed. The file and curl script can be run from any directory on the device as long as the file and the curl script are run from the same directory:</li>
 </ol>
 <pre><code class="lang-bash">curl -i -d &quot;@PeriodicEgressEndpoints.json&quot; -H &quot;Content-Type: application/json&quot; -X PUT http://localhost:5590/api/v1/configuration/storage/PeriodicEgressEndpoints/
 </code></pre><p>When this command completes successfully, data will start being sent to OCS.</p>
