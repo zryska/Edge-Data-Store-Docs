@@ -578,6 +578,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Overview/CommandLineLinuxQuickStart.md",
       "output": {
@@ -590,9 +593,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "Conceptual",
       "source_relative_path": "V1/Overview/CommandLineQuickStartWindows.md",
       "output": {
@@ -1085,7 +1085,7 @@
       "output": {
         ".html": {
           "relative_path": "V1/index.html",
-          "hash": "BYB6hcoCsoSQnxjAYssh/Q=="
+          "hash": "KAJ7wagsg+iTCHAsLP+1XQ=="
         }
       },
       "is_incremental": false,
