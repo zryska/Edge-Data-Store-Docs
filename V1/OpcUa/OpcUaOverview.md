@@ -12,7 +12,7 @@ It is possible to add a single EDS OPC UA adapter during installation. If multip
 
 As with other Edge Data Store EDS adapters, the EDS OPC UA adapter is configured using data source and data selection JSON documents. The data source configuration are identical with other adapters, but OPC UA supports an option to generate a template data selection file that can be manually edited and used for subsequent configuration. This optional process for generating and editing the file is different for [Windows](xref:opcUaDataSelectionWindows) and [Linux](xref:opcUaDataSelectionLinux). Once the template file is created it can be reused on both Linux and Windows without changes.
 
-OPC UA is a standard, which ensures open EDS adapter, interoperability, security, and reliability of industrial automation devices and systems. OPC UA is recognized as one of the key communication and data modeling technologies of Industry 4.0, due to the fact that it works with many software platforms and that it is completely scalable and flexible.
+OPC UA is an open standard, which ensures interoperability, security, and reliability of industrial automation devices and systems. OPC UA is recognized as one of the key communication and data modeling technologies of Industry 4.0, due to the fact that it works with many software platforms and that it is completely scalable and flexible.
 
 ## Configuration of OPC UA data source
 
@@ -42,13 +42,13 @@ The following parameters are available for configuring an OPC UA data source.
 
 | Parameter | Required | Type |	Description |
 |-----------|----------|------|-------------|
-| **EndpointURL** | Required | string | The endpoint URL of the OPC UA server. The following is an example of the URL format: opc.tcp://OPCServerHost:Port/OpcUa/SimulationServer<br><br>**Note:** If you change the EndpointURL on a configured OPC UA EDS adapter that has DataCollection.config.csv file exported, you will need to relocate the DataCollection.config.csv file from the configuration directory to trigger a new browse (export).|
+| **EndpointURL** | Required | string | The endpoint URL of the OPC UA server. The following is an example of the URL format: opc.tcp://OPCServerHost:Port/OpcUa/SimulationServer<br><br>**Note:** If you change the EndpointURL on a configured OPC UA EDS adapter that has ComponentID_DataSelection.json file exported, you will need to relocate the ComponentID_DataSelection.json file from the configuration directory to trigger a new browse (export).|
 | **UseSecureConnection**|Optional | bool | When set to true, the OPC UA EDS adapter connects to a secure endpoint using OPC UA certificate exchange operation. The default is true. When set to false, the OPC UA EDS adapter connects to an unsecured endpoint of the server and certificate exchange operation is not required.<br><br>**Note:** OSIsoft recommends setting this option to false for testing purposes only.|
 | **UserName** | Optional | string | User name for accessing the OPC UA server. |
 | **Password** | Optional | string | Password for accessing the OPC UA server.<br><br>**Note:** OSIsoft recommends using REST to configure the data source when the password must be specified.|
 | **RootNodeIds** | Optional | string |List of comma-separated NodeIds of those objects from which the OPC UA EDS adapter browses the OPC UA server address space. This option allows selecting only subsets of the OPC UA address by explicitly listing one or more NodeIds which are used to start the initial browse. For example: ns=5;s=85/0:Simulation, ns=3;s=DataItems. If not specified, it means that the whole address space will be browsed.|
 | **IncomingTimestamp**	| Optional | string | Specifies whether the incoming timestamp is taken from the source, from the OPC UA server, or should be created by the OPC UA EDS adapter instance. **Source** - Default and recommended setting. The timestamp is taken from the source timestamp field. The source is what provides data for the item to the OPC UA server, such as a field device. **Server** - In case the OPC UA item has an invalid source timestamp field, the Server timestamp can be used. **Connector** - The OPC UA EDS adapter generates a timestamp for the item upon receiving it from the OPC UA server.|
-| **StreamIdPrefix** | Optional | string | Specifies what prefix is used for Stream IDs. Naming convention is StreamIdPrefix.NodeId. **Note:** An empty string means no prefix will be added to the Stream IDs.|
+| **StreamIdPrefix** | Optional | string | Specifies what prefix is used for Stream IDs. Naming convention is StreamIdPrefixNodeId. **Note:** An empty string means no prefix will be added to the Stream IDs. Null value means ComponentID followed by dot character will be added to the stream IDs (example: OpcUa1.NodeId).|
 
 
 ### OPC UA data source example
@@ -93,7 +93,7 @@ curl -v -d "@DataSelection.config.json" -H "Content-Type: application/json" -X P
 
 | Parameter     | Required | Type | Description |
 |---------------|----------|------|-------------|
-| **Selected** | Optional | bool | This field is used to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is true.|
+| **Selected** | Optional | bool | This field is used to select or clear a measurement. To select an item, set to true. To remove an item, leave the field empty or set to false.  If not configured, the default value is false.|
 | **Name**      | Optional | string | The optional friendly name of the data item collected from the data source. If not configured, the default value will be the stream id |
 | **NodeId**    | Required | string | The NodeId of the variable. |
 | **StreamID** | Required | string | The custom stream ID that will be used to create the streams. If not specified, the Modbus TCP EDS adapter will generate a default stream ID based on the measurement configuration. A properly configured custom stream ID follows these rules:<br><br>Is not case-sensitive.<br>Can contain spaces.<br>Cannot start with two underscores ("__").<br>Can contain a maximum of 260 characters.<br>Cannot use the following characters: / : ? # [ ] @ ! $ & ' ( ) \ * + , ; = % < > &#124;<br>Cannot start or end with a period.<br>Cannot contain consecutive periods.<br>Cannot consist of only periods.
@@ -141,7 +141,7 @@ OSIsoft Adapter for OPC UA generates a self-signed certificate when the first se
 
 ```json
 {
-"EndpointUrl": "opc.tcp://<ip address>:<port - often 62541>/<server path>",
+"EndpointUrl": "opc.tcp://IP-Address/TestOPCUAServer",
 "UseSecureConnection": true,
 "UserName": null,
 "Password": null,
