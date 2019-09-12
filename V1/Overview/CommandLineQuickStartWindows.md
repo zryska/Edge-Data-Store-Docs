@@ -1,5 +1,5 @@
 ---
-uid: commandLineLinuxQuickStart
+uid: commandLineWindowsQuickStart
 ---
 
 # Edge Data Store Command Line Quick Start - Windows
