@@ -4,23 +4,17 @@ uid: commandLine
 
 # Command line configuration of Edge Data Store
 
-Configuration and administration of the Edge Data Store on Linux and Windows can also be accomplished using the edgecmd command line tool. On Windows it is located in the directory:
-
-```cmd
-C:\Program Files\OSIsoft\EdgeDataStore\edgecmd.exe
-```
-
-You should specify the full path when using it on Windows.
-
-On Linux the utility is installed in:
+Configuration of the Edge Data Store on Linux and Windows can also be accomplished using the edgecmd command line tool. The tool location:
 
 ```bash
- /opt/OSIsoft/EdgeDataStore/edgecmd
+Windows: %ProgramFiles%\OSIsoft\EdgeDataStore\edgecmd.exe
+
+Linux: /opt/OSIsoft/EdgeDataStore/edgecmd
 ```
 
-On Linux it can be accessed without using the full path. For the sake of simplicity the utility for the rest of this topic will be referred to as edgecmd, even though it is named edgecmd.exe on Windows and edgecmd on Linux.
+**Note:** You should specify the full path when using the edgecmd tool on Windows.
 
-Most configurations options that can be done using REST can also be done using the edgecmd utility and command line arguments. Generally the configuration and administrative REST interfaces are exposed via the command line. Access to reading and writing data to the Edge Data Store Storage Component - OMF Ingress and SDS Read/Write capabilities are only available using the REST API.
+Configuration options that are available via REST API are also available to configure via the edgecmd utility. Access to reading and writing data from and to the Edge Data Store Storage Component - OMF Ingress and SDS Read/Write capabilities are only available using the REST API.
 
 A simple example of viewing system configuration using edgecmd:
 
@@ -55,7 +49,7 @@ edgecmd Configuration System
 
 ## Getting Help
 
-The Edgecmd application provides a 'Help' utility. For general instructions on how to use the Edgecmd application, type:
+The Edgecmd application provides a 'Help' functionality. For general instructions on how to use the Edgecmd application, type:
 
 ```bash
 edgecmd Help
@@ -114,9 +108,9 @@ ComponentType                      [Required] Type of the hosted component.
 Example: ./edgecmd Configuration System Components ComponentId=Modus1 ComponentType=Modbus
 ```
 
-For help regarding a specific facet within a component, add the facet name after the component ID.
+To retreive help for a specific facet within a component, add the facet name after the component ID.
 
-An example to get help regarding the 'Port' facet within the 'System' component:
+An example to get help for the 'Port' facet within the 'System' component:
 
 ```bash
 edgecmd Help System Port
@@ -142,9 +136,9 @@ To register a new component, use the following command:
 edgecmd Configuration System Components componentId=<componentId> componentType=<componentType>
 ```
 
-Valid component type's are "Modbus" and "OpcUa". Use "Modbus" if trying to register a Modbus EDS adapter and "OpcUa" if trying to register an OPC UA adapter. 
+Valid component type's are "Modbus" and "OpcUa". Use "Modbus" if trying to register an EDS Modbus Adapter and "OpcUa" if trying to register an EDS OPC UA Adapter. 
 
-Example of registering a new Modbus adapter component:
+Example of registering a new EDS Modbus Adapter component:
 
 ```bash
 edgecmd Configuration System Components componentId=Modbus1 componentType=Modbus
@@ -152,7 +146,7 @@ edgecmd Configuration System Components componentId=Modbus1 componentType=Modbus
 
 ### Configuring Components
 
-The EDS Modbus adapter and OPC UA adapter each have 3 configurable facets: Data Source, Data Selection, and Logging. These can be configured with edgecmd by specifying a component ID and facet name. An example of configuring the data source facet of a Modbus adapter:
+The EDS Modbus Adapter and EDS OPC UA Adapter each have 3 configurable facets: Data Source, Data Selection, and Logging. These can be configured with edgecmd by specifying a component ID and facet name. An example of configuring the data source facet of an EDS Modbus Adapter:
 
 ```bash
 edgecmd Configuration Modbus1 DataSource IpAddress=117.23.45.110 port=502 ConnectTimeout=15000 StreamIdPrefix="DataSource1"
@@ -264,19 +258,19 @@ To create a configuration a user must enter the component and facet where the co
 edgecmd Configuration Storage Logging LogLevel=Warning LogFileSizeLimitBytes=32768 LogFileCountLimit=5
 ```
 
-This can be used to configure any number of valid key=value pairs in a facet. Example, changing a single value in the 'Logging' facet:
+The folowing command can be used to configure any number of valid key=value pairs in a facet. Example, changing a single value in the 'Logging' facet:
 ```bash
 edgecmd Configuration Storage Logging LogFileCountLimit=5
 ```
 
-It can also be used to add an entry to a collection configuration, for example, the 'Health Endpoints' facet in the 'System' component:
+It can also be used to add an entry to a collection configuration, for example, the 'Health Endpoints' facet of the 'System' component:
 ```bash
 edgecmd Configuration System HealthEndpoints Id=endpoint_1 Endpoint=endpointURL UserName=UserName Password=Password
 ```
 - Note: if an entry with the specified id already exists, it will be updated based on the new key=value pairs
 
 ### Configuring with JSON Files
-The Edge Data Store can also be configured by inputting a JSON file into the edgecmd application. File imports will completely replace the existing configuration(s) that you are attempting to change. Therefore, it cannot be used to change individual values in a facet without modifying others.
+The Edge Data Store can also be configured by inputting a JSON file into the edgecmd application. Imported file contents will completely replace the existing configuration(s) that you are attempting to change. Therefore, it cannot be used to change individual values in a facet without modifying others.
 
 To import a bulk configuration:
 ```bash
@@ -308,7 +302,7 @@ where the file 'Bulk_Storage_Runtime.json' contains:
 	}
 }
 ```
-will only affect the 'Runtime' facet in the 'Storage' component, it will not change any other components or facets. However, if a file containing the following was imported, the 'StreamStorageLimitMb' and 'StreamStorageTargetMb' values would be modified, resetting the remaining values in the facet (IngressDebugExpiration, CheckpointRateInSec, TransactionLogLimitMB, and EnableTransactionLog) to their default values:
+will only affect the 'Runtime' facet of the 'Storage' component, it will not change any other components or facets. However, if a file containing the following was imported, the 'StreamStorageLimitMb' and 'StreamStorageTargetMb' values would be modified, resetting the remaining values in the facet (IngressDebugExpiration, CheckpointRateInSec, TransactionLogLimitMB, and EnableTransactionLog) to their default values:
 ```JSON
 {
 	"Storage": {
