@@ -39,7 +39,7 @@ Configure Edge Storage periodic egress for the Osisoft Cloud Services (OCS) endp
     **Note:** If required, you can use the StreamPrefix and TypePrefix to ensure uniqueness on the destination system. If a StreamPrefix is specified, it will be used to create a unique stream id on OCS. This configuration is set up to send all stream data to OCS. If you want to only send specific streams, edit the EgressFilter value. Examples of more advanced scenarios are in the Egress section of this documentation.
 
 3. Save the JSON with the file name PeriodicEgressEndpoints.json.
-4. Run the following curl script to configure the Edge Storage to send data to OCS. Run the script from the same directory where the file exists on the device where the Edge Data Store is installed. You can run the file and curl script from any directory on the device as long as the file and the curl script are run from the same directory:
+4. Run the following curl script to configure the Edge Storage to send data to OCS. Run the script from the same directory where the file exists on the device where Edge Data Store is installed. You can run the file and curl script from any directory on the device as long as the file and the curl script are run from the same directory:
 
 ```bash
 curl -i -d "@PeriodicEgressEndpoints.json" -H "Content-Type: application/json" -X PUT http://localhost:5590/api/v1/configuration/storage/PeriodicEgressEndpoints/
