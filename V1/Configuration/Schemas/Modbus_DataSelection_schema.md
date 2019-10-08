@@ -63,13 +63,13 @@ uid: modbus_DataSelection_schema
 ]
 ```
 
-# Modbus DataSelectionConfiguration schema
+# Modbus TCP data selection configuration schema
 
 | Abstract            | Extensible | Status       | Identifiable | Custom properties | Additional properties | Defined in                                                           |
 | ------------------- | ---------- | ------------ | ------------ | ----------------- | --------------------- | -------------------------------------------------------------------- |
 | Can be instantiated | Yes        | Experimental | No           | Forbidden         | Forbidden             | [Modbus_DataSelection_schema.json](Modbus_DataSelection_schema.json) |
 
-# DataSelectionConfiguration properties
+# Modbus data selection configuration properties
 
 | Property                              | Type      | Required | Nullable | Defined by                               |
 | ------------------------------------- | --------- | -------- | -------- | ---------------------------------------- |
@@ -217,7 +217,7 @@ uid: modbus_DataSelection_schema
 
 `integer`
 
-**All** of the following _requirements_ need to be fulfilled.
+**Note:** All of the following _requirements_ need to be fulfilled.
 
 #### Requirement 1
 
