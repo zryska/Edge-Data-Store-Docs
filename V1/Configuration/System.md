@@ -8,10 +8,10 @@ The EDS system component hosts all the other components running in Edge Data Sto
 
 The following facets can be configured in the system component:
 
-[Logging](xref:system_Logging_schema)
+- [Logging](xref:system_Logging_schema)
 
-[Port](xref:system_Port_schema)
+- [Port](xref:system_Port_schema)
 
-[Components](xref:system_HealthEndpoints_schema)
+- [Components](xref:system_HealthEndpoints_schema)
 
-[Health Endpoints](xref:system_HealthEndpoints_schema)
+- [Health Endpoints](xref:system_HealthEndpoints_schema)
