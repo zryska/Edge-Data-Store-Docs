@@ -8,9 +8,9 @@ uid: opcUaOverview
 
 The OPC UA EDS adapter transfers time-series data from OPC UA devices into Edge Data Store.
 
-You can add a single OPC UA EDS adapter during installation. If you desire multiple OPC UA EDS adapters, please reference [Edge Data Store Configuration](xref:EdgeDataStoreConfiguration) on how to add a new component to Edge Data Store. The example below covers howto configure the first adapter. If another adapter has been installed, please substitute the name of the installed adapter in the below example for OpcUa1.
+You can add a single OPC UA EDS adapter during installation. If you want multiple OPC UA EDS adapters, see [Edge Data Store Configuration](xref:EdgeDataStoreConfiguration) on how to add a new component to Edge Data Store. The following example explains how to configure the first adapter. If another adapter has been installed, substitute the name of the installed adapter in the below example for OpcUa1.
 
-As with other Edge Data Store EDS adapters, the OPC UA EDS adapter is configured with data source and data selection JSON documents. The data source configurations are identical with other adapters, but OPC UA supports an option to generate a data selection file template that can be manually edited and used for subsequent configuration. Please reference [OPC UA Data Selection](xref:opcUaDataSelection) for details. Once you create a template file, you can reuse it on both Linux and Windows without changes.
+As with other EDS adapters, the OPC UA EDS adapter is configured with data source and data selection JSON documents. The data source configurations are identical with other adapters, but OPC UA supports an option to generate a data selection file template that you can manually edit and use for subsequent configuration. See [OPC UA Data Selection](xref:opcUaDataSelection) for details. Once you create a template file, you can reuse it on both Linux and Windows without changes.
 
 OPC UA is an open standard, which ensures interoperability, security, and reliability of industrial automation devices and systems. OPC UA is recognized as one of the key communication and data modeling technologies of Industry 4.0, due to the fact that it works with many software platforms, and is completely scalable and flexible.
 
@@ -18,7 +18,7 @@ OPC UA is an open standard, which ensures interoperability, security, and reliab
 
 ### Data Types
 
-The table below lists OPC UA variable types that the OPC UA EDS adapter supports data collection from and types of streams that are going to be created in the Edge Data Store.
+The table below lists OPC UA variable types that the OPC UA EDS adapter supports data collection from and types of streams that are going to be created in Edge Data Store.
 
 | OPC UA data type | Stream data type |
 |------------------|------------------|
@@ -38,7 +38,7 @@ The table below lists OPC UA variable types that the OPC UA EDS adapter supports
 
 ### Export operation
 
-The OPC UA EDS adapter is able to export available OPC UA dynamic variables by browsing the OPC UA hierarchies or sub-hierarchies. Browse can be limited by specifying comma separated collection of nodeIds in data source configuration (RootNodeIds) which are going to be treated as a root(s) from where the adapter starts the browse operation. The adapter triggers export operation after successful connection to OPC UA server when the data selection file doesn't exist in configuration directory. The exported data selection JSON file can be copied from the directory or retrieved via REST API call.
+The OPC UA EDS adapter is able to export available OPC UA dynamic variables by browsing the OPC UA hierarchies or sub-hierarchies. Browse can be limited by specifying comma separated collection of nodeIds in data source configuration (RootNodeIds) which are going to be treated as a root(s) from where the adapter starts the browse operation. The adapter triggers export operation after successful connection to the OPC UA server when the data selection file doesn't exist in configuration directory. The exported data selection JSON file can be copied from the directory or retrieved via REST API call.
 
 Data selection file can be also created manually in order to avoid potentially long and expensive browse operation and configured before configuring data source or pushed in one configuration call with data source configuration.
 
@@ -46,22 +46,22 @@ Data selection file can be also created manually in order to avoid potentially l
 
 ### Adapter configuration
 
-In order for the OPC UA EDS adapter to start data collection, you need to configure the adapter. Please refer to **Configuration of OPC UA data source** and **Configuration of OPC UA data selection** sections. To configure the adapter, configure the following:
+In order for the OPC UA EDS adapter to start data collection, you need to configure the adapter. See [Configuration of OPC UA data source] (#configuration-of-opc-ua-data-source) and [Configuration of OPC UA data selection] (#configuration-of-opc-ua-data-selection). To configure the adapter, configure the following:
 
-Data source: Provide the information of the data source from where adapter should collect data.
+Data source: Provide the information of the data source from where the adapter should collect data.
 Data selection: Perform selection of OPC UA items that adapter should should subscribe for data.
 
 ## Network communication
 
-The OPC UA EDS adapter communicates with OPC UA server through TCP/IP network using opc.tcp binary protocol.
+The OPC UA EDS adapter communicates with the OPC UA server through TCP/IP network using opc.tcp binary protocol.
 
 ### Stream creation
 
-The OPC UA EDS adapter creates Types upon receiving the value update for a stream from OPC UA subscription per stream and streams are created for selected OPC UA items in data selection configuration. One stream is going to be created in Edge Data Store for every selected OPC UA item in data selection configuration.
+The OPC UA EDS adapter creates types upon receiving the value update for a stream from OPC UA subscription per stream and streams are created for selected OPC UA items in the data selection configuration. One stream is going to be created in Edge Data Store for every selected OPC UA item in data selection configuration.
 
 ### Connection
 
-The OPC UA EDS adapter uses binary opc.tcp protocol to communicate with OPC UA servers. The X.509-type client and server certificates are exchanged and verified (when security is enabled) and the connection to configured OPC UA server is established.
+The OPC UA EDS adapter uses binary opc.tcp protocol to communicate with the OPC UA servers. The X.509-type client and server certificates are exchanged and verified (when security is enabled) and the connection to the configured OPC UA server is established.
 
 ### Data collection
 
@@ -70,6 +70,7 @@ OPC UA EDS adapter is collecting time-series data from selected OPC UA dynamic v
 ### Streams created by OPC UA EDS adapter
 
 OPC UA EDS adapter creates a stream with two properties per selected OPC UA item. The properties are defined in the following table:
+
 | Property name | Data type | Description |
 |---------------|-----------|-------------|
 | Timestamp     | DateTime  | Timestamp of the given OPC UA item value update. |
@@ -98,7 +99,7 @@ Complete the following to configure the OPC UA data source:
 1. Using any text editor, create a file that contains an OPC UA data source in JSON form.
     - For content structure, see the following OPC UA data source example section.
     - For a table of all available parameters, see the following **Parameters for OPC UA data source** section.
-2. Save the file as DataSource.config.json.
+2. Save the file as _DataSource.config.json_.
 3. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<EDS adapterId>/DataSource/`. 
 
    **Note:** During installation it is possible to add a single OPC UA EDS adapter, and it is named OpcUa1. The example below uses this component name.
@@ -153,7 +154,7 @@ Complete the following to configure OPC UA data selection:
 1. Using any text editor, create a file that contains an OPC UA data selection in JSON form.
     - For content structure, see the following OPC UA data selection example.
     - For a table of all available parameters, see the following Parameters for **OPC UA data selection** section.
-2. Save the file as DataSelection.config.json.
+2. Save the file as _DataSelection.config.json_.
 3. Use any [tool](xref:managementTools) capable of making HTTP requests to execute a POST command with the contents of that file to the following endpoint: `http://localhost:5590/api/v1/configuration/<EDS adapterId>/DataSelection/`
     - Example using cURL:
 
@@ -267,7 +268,7 @@ After the certificate is reviewed and approved, it can be manually moved from th
 
 > **Note:** Administrator or root privileges are required to perform this operation.
 
-When the certificate is in the adapter trust store, the adapter trusts the server and the connection attempt proceeds in making the  connection call to the configured server. Connection succeeds only when the adapter certificate is trusted on the server side. Please refer to your OPC UA server documentation for more details on how to make a client certificate trusted. In general, servers work in a similar fashion to the clients; hence a similar approach for making the server certificate trusted on the client side can be taken on the server.
+When the certificate is in the adapter trust store, the adapter trusts the server and the connection attempt proceeds in making the  connection call to the configured server. Connection succeeds only when the adapter certificate is trusted on the server side. See your OPC UA server documentation for more details on how to make a client certificate trusted. In general, servers work in a similar fashion to the clients; hence a similar approach for making the server certificate trusted on the client side can be taken on the server.
 
 When certificates are mutually trusted, the connection attempt succeeds and the adapter is connected to the most secure endpoint provided by the server.
 
